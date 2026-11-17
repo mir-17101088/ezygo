@@ -72,6 +72,30 @@
     });
   }
 
+  /* ---------- Loading screen: stays until the page has loaded, then lifts away ---------- */
+  var intro = doc.querySelector('.intro');
+  var loadedCbs = [], isLoaded = false;
+  function whenLoaded(fn) { if (isLoaded) fn(); else loadedCbs.push(fn); }
+  (function () {
+    var start = Date.now(), minShow = root.className.indexOf('seen') > -1 ? 350 : 1100, p = .12, timer, done = false;
+    var pct = intro && intro.querySelector('.intro__pct');
+    function setP(v) { if (intro) intro.style.setProperty('--p', v); if (pct) pct.textContent = Math.round(v * 100); }
+    function finish() {
+      if (done) return; done = true; clearInterval(timer); setP(1);
+      setTimeout(function () {
+        if (intro) intro.classList.add('is-done');
+        root.className += ' is-loaded'; isLoaded = true;
+        loadedCbs.forEach(function (f) { f(); }); loadedCbs = [];
+        setTimeout(function () { if (intro && intro.parentNode) intro.parentNode.removeChild(intro); }, 1200);
+      }, Math.max(0, minShow - (Date.now() - start)) + 220);
+    }
+    if (!intro || reduce || getComputedStyle(intro).display === 'none') { isLoaded = true; root.className += ' is-loaded'; if (intro) intro.style.display = 'none'; return; }
+    setP(p);
+    timer = setInterval(function () { p += (0.86 - p) * 0.12; setP(p); }, 120);
+    if (doc.readyState === 'complete') finish(); else window.addEventListener('load', finish);
+    setTimeout(finish, 5000); /* never wait longer than 5 s on slow networks */
+  })();
+
   /* ---------- Reveal on scroll (pop-in) ---------- */
   $$('[data-stagger]').forEach(function (g) {
     Array.prototype.forEach.call(g.children, function (c, i) {
@@ -86,7 +110,9 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    revealEls.forEach(function (el) { io.observe(el); });
+    revealEls.forEach(function (el) {
+      if (el.closest('.hero')) whenLoaded(function () { io.observe(el); }); else io.observe(el);
+    });
   }
 
   /* ---------- Count-up (real number stays in the HTML) ---------- */

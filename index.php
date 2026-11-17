@@ -65,7 +65,8 @@ $pagePath  = '';
 <?php include 'includes/rent.php'; ?>
 
   <!-- ============ VEHICLE SPECIFICATIONS ============ -->
-  <section class="sec" id="ev-specs">
+  <section class="sec sec--glass" id="ev-specs">
+    <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="wrap">
       <div class="head head--split">
         <div>
@@ -94,6 +95,7 @@ $pagePath  = '';
           </div>
         </article>
         <article class="bike bike--feat" data-tilt>
+          <span class="bike__flag"><?= icon('star') ?> Top Pick</span>
           <div class="bike__pic"><?= bike_pic('eco-ride', 'Eco Ride Electric Bike', '(min-width: 1080px) 400px, (min-width: 720px) 50vw, 100vw') ?></div>
           <div class="bike__body">
             <h3 class="bike__name">Eco Ride</h3>

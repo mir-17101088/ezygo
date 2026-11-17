@@ -7,28 +7,40 @@ ErrorDocument 404 /404.php
 # No folder listings
 Options -Indexes
 
-# Force HTTPS and www
+# Force HTTPS and www (main domain only; SSL checks under .well-known are left alone)
+RewriteCond %{REQUEST_URI} !^/\.well-known/
 RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} ^ezygobd\.com$ [NC]
 RewriteRule ^ https://www.ezygobd.com%{REQUEST_URI} [L,R=301]
+
+# Only the site's own PHP pages may run in the top folder; no PHP at all under assets/.
+# (The 2026 hack worked by dropping a rogue router.php here.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(?!(index|evs|services|franchise|advertising|about|team|join|contact|privacy|404|form-handler)\.php$)[^/]+\.(php\d?|phtml|phar|phps)$ - [F,NC]
+RewriteRule ^assets/.*\.(php\d?|phtml|phar|phps|cgi|pl|py|sh)$ - [F,NC]
 
 # Block private folders: form submissions, git data, editor settings
 RewriteRule ^(submissions|ezy|includes|\.git|\.vscode|Ecocyclec-main|tools|preview|_mock)(/|$) - [F,L]
 
 # Block backups, archives, logs, docs and dotfiles (except .well-known for SSL)
-<FilesMatch "\.(bak|old|orig|zip|tar|gz|sql|log|md|ini|env|json)$">
+<FilesMatch "(?i)(\.(bak|old|orig|save|swp|zip|tar|gz|rar|7z|sql|log|md|ini|env|json|txt|py|sh|yml|yaml|phps|lock)|~)$">
   Require all denied
 </FilesMatch>
+<Files "robots.txt">
+  Require all granted
+</Files>
 RewriteRule (^|/)\.(?!well-known/) - [F,L]
 
 # Basic security headers
 <IfModule mod_headers.c>
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
 # Compress text files

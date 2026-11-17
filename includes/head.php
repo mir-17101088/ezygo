@@ -4,7 +4,7 @@ $siteUrl   = 'https://www.ezygobd.com';
 $pageTitle = $pageTitle ?? "EzygoBD — Bangladesh's #1 EV Rental Network";
 $pageDesc  = $pageDesc  ?? 'Efficient, eco-friendly, and affordable electric vehicle rentals across Bangladesh.';
 $canonical = $siteUrl . '/' . ($pagePath ?? '');
-$cssVer    = '3.3';
+$cssVer    = '3.6';
 ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

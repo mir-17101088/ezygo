@@ -52,7 +52,8 @@ $rentPrice = 'Daily, weekly or monthly plans — from Tk 100/day.';
 <?php include 'includes/rent.php'; ?>
 
   <!-- ============ VEHICLE SPECIFICATIONS ============ -->
-  <section class="sec" id="ev-specs">
+  <section class="sec sec--glass" id="ev-specs">
+    <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="wrap">
       <div class="head head--split">
         <div>
@@ -79,6 +80,7 @@ $rentPrice = 'Daily, weekly or monthly plans — from Tk 100/day.';
           </div>
         </article>
         <article class="bike bike--sheet bike--feat" data-tilt>
+          <span class="bike__flag"><?= icon('star') ?> Top Pick</span>
           <div class="sheet__top"><span class="sheet__ic"><?= icon('route') ?></span><span class="sheet__code">EZY · 02</span></div>
           <div class="bike__body">
             <h3 class="bike__name">EzyRide E-Bike</h3>

@@ -7,9 +7,12 @@ $megaOn = fn($p) => $currentPage === $p ? ' class="is-on" aria-current="page"' :
 
   <!-- Intro: once per visit, CSS only -->
   <div class="intro" aria-hidden="true">
-    <img src="assets/img/logo-480.webp" width="240" height="65" alt="">
-    <span class="intro__bar"><span></span></span>
-    <p class="intro__tag">Bangladesh First EV Network</p>
+    <div class="intro__in">
+      <span class="intro__glow"></span>
+      <img src="assets/img/logo-480.webp" width="240" height="65" alt="">
+      <div class="intro__meter"><span class="intro__bar"><span></span></span><span class="intro__pct">0</span></div>
+      <p class="intro__tag">Bangladesh First EV Network</p>
+    </div>
   </div>
 
   <header class="site-head<?= !empty($headLight) ? ' site-head--light' : '' ?>" id="top">

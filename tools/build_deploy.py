@@ -16,7 +16,7 @@ DEST = OUT / 'public_html'
 
 PAGES = ['index.php', 'evs.php', 'services.php', 'franchise.php', 'advertising.php', 'about.php',
          'team.php', 'join.php', 'contact.php', 'privacy.php', '404.php', 'form-handler.php']
-FILES = PAGES + ['.htaccess', 'robots.txt', 'sitemap.xml', 'submissions/.htaccess']
+FILES = PAGES + ['.htaccess', '.user.ini', 'robots.txt', 'sitemap.xml', 'submissions/.htaccess']
 DIRS = ['includes', 'assets/css', 'assets/fonts', 'assets/img', 'assets/js', 'assets/video']
 SKIP_SUFFIX = {'.md', '.py', '.pyc', '.log', '.zip'}
 

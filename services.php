@@ -20,7 +20,7 @@ $pagePath  = 'services.php';
     <div class="hero__in wrap">
       <h1 class="sr-only">EzygoBD services for riders and partners</h1>
       <div class="svc">
-        <div class="svc__col" id="riders">
+        <div class="svc__col svc__col--riders" id="riders">
           <h2 class="svc__title" data-reveal><?= icon('user') ?> For Riders</h2>
           <div class="svc__grid svc__grid--riders" data-stagger="pop">
             <a href="index.php#rent-ev" class="offer">
@@ -55,7 +55,7 @@ $pagePath  = 'services.php';
             </a>
           </div>
         </div>
-        <div class="svc__col" id="business">
+        <div class="svc__col svc__col--partners" id="business">
           <h2 class="svc__title" data-reveal><?= icon('handshake') ?> For Partners</h2>
           <div class="svc__grid" data-stagger="pop">
             <a href="contact.php" class="offer" id="delivery">

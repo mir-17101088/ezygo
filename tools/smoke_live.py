@@ -40,7 +40,7 @@ for p in ['/', '/evs.php', '/services.php', '/franchise.php', '/advertising.php'
     s, h, body = get(p)
     check(s == 200 and 'assets/css/site.css' in body and 'buckdomain' not in body.lower(), f'{p} loads the new site ({s})')
 
-for p in ['/includes/config.php', '/includes/footer.php', '/submissions/', '/tools/', '/preview/', '/.git/config',
+for p in ['/router.php', '/cp-hades-test.html', '/includes/config.php', '/includes/footer.php', '/submissions/', '/tools/', '/preview/', '/.git/config',
           '/README.md', '/.htaccess', '/form-handler.php.bak']:
     s, _, _ = get(p)
     check(s in (403, 404), f'{p} is blocked ({s})')

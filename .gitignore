@@ -5,3 +5,9 @@ submissions/*
 _mock/
 __pycache__/
 *.pyc
+
+*.log
+*.env
+*.txt
+!robots.txt
+!assets/fonts/FONTS-LICENSE.txt

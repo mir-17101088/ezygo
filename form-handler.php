@@ -7,6 +7,10 @@
  * Settings: includes/config.php
  */
 
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+date_default_timezone_set('Asia/Dhaka');
+
 $cfg = require __DIR__ . '/includes/config.php';
 
 // ── Only accept POST ──
@@ -19,8 +23,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 function field(string $key, int $max = 500): string {
     $v = $_POST[$key] ?? '';
     if (!is_string($v)) { return ''; }
-    $v = trim(strip_tags($v));
-    $v = preg_replace('/[^\P{C}\n\t]/u', '', $v) ?? '';      // drop control characters, keep new lines
+    $v = trim($v);
+    // drop control characters and text-direction overrides; keep new lines, tabs and Bengali joiners
+    $v = preg_replace('/[^\P{Cc}\n\t]|[\x{202A}-\x{202E}\x{2066}-\x{2069}]/u', '', $v) ?? '';
     return function_exists('mb_substr') ? mb_substr($v, 0, $max, 'UTF-8') : substr($v, 0, $max);
 }
 function one_line(string $v): string { return trim(preg_replace('/[\r\n\t]+/', ' ', $v)); }
@@ -43,33 +48,52 @@ function finish(string $status, string $form): void {
     exit;
 }
 
-$formType = preg_replace('/[^a-z_]/', '', (string) ($_POST['form_type'] ?? ''));
+$ft = $_POST['form_type'] ?? '';
+$formType = is_string($ft) ? preg_replace('/[^a-z_]/', '', $ft) : '';
 
 // ── Same-site check: browsers send Origin on POST; reject posts from other sites ──
 $host   = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-if ($origin !== '' && $origin !== 'null' && strtolower((string) parse_url($origin, PHP_URL_HOST)) !== $host) {
+if ($origin === 'null' || ($origin !== '' && strtolower((string) parse_url($origin, PHP_URL_HOST)) !== $host)
+    || ($_SERVER['HTTP_SEC_FETCH_SITE'] ?? '') === 'cross-site') {
     finish('error', $formType);
 }
 
 // ── Spam traps: hidden "website" field must stay empty; a form can't be filled in under 3 seconds ──
 if (field('website', 200) !== '') { finish('success', $formType); }       // quietly drop bots
 $t = (int) ($_POST['_t'] ?? 0);
-if ($t > 0 && (time() - $t) < 3) { finish('success', $formType); }
+if ($t <= 0 || (time() - $t) < 3) { finish('success', $formType); }
 
 // ── Private storage (outside the web root: /home/<account>/ezygo-submissions) ──
 $logDir = dirname(__DIR__) . '/ezygo-submissions';
 if (!is_dir($logDir)) { @mkdir($logDir, 0700, true); }
+if (!is_dir($logDir) || !is_writable($logDir)) {
+    error_log('ezygo: submissions folder is missing or not writable: ' . $logDir);
+    finish('error', $formType);
+}
 
-// ── Rate limit per visitor IP (hashed, never stored in clear) ──
-$ip     = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
-$rlFile = $logDir . '/.rate-' . substr(hash('sha256', $ip . '|ezygo'), 0, 20);
-$now    = time();
-$hits   = is_file($rlFile) ? array_map('intval', explode(',', (string) @file_get_contents($rlFile))) : [];
-$hits   = array_values(array_filter($hits, function ($x) use ($now) { return $x > $now - 600; }));
-if (count($hits) >= (int) $cfg['rate_limit']) { finish('error', $formType); }
-$hits[] = $now;
-@file_put_contents($rlFile, implode(',', $hits), LOCK_EX);
+// ── Rate limits: per visitor (IPv6 counted per /64) and for the whole site ──
+function hit(string $file, int $window, int $max): bool {   // true = allowed
+    $fh = @fopen($file, 'c+');
+    if (!$fh) { return true; }
+    flock($fh, LOCK_EX);
+    $now  = time();
+    $hits = array_filter(array_map('intval', explode(',', (string) stream_get_contents($fh))), function ($x) use ($now, $window) { return $x > $now - $window; });
+    $ok   = count($hits) < $max;
+    if ($ok) { $hits[] = $now; }
+    ftruncate($fh, 0); rewind($fh); fwrite($fh, implode(',', $hits));
+    flock($fh, LOCK_UN); fclose($fh);
+    return $ok;
+}
+$ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+if (strpos($ip, ':') !== false) { $ip = implode(':', array_slice(explode(':', $ip), 0, 4)) . '::/64'; }
+$rlFile = $logDir . '/.rate-' . substr(hash_hmac('sha256', $ip, (string) $cfg['secret']), 0, 20);
+if (!hit($logDir . '/.rate-site', 3600, (int) ($cfg['site_limit'] ?? 60)) || !hit($rlFile, 600, (int) $cfg['rate_limit'])) {
+    finish('error', $formType);
+}
+if (mt_rand(1, 50) === 1) {   // tidy old per-visitor counters now and then
+    foreach ((array) glob($logDir . '/.rate-*') as $f) { if ($f !== $logDir . '/.rate-site' && @filemtime($f) < time() - 86400) { @unlink($f); } }
+}
 
 // ── Forms: field => [label, required, max length, kind]   kind: text | multi | email | phone | sensitive ──
 $forms = [
@@ -122,6 +146,7 @@ $lines = [];
 foreach ($spec as $key => [$label]) { $lines[] = str_pad($label . ':', 18) . str_replace("\n", "\n" . str_repeat(' ', 18), $vals[$key]); }
 $entry   = "\n" . str_repeat('=', 60) . "\nTime: " . date('Y-m-d H:i:s') . "\nForm: $formType ($title)\n" . str_repeat('-', 60) . "\n" . implode("\n", $lines) . "\n";
 $logFile = $logDir . '/' . date('Y-m-d') . '.log';
+if (is_file($logFile) && filesize($logFile) > 5000000) { error_log('ezygo: daily log over 5 MB, not saving'); finish('error', $formType); }
 $saved   = @file_put_contents($logFile, $entry, FILE_APPEND | LOCK_EX) !== false;
 if ($saved) { @chmod($logFile, 0600); }
 
@@ -135,13 +160,13 @@ if (!empty($cfg['mail_enabled'])) {
         $mlines[] = str_pad($label . ':', 18) . $v;
     }
     $subject = one_line("[Ezygo website] $title — " . ($who !== '' ? $who : 'new'));
-    $subject = '=?UTF-8?B?' . base64_encode(function_exists('mb_substr') ? mb_substr($subject, 0, 150, 'UTF-8') : substr($subject, 0, 150)) . '?=';
+    $subject = function_exists('mb_encode_mimeheader') ? mb_encode_mimeheader(mb_substr($subject, 0, 150, 'UTF-8'), 'UTF-8', 'B') : substr($subject, 0, 150);
     $body    = "A new form was submitted on ezygobd.com.\n\n" . implode("\n", $mlines) . "\n\nSent: " . date('Y-m-d H:i') . "\n";
     $from    = preg_replace('/[^a-z0-9@._-]/i', '', (string) $cfg['mail_from']);
-    $headers = "From: EzygoBD Website <$from>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
+    $headers = "From: EzygoBD Website <$from>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n";
     $reply   = $vals['email'] ?? '';
     if ($reply !== '' && filter_var($reply, FILTER_VALIDATE_EMAIL)) { $headers .= "Reply-To: $reply\r\n"; }
-    $mailed = @mail((string) $cfg['mail_to'], $subject, $body, $headers, '-f' . $from);
+    $mailed = @mail((string) $cfg['mail_to'], $subject, chunk_split(base64_encode($body)), $headers, '-f' . $from);
 }
 
 // Received if it was saved or emailed
