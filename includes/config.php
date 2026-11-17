@@ -43,6 +43,4 @@ return [
     'rate_limit' => 6,
     'site_limit' => 60,
 
-    // Random value used to hash visitor IPs for the rate limit. Any long random text.
-    'secret' => '3a8576feaf9f34141ab0d479265ec208',
 ];

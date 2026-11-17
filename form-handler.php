@@ -87,12 +87,16 @@ function hit(string $file, int $window, int $max): bool {   // true = allowed
 }
 $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 if (strpos($ip, ':') !== false) { $ip = implode(':', array_slice(explode(':', $ip), 0, 4)) . '::/64'; }
-$rlFile = $logDir . '/.rate-' . substr(hash_hmac('sha256', $ip, (string) $cfg['secret']), 0, 20);
+// Secret for hashing IPs lives in the private folder, created on first use (never in the code/repo)
+$secretFile = $logDir . '/.secret';
+$secret = is_file($secretFile) ? trim((string) @file_get_contents($secretFile)) : '';
+if (strlen($secret) < 32) { $secret = bin2hex(random_bytes(24)); @file_put_contents($secretFile, $secret, LOCK_EX); @chmod($secretFile, 0600); }
+$rlFile = $logDir . '/.rate-' . substr(hash_hmac('sha256', $ip, $secret), 0, 20);
 if (!hit($rlFile, 600, (int) $cfg['rate_limit']) || !hit($logDir . '/.rate-site', 3600, (int) ($cfg['site_limit'] ?? 60))) {
     finish('error', $formType);
 }
 if (mt_rand(1, 50) === 1) {   // tidy old per-visitor counters now and then
-    foreach ((array) glob($logDir . '/.rate-*') as $f) { if ($f !== $logDir . '/.rate-site' && @filemtime($f) < time() - 86400) { @unlink($f); } }
+    foreach ((array) glob($logDir . '/.rate-*') as $f) { if ($f !== $logDir . '/.rate-site' && $f !== $secretFile && @filemtime($f) < time() - 86400) { @unlink($f); } }
 }
 
 // ── Forms: field => [label, required, max length, kind]   kind: text | multi | email | phone | sensitive ──
