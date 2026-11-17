@@ -138,7 +138,7 @@ foreach ($formats as $f): ?>
       </div>
       <div class="form-card" data-reveal="pop">
         <form action="form-handler.php" method="POST" data-form="advertising" class="fields">
-          <input type="hidden" name="form_type" value="advertising">
+          <input type="hidden" name="form_type" value="advertising"><?= form_guard() ?>
           <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your enquiry is in. Our advertising team will reach out within 24 hours.</p>
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your enquiry didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">

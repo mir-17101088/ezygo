@@ -56,9 +56,7 @@ $pagePath  = 'about.php';
         <p class="lead" data-reveal style="--i:3">A visionary entrepreneur and electrical engineer dedicated to transforming urban transportation in Bangladesh. Md Sazzatul Islam founded Ezygo with a vision to create sustainable mobility solutions through electric vehicle technology.</p>
         <p class="muted founder__more" data-reveal style="--i:4">Under his leadership, Ezygo has pioneered 72V lithium-powered solutions for urban mobility, developed sustainable rental frameworks, and been named "Most Impactful Business" at the Renewable Energy Fest. His expertise spans lithium-ion battery technology, EV logistics, and sustainable infrastructure.</p>
         <div class="socials" data-reveal style="--i:5">
-          <a href="#" aria-label="LinkedIn"><?= icon('linkedin') ?></a>
-          <a href="#" aria-label="X"><?= icon('x') ?></a>
-          <a href="#" aria-label="Facebook"><?= icon('facebook') ?></a>
+          <?= social('founder_linkedin', 'linkedin', 'LinkedIn') . social('founder_x', 'x', 'X') . social('founder_facebook', 'facebook', 'Facebook') ?>
         </div>
       </div>
     </div>
@@ -194,7 +192,7 @@ $pagePath  = 'about.php';
         <article class="news__card"><div class="news__thumb"><?= icon('bolt') ?><span class="news__play"><?= icon('play') ?></span></div><p>Battery Swap Network Launch</p></article>
         <article class="news__card"><div class="news__thumb"><?= icon('user') ?><span class="news__play"><?= icon('play') ?></span></div><p>Women in EV Mobility Feature</p></article>
       </div>
-      <p class="center-cta" data-reveal><a href="#" class="btn btn--line">View All News <?= icon('arrow') ?></a></p>
+      <p class="center-cta" data-reveal><?= soon('news', 'View All News ' . icon('arrow'), 'btn btn--line') ?></p>
     </div>
   </section>
 
@@ -207,9 +205,9 @@ $pagePath  = 'about.php';
         <p class="lead" data-reveal style="--i:2">We'd love to hear from you — riders, partners, investors, or media.</p>
       </div>
       <div class="res" data-stagger="pop">
-        <a href="#" class="res__card"><?= icon('book') ?><span>User Manual</span><?= icon('arrow-ne') ?></a>
-        <a href="#" class="res__card"><?= icon('map') ?><span>Charging Map</span><?= icon('arrow-ne') ?></a>
-        <a href="#" class="res__card"><?= icon('shield') ?><span>Safety Guidelines</span><?= icon('arrow-ne') ?></a>
+        <?= soon('user_manual', icon('book') . '<span>User Manual</span>' . icon('arrow-ne'), 'res__card') ?>
+        <?= soon('charging_map', icon('map') . '<span>Charging Map</span>' . icon('arrow-ne'), 'res__card') ?>
+        <?= soon('safety_guidelines', icon('shield') . '<span>Safety Guidelines</span>' . icon('arrow-ne'), 'res__card') ?>
       </div>
       <div class="connect" data-stagger>
         <div class="connect__col">
@@ -229,12 +227,12 @@ $pagePath  = 'about.php';
           <div class="socials">
             <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><?= icon('facebook') ?></a>
             <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><?= icon('instagram') ?></a>
-            <a href="#" aria-label="YouTube"><?= icon('youtube') ?></a>
+            <?= social('youtube', 'youtube', 'YouTube') ?>
             <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><?= icon('linkedin') ?></a>
           </div>
           <h3 class="h3" style="margin-top:30px">Quick Message</h3>
           <form action="form-handler.php" method="POST" data-form="contact" class="fields quick" id="message">
-            <input type="hidden" name="form_type" value="contact">
+            <input type="hidden" name="form_type" value="contact"><?= form_guard() ?>
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in.</p>
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please try again.</p>
             <div class="field"><label class="sr-only" for="qmName">Your name</label><input type="text" id="qmName" name="name" placeholder="Your name" autocomplete="name" required></div>

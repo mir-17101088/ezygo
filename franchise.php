@@ -158,7 +158,7 @@ model_block('fofo', true, 'FOFO Model', 'Franchise Owned,<br><em>Franchise Opera
       </div>
       <div class="form-card" data-reveal="pop">
         <form action="form-handler.php" method="POST" data-form="franchise" class="fields">
-          <input type="hidden" name="form_type" value="franchise">
+          <input type="hidden" name="form_type" value="franchise"><?= form_guard() ?>
           <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your application is in. Our partnership team will reach out within 24 hours.</p>
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your application didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">

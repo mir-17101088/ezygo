@@ -18,7 +18,7 @@
       </div>
       <div class="form-card" data-reveal="pop">
         <form action="form-handler.php" method="POST" data-form="evs_contact" class="fields">
-          <input type="hidden" name="form_type" value="evs_contact">
+          <input type="hidden" name="form_type" value="evs_contact"><?= form_guard() ?>
           <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in and our team will get back to you.</p>
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">

@@ -63,7 +63,7 @@ $pagePath  = 'contact.php';
           <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><?= icon('facebook') ?></a>
           <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><?= icon('instagram') ?></a>
           <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><?= icon('linkedin') ?></a>
-          <a href="#" aria-label="YouTube"><?= icon('youtube') ?></a>
+          <?= social('youtube', 'youtube', 'YouTube') ?>
           <a href="https://wa.me/8801828721222" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><?= icon('whatsapp') ?></a>
         </div>
       </div>
@@ -79,7 +79,7 @@ $pagePath  = 'contact.php';
 
         <div role="tabpanel" tabindex="0" id="ct-panel-general" aria-labelledby="tab-general">
           <form action="form-handler.php" method="POST" data-form="contact" class="fields">
-            <input type="hidden" name="form_type" value="contact">
+            <input type="hidden" name="form_type" value="contact"><?= form_guard() ?>
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in. We reply within 24 hours on business days.</p>
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
             <div class="row2">
@@ -95,7 +95,7 @@ $pagePath  = 'contact.php';
 
         <div role="tabpanel" tabindex="0" id="ct-panel-support" aria-labelledby="tab-support" hidden>
           <form action="form-handler.php" method="POST" data-form="support" class="fields">
-            <input type="hidden" name="form_type" value="support">
+            <input type="hidden" name="form_type" value="support"><?= form_guard() ?>
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your support request is in. For emergencies call 01828-721222.</p>
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your request didn't go through. Please call 01828-721222.</p>
             <div class="row2">
@@ -111,7 +111,7 @@ $pagePath  = 'contact.php';
 
         <div role="tabpanel" tabindex="0" id="ct-panel-partner" aria-labelledby="tab-partner" hidden>
           <form action="form-handler.php" method="POST" data-form="partnership" class="fields">
-            <input type="hidden" name="form_type" value="partnership">
+            <input type="hidden" name="form_type" value="partnership"><?= form_guard() ?>
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your enquiry is in. Our partnerships team will be in touch.</p>
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your enquiry didn't go through. Please email partners@ezygobd.com.</p>
             <div class="row2">

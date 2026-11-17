@@ -263,8 +263,8 @@ foreach ($products as $i => $p): ?>
           <h2 class="d2">Navigate the Future<br>with Our Fleet App</h2>
           <p class="lead">Download EzygoBD and start riding or managing your fleet today. Available on Android and iOS — completely free.</p>
           <div class="stores">
-            <a href="#" class="store"><?= icon('gplay') ?><span><small>Get it on</small><b>Google Play</b></span></a>
-            <a href="#" class="store"><?= icon('apple') ?><span><small>Download on the</small><b>App Store</b></span></a>
+            <?= soon('google_play', icon('gplay') . '<span><small>Get it on</small><b>Google Play</b></span>', 'store') ?>
+            <?= soon('app_store', icon('apple') . '<span><small>Download on the</small><b>App Store</b></span>', 'store') ?>
           </div>
         </div>
         <div class="app__qr">

@@ -49,8 +49,7 @@ $team = [
           <div class="person__pic">
             <?= team_pic($m[0], $m[3]) ?>
             <div class="person__links">
-              <a href="#" aria-label="LinkedIn"><?= icon('linkedin') ?></a>
-              <a href="#" aria-label="Email"><?= icon('mail') ?></a>
+              <?= social('team_' . $m[0] . '_linkedin', 'linkedin', 'LinkedIn') . social('team_' . $m[0] . '_email', 'mail', 'Email') ?>
             </div>
           </div>
           <div class="person__body">

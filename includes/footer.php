@@ -9,7 +9,7 @@
             <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><?= icon('facebook') ?></a>
             <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><?= icon('instagram') ?></a>
             <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><?= icon('linkedin') ?></a>
-            <a href="#" aria-label="YouTube" rel="noopener noreferrer"><?= icon('youtube') ?></a>
+            <?= social('youtube', 'youtube', 'YouTube') ?>
           </div>
         </div>
         <nav class="foot__col" aria-label="Riders">
@@ -36,7 +36,7 @@
             <li><a href="about.php">Our Story</a></li>
             <li><a href="contact.php">Contact Us</a></li>
             <li><a href="join.php">Join Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="privacy.php">Privacy Policy</a></li>
           </ul>
         </nav>
       </div>

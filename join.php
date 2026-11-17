@@ -112,7 +112,7 @@ $pagePath  = 'join.php';
       </div>
       <div class="form-card" data-reveal="pop">
         <form action="form-handler.php" method="POST" data-form="join" class="fields">
-          <input type="hidden" name="form_type" value="join">
+          <input type="hidden" name="form_type" value="join"><?= form_guard() ?>
           <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your application is in. Our team will get back to you within 48 hours.</p>
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your application didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="field"><label for="jfType">I'm interested in <span>*</span></label>

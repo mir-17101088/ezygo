@@ -141,3 +141,33 @@ function hero_video(string $class = 'hero__video'): string {
 function num(string $value): string {
     return '<span class="countup" data-count="' . htmlspecialchars($value) . '">' . htmlspecialchars($value) . '</span>';
 }
+
+/* Optional links from includes/config.php ('links'). */
+function site_link(string $key): string {
+    static $links = null;
+    if ($links === null) { $c = require __DIR__ . '/config.php'; $links = $c['links'] ?? []; }
+    return trim((string) ($links[$key] ?? ''));
+}
+/* Icon-only social link: hidden until a real address is set. */
+function social(string $key, string $ic, string $label): string {
+    $u = site_link($key);
+    if ($u === '') return '';
+    $ext = preg_match('#^https?://#', $u);
+    return '<a href="' . htmlspecialchars($u) . '" aria-label="' . htmlspecialchars($label) . '"' . ($ext ? ' target="_blank" rel="noopener noreferrer"' : '') . '>' . icon($ic) . '</a>';
+}
+/* Text link or card: a real link when set, otherwise a "Coming soon" label (no dead click). */
+function soon(string $key, string $inner, string $class): string {
+    $u = site_link($key);
+    if ($u !== '') {
+        $ext = preg_match('#^https?://#', $u);
+        return '<a href="' . htmlspecialchars($u) . '" class="' . $class . '"' . ($ext ? ' target="_blank" rel="noopener noreferrer"' : '') . '>' . $inner . '</a>';
+    }
+    return '<span class="' . $class . ' is-soon" aria-disabled="true">' . $inner . '<small class="soon">Coming soon</small></span>';
+}
+
+/* Spam guard for every form: a hidden honeypot field and the time the page was served. */
+function form_guard(): string {
+    return '<div class="hp" aria-hidden="true"><label for="hp-' . ($GLOBALS['__hp'] = ($GLOBALS['__hp'] ?? 0) + 1) . '">Leave this empty</label>'
+        . '<input type="text" id="hp-' . $GLOBALS['__hp'] . '" name="website" tabindex="-1" autocomplete="off"></div>'
+        . '<input type="hidden" name="_t" value="' . time() . '">';
+}
