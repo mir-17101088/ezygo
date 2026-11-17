@@ -55,9 +55,9 @@ $team = [
           </div>
           <div class="person__body">
             <p class="person__dept"><?= icon('briefcase') ?> <?= htmlspecialchars($m[4]) ?></p>
+            <p class="person__bio"><?= htmlspecialchars($m[5]) ?></p>
             <h3 class="d3"><?= $m[1] ?></h3>
             <p class="person__role"><?= htmlspecialchars($m[2]) ?></p>
-            <p class="person__bio"><?= htmlspecialchars($m[5]) ?></p>
 <?php if ($m[6]): ?>
             <ul class="tags">
 <?php foreach ($m[6] as $t): ?>

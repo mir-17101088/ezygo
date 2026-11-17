@@ -77,7 +77,7 @@ $pagePath  = 'contact.php';
           <button type="button" role="tab" id="tab-partner" aria-controls="ct-panel-partner" aria-selected="false" tabindex="-1">Partnership</button>
         </div>
 
-        <div role="tabpanel" id="ct-panel-general" aria-labelledby="tab-general">
+        <div role="tabpanel" tabindex="0" id="ct-panel-general" aria-labelledby="tab-general">
           <form action="form-handler.php" method="POST" data-form="contact" class="fields">
             <input type="hidden" name="form_type" value="contact">
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in. We reply within 24 hours on business days.</p>
@@ -93,7 +93,7 @@ $pagePath  = 'contact.php';
           </form>
         </div>
 
-        <div role="tabpanel" id="ct-panel-support" aria-labelledby="tab-support" hidden>
+        <div role="tabpanel" tabindex="0" id="ct-panel-support" aria-labelledby="tab-support" hidden>
           <form action="form-handler.php" method="POST" data-form="support" class="fields">
             <input type="hidden" name="form_type" value="support">
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your support request is in. For emergencies call 01828-721222.</p>
@@ -109,7 +109,7 @@ $pagePath  = 'contact.php';
           </form>
         </div>
 
-        <div role="tabpanel" id="ct-panel-partner" aria-labelledby="tab-partner" hidden>
+        <div role="tabpanel" tabindex="0" id="ct-panel-partner" aria-labelledby="tab-partner" hidden>
           <form action="form-handler.php" method="POST" data-form="partnership" class="fields">
             <input type="hidden" name="form_type" value="partnership">
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your enquiry is in. Our partnerships team will be in touch.</p>

@@ -34,7 +34,7 @@ function back_url(string $status): string {
         }
     }
     $form   = preg_replace('/[^a-z_]/', '', $_POST['form_type'] ?? '');
-    $anchor = ['rent_ev' => '#rent-ev', 'evs_contact' => '#contact', 'franchise' => '#fr-contact', 'advertising' => '#ad-contact', 'join' => '#join-form', 'support' => '#message', 'partnership' => '#message'][$form] ?? '';
+    $anchor = ['rent_ev' => '#rent-ev', 'contact' => '#message', 'evs_contact' => '#contact', 'franchise' => '#fr-contact', 'advertising' => '#ad-contact', 'join' => '#join-form', 'support' => '#message', 'partnership' => '#message'][$form] ?? '';
     return $path . (strpos($path, '?') !== false ? '&' : '?') . 'status=' . $status . ($form ? '&form=' . $form : '') . $anchor;
 }
 
@@ -49,9 +49,10 @@ switch ($formType) {
         $phone   = clean($_POST['phone']   ?? '');
         $email   = clean($_POST['email']   ?? '');
         $type    = clean($_POST['inquiry_type'] ?? '');
+        $subj    = clean($_POST['subject'] ?? '');
         $message = clean($_POST['message'] ?? '');
         $subject = "New Contact Message from $name";
-        $body    = "Name:    $name\nPhone:   $phone\nEmail:   $email\nI am a:  $type\n\nMessage:\n$message";
+        $body    = "Name:    $name\nPhone:   $phone\nEmail:   $email\nI am a:  $type\nSubject: $subj\n\nMessage:\n$message";
         break;
 
     case 'driver':
@@ -96,10 +97,12 @@ switch ($formType) {
 
     case 'evs_contact':
         $name    = clean($_POST['name']    ?? '');
+        $phone   = clean($_POST['phone']   ?? '');
         $email   = clean($_POST['email']   ?? '');
+        $type    = clean($_POST['inquiry_type'] ?? '');
         $message = clean($_POST['message'] ?? '');
-        $subject = "EV Page Contact from $name";
-        $body    = "Name:    $name\nEmail:   $email\n\nMessage:\n$message";
+        $subject = "Website Contact from $name";
+        $body    = "Name:    $name\nPhone:   $phone\nEmail:   $email\nI am a:  $type\n\nMessage:\n$message";
         break;
 
     case 'support':

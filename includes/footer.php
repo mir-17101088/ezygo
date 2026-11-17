@@ -27,7 +27,7 @@
             <li><a href="services.php">Delivery Fleet</a></li>
             <li><a href="join.php#franchise">Franchise</a></li>
             <li><a href="join.php#advertising">Advertising</a></li>
-            <li><a href="index.php">EzyFleet</a></li>
+            <li><a href="evs.php#ezyfleet">EzyFleet</a></li>
           </ul>
         </nav>
         <nav class="foot__col" aria-label="Company">
@@ -52,7 +52,7 @@
 
   <!-- WhatsApp: floating button on larger screens, bottom bar on phones -->
   <a href="https://wa.me/8801828721222" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><?= icon('whatsapp') ?></a>
-  <div class="dock" aria-label="Quick actions">
+  <div class="dock" role="group" aria-label="Quick actions">
     <a href="index.php#rent-ev" class="btn btn--lime">Book Now</a>
     <a href="https://wa.me/8801828721222" class="btn btn--glass" target="_blank" rel="noopener noreferrer"><?= icon('whatsapp') ?> WhatsApp</a>
   </div>

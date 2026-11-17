@@ -187,7 +187,6 @@ $pagePath  = 'about.php';
           <p class="kick" data-reveal>Big Creators Feature Our Founder</p>
           <h2 class="d2" data-reveal style="--i:1">In the News</h2>
         </div>
-        <p data-reveal style="--i:2"><a href="#" class="link-go">View All News <?= icon('arrow') ?></a></p>
       </div>
       <div class="news" data-stagger="pop">
         <article class="news__card"><div class="news__thumb"><?= icon('youtube') ?><span class="news__play"><?= icon('play') ?></span></div><p>EzygoBD Expands to Chittagong</p></article>
@@ -195,6 +194,7 @@ $pagePath  = 'about.php';
         <article class="news__card"><div class="news__thumb"><?= icon('bolt') ?><span class="news__play"><?= icon('play') ?></span></div><p>Battery Swap Network Launch</p></article>
         <article class="news__card"><div class="news__thumb"><?= icon('user') ?><span class="news__play"><?= icon('play') ?></span></div><p>Women in EV Mobility Feature</p></article>
       </div>
+      <p class="center-cta" data-reveal><a href="#" class="btn btn--line">View All News <?= icon('arrow') ?></a></p>
     </div>
   </section>
 
@@ -233,7 +233,7 @@ $pagePath  = 'about.php';
             <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><?= icon('linkedin') ?></a>
           </div>
           <h3 class="h3" style="margin-top:30px">Quick Message</h3>
-          <form action="form-handler.php" method="POST" data-form="contact" class="fields quick">
+          <form action="form-handler.php" method="POST" data-form="contact" class="fields quick" id="message">
             <input type="hidden" name="form_type" value="contact">
             <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in.</p>
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please try again.</p>

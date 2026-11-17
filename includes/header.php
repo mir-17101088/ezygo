@@ -53,7 +53,7 @@ $megaOn = fn($p) => $currentPage === $p ? ' class="is-on" aria-current="page"' :
 
       <div class="mega__cols">
         <div class="mega__col">
-          <h3>Home</h3>
+          <h2>Home</h2>
           <ul>
             <li><a href="index.php"<?= $megaOn('index') ?>>Home</a></li>
             <li><a href="index.php#rent-ev">Rent an EV</a></li>
@@ -62,7 +62,7 @@ $megaOn = fn($p) => $currentPage === $p ? ' class="is-on" aria-current="page"' :
           </ul>
         </div>
         <div class="mega__col">
-          <h3>Our Story</h3>
+          <h2>Our Story</h2>
           <ul>
             <li><a href="about.php"<?= $megaOn('about') ?>>About Us</a></li>
             <li><a href="about.php#certificates">Certificates</a></li>
@@ -70,13 +70,13 @@ $megaOn = fn($p) => $currentPage === $p ? ' class="is-on" aria-current="page"' :
           </ul>
         </div>
         <div class="mega__col">
-          <h3 class="mega__ghost">Team</h3>
+          <h2 class="mega__ghost">Team</h2>
           <ul>
             <li><a href="team.php"<?= $megaOn('team') ?>>Team</a></li>
           </ul>
         </div>
         <div class="mega__col">
-          <h3>Services</h3>
+          <h2>Services</h2>
           <ul>
             <li><a href="services.php"<?= $megaOn('services') ?>>EV Rental Plans</a></li>
             <li><a href="services.php#delivery">Delivery Fleet</a></li>
@@ -85,13 +85,13 @@ $megaOn = fn($p) => $currentPage === $p ? ' class="is-on" aria-current="page"' :
           </ul>
         </div>
         <div class="mega__col">
-          <h3>Contact Us</h3>
+          <h2>Contact Us</h2>
           <ul>
             <li><a href="contact.php"<?= $megaOn('contact') ?>>Contact Us</a></li>
           </ul>
         </div>
         <div class="mega__col">
-          <h3>Join Us</h3>
+          <h2>Join Us</h2>
           <ul>
             <li><a href="join.php"<?= $megaOn('join') ?>>Join Us</a></li>
             <li><a href="join.php#franchise">Franchise (FOCO)</a></li>

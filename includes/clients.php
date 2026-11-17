@@ -22,4 +22,7 @@ $chips = function ($hidden) use ($clients) {
     <div class="marquee" data-reveal>
       <div class="marquee__track"><?= $chips(false) . $chips(true) ?></div>
     </div>
+    <div class="wrap">
+      <p class="trustline" data-reveal><span><?= icon('cert') ?> Trade License: TRAD/DSCC/037731/2025</span><span><?= icon('pin') ?> Head office: Plot#34, 7th Floor, Sonargaon Janapath Rd, Dhaka</span><span><?= icon('shield') ?> Third-party insurance on every rental plan</span></p>
+    </div>
   </section>

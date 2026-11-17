@@ -1,5 +1,6 @@
 /* EzygoBD v3 — dependency-free, ES5-safe for old Android Chrome. */
 (function () {
+  window.ezygoReady = true;
   var root = document.documentElement;
   var doc = document;
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -124,13 +125,14 @@
     if (!('IntersectionObserver' in window)) { v.play && v.play().catch(function () {}); return; }
     new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
+        v._inView = en.isIntersecting;
         if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
         else v.pause();
       });
     }, { threshold: 0.05 }).observe(v);
   });
   doc.addEventListener('visibilitychange', function () {
-    $$('video[data-autoplay]').forEach(function (v) { if (doc.hidden) v.pause(); });
+    $$('video[data-autoplay]').forEach(function (v) { if (doc.hidden) v.pause(); else if (v._inView && !reduce && !saveData) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } });
   });
 
   /* ---------- Gentle tilt on bike cards (mouse only) ---------- */
@@ -151,18 +153,6 @@
     }, true);
   });
 
-  /* ---------- Tabs that set a hidden field (contact / join) ---------- */
-  $$('[data-tabs]').forEach(function (tabs) {
-    var input = doc.getElementById(tabs.getAttribute('data-tabs'));
-    $$('button', tabs).forEach(function (b) {
-      b.addEventListener('click', function () {
-        $$('button', tabs).forEach(function (x) { x.setAttribute('aria-selected', 'false'); });
-        b.setAttribute('aria-selected', 'true');
-        if (input) input.value = b.getAttribute('data-value');
-      });
-    });
-  });
-
   /* ---------- Tabs that switch form panels (contact) ---------- */
   $$('[data-panels]').forEach(function (list) {
     var tabs = $$('[role="tab"]', list);
@@ -176,8 +166,11 @@
     tabs.forEach(function (t, i) {
       t.addEventListener('click', function () { select(t); });
       t.addEventListener('keydown', function (e) {
-        var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-        if (k) { e.preventDefault(); var n = tabs[(i + k + tabs.length) % tabs.length]; select(n); n.focus(); }
+        var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0, n = null;
+        if (k) n = tabs[(i + k + tabs.length) % tabs.length];
+        if (e.key === 'Home') n = tabs[0];
+        if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n); n.focus(); }
       });
     });
     var m = location.search.match(/form=(support|partnership)/);
@@ -193,9 +186,10 @@
   }
 
   /* ---------- Form result after the server redirect (?status=success&form=rent_ev) ---------- */
-  var q = location.search.replace(/^\?/, '').split('&').reduce(function (o, kv) { var p = kv.split('='); if (p[0]) o[decodeURIComponent(p[0])] = decodeURIComponent(p[1] || ''); return o; }, {});
+  var q = location.search.replace(/^\?/, '').split('&').reduce(function (o, kv) { var p = kv.split('='); try { if (p[0]) o[decodeURIComponent(p[0])] = decodeURIComponent(p[1] || ''); } catch (e) {} return o; }, {});
+  if (!/^[a-z_]+$/.test(q.form || '')) q.form = '';
   if (q.status) {
-    var form = doc.querySelector('form[data-form="' + q.form + '"]') || doc.querySelector('form[data-form]');
+    var form = (q.form && doc.querySelector('form[data-form="' + q.form + '"]')) || doc.querySelector('form[data-form]');
     var n = form && form.querySelector('[data-notice="' + (q.status === 'success' ? 'success' : 'error') + '"]');
     if (n) { n.hidden = false; setTimeout(function () { n.scrollIntoView({ block: 'center' }); }, 60); }
     if (history.replaceState) history.replaceState(null, '', location.pathname + location.hash);

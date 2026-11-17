@@ -10,7 +10,7 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.ezygobd.com%{REQUEST_URI} [L,R=301]
 
 # Block private folders: form submissions, git data, editor settings
-RewriteRule ^(submissions|ezy|\.git|\.vscode|Ecocyclec-main|tools|preview|_mock)(/|$) - [F,L]
+RewriteRule ^(submissions|ezy|includes|\.git|\.vscode|Ecocyclec-main|tools|preview|_mock)(/|$) - [F,L]
 
 # Block backups, archives, logs, docs and dotfiles (except .well-known for SSL)
 <FilesMatch "\.(bak|old|orig|zip|tar|gz|sql|log|md|ini|env|json)$">

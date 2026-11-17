@@ -32,18 +32,16 @@ $pagePath  = '';
           <p><strong>120+</strong> active riders across Bangladesh</p>
         </div>
         <ul class="facts" data-reveal style="--i:5" aria-label="At a glance">
-          <li><b>299 BDT</b>daily rent, EM1</li>
+          <li><b>Tk 299/day</b>daily rent, EM1</li>
           <li><b>Fully insured</b>every rental plan</li>
           <li><b>24/7</b>rider support</li>
           <li><b>2 hours</b>booking confirmation</li>
         </ul>
       </div>
-      <div class="hero__frame" data-reveal="pop" style="--i:3" aria-hidden="true">
-        <video muted loop playsinline preload="none" poster="assets/video/ezygo-hero-poster.webp" data-autoplay tabindex="-1">
-          <source src="assets/video/ezygo-hero-720.mp4" type="video/mp4">
-        </video>
-        <div class="hero__chip"><?= icon('bolt') ?><div><b>Sparky</b>120km+ / charge · 70km/h</div></div>
-      </div>
+      <a href="#ev-specs" class="hero__frame" data-reveal="pop" style="--i:3">
+        <?= bike_pic('sparky', 'Sparky electric scooter from the EzygoBD fleet', '(min-width: 960px) 380px, 96px', true) ?>
+        <span class="hero__chip"><?= icon('bolt') ?><span><b>Sparky</b>120km+/Charge · 70km/h</span></span>
+      </a>
     </div>
   </section>
 
