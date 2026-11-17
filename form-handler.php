@@ -22,19 +22,19 @@ function clean(string $val): string {
 // ── Redirect only back to a page on this site (blocks open redirects) ──
 function back_url(string $status): string {
     $ref  = $_SERVER['HTTP_REFERER'] ?? '';
-    $host = $_SERVER['HTTP_HOST'] ?? '';
+    $host = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
     $path = 'index.php';
-    if ($ref !== '' && parse_url($ref, PHP_URL_HOST) === $host) {
+    if ($ref !== '' && strtolower((string) parse_url($ref, PHP_URL_HOST)) === $host) {
         $path = parse_url($ref, PHP_URL_PATH) ?: '/';
         $q = parse_url($ref, PHP_URL_QUERY);
         if ($q) {
             parse_str($q, $params);
-            unset($params['status']);
+            unset($params['status'], $params['form']);
             if ($params) { $path .= '?' . http_build_query($params); }
         }
     }
     $form   = preg_replace('/[^a-z_]/', '', $_POST['form_type'] ?? '');
-    $anchor = ['rent_ev' => '#book', 'contact' => '#contact'][$form] ?? '';
+    $anchor = ['rent_ev' => '#book', 'contact' => '#contact', 'franchise' => '#apply', 'advertising' => '#enquire', 'join' => '#apply'][$form] ?? '';
     return $path . (strpos($path, '?') !== false ? '&' : '?') . 'status=' . $status . ($form ? '&form=' . $form : '') . $anchor;
 }
 

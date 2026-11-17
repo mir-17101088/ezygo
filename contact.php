@@ -1,330 +1,118 @@
 <?php
-$pageTitle = "Contact — EzygoBD | Get In Touch";
-$pageDesc  = "Reach out to EzygoBD for rider support, partnership inquiries, franchise questions or media requests. We respond within 24 hours.";
-$pageCss   = 'contact.css';
-$pageJs    = 'contact.js';
+$pageTitle = 'Contact Ezygo';
+$pageDesc  = 'Call or WhatsApp Ezygo on 01828-721222, email hello@ezygobd.com, or visit our Dhaka head office. Rider support is available 24/7.';
+$pagePath  = 'contact.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'includes/head.php'; ?>
-<style>
-  .ct-fade { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
-  .ct-fade.visible { opacity: 1; transform: none; }
-</style>
+<?php include 'includes/v2/head.php'; ?>
 </head>
 <body>
+<?php include 'includes/v2/header.php'; ?>
 
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/mega-menu.php'; ?>
+<main id="main">
 
-  <!-- ============ HERO ============ -->
-  <section class="ct-hero">
-    <div class="ct-hero-bg-dots"></div>
-    <div class="ct-hero-content container">
-      <span class="ct-hero-eyebrow">Get In Touch</span>
-      <h1 class="ct-hero-title">We'd Love to<br><span>Hear From You</span></h1>
-      <p class="ct-hero-sub">Whether you're a rider, a business, an investor, or just curious — our team is here and ready to help.</p>
-    </div>
-    <div class="ct-hero-wave">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,35 C360,75 1080,-5 1440,35 L1440,70 L0,70 Z" fill="#f0faf3"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ============ QUICK INFO CARDS ============ -->
-  <section class="ct-info-strip">
-    <div class="container">
-      <div class="ct-info-grid">
-
-        <div class="ct-info-card ct-fade">
-          <div class="ct-info-icon" style="--ic:#e8f5e9;--ic-fg:#00c853"><i class="fa-solid fa-phone"></i></div>
-          <h4>Phone / WhatsApp</h4>
-          <p><a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a></p>
-          <p style="font-size:.82rem;color:var(--clr-muted);margin-top:4px">Available 9 AM – 9 PM</p>
-        </div>
-
-        <div class="ct-info-card ct-fade">
-          <div class="ct-info-icon" style="--ic:#e3f2fd;--ic-fg:#1976d2"><i class="fa-solid fa-envelope"></i></div>
-          <h4>Email Us</h4>
-          <p><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a></p>
-          <p style="font-size:.82rem;color:var(--clr-muted);margin-top:4px">Reply within 24 hours</p>
-        </div>
-
-        <div class="ct-info-card ct-fade">
-          <div class="ct-info-icon" style="--ic:#fce4ec;--ic-fg:#c2185b"><i class="fa-solid fa-location-dot"></i></div>
-          <h4>Head Office</h4>
-          <p>Plot#34, 7th Floor, Road<br>Sonargaon Janapath Rd, Dhaka</p>
-        </div>
-
-        <div class="ct-info-card ct-fade">
-          <div class="ct-info-icon" style="--ic:#e8eaf6;--ic-fg:#3949ab"><i class="fa-solid fa-building-columns"></i></div>
-          <h4>Corporate Office</h4>
-          <p>6th Floor, Chattogram Software<br>Technology Park, Agrabad, Chittagong</p>
-        </div>
-
-        <div class="ct-info-card ct-fade">
-          <div class="ct-info-icon" style="--ic:#fff8e1;--ic-fg:#f57f17"><i class="fa-solid fa-headset"></i></div>
-          <h4>24/7 Rider Support</h4>
-          <p><a href="mailto:support@ezygobd.com">support@ezygobd.com</a></p>
-          <p style="font-size:.82rem;color:var(--clr-muted);margin-top:4px">Emergency breakdown help</p>
-        </div>
-
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Talk to Ezygo.</h1>
+      <p class="lede">Rider, business, investor or just curious, we'll find the right person to help. Riders on the road can reach support any time, day or night.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="tel:+8801828721222"><?= icon('phone') ?>Call 01828-721222</a>
+        <a class="btn btn-ghost" href="https://wa.me/8801828721222" target="_blank" rel="noopener"><?= icon('whatsapp') ?>WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ MAIN CONTACT SECTION ============ -->
-  <section class="ct-main">
-    <div class="container">
-      <div class="ct-main-grid">
-
-        <!-- Left — details -->
-        <div class="ct-fade">
-          <h2 class="ct-panel-title">Contact Details</h2>
-          <p class="ct-panel-sub">We're a team of passionate people building Bangladesh's cleanest mobility platform. Whatever you need, we'll find the right person to help.</p>
-
-          <ul class="ct-detail-list">
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-building"></i></div>
-              <div class="ct-detail-body">
-                <strong>Head Office</strong>
-                <span>Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</span>
-              </div>
-            </li>
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-building-columns"></i></div>
-              <div class="ct-detail-body">
-                <strong>Corporate Office</strong>
-                <span>6th Floor, Chattogram Software Technology Park, Agrabad, Chittagong</span>
-              </div>
-            </li>
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-phone"></i></div>
-              <div class="ct-detail-body">
-                <strong>Phone / WhatsApp</strong>
-                <a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a>
-              </div>
-            </li>
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="ct-detail-body">
-                <strong>General Enquiries</strong>
-                <a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a>
-              </div>
-            </li>
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-handshake"></i></div>
-              <div class="ct-detail-body">
-                <strong>Partnerships</strong>
-                <a href="mailto:partners@ezygobd.com">partners@ezygobd.com</a>
-              </div>
-            </li>
-            <li class="ct-detail-item">
-              <div class="ct-detail-icon"><i class="fa-solid fa-newspaper"></i></div>
-              <div class="ct-detail-body">
-                <strong>Media & Press</strong>
-                <a href="mailto:press@ezygobd.com">press@ezygobd.com</a>
-              </div>
-            </li>
+  <section class="section" aria-labelledby="where-h">
+    <div class="wrap">
+      <h2 id="where-h" class="visually-hidden">Contact details</h2>
+      <div class="tiles">
+        <div class="tile">
+          <?= icon('phone') ?>
+          <h3>Phone and WhatsApp</h3>
+          <ul class="contact-list" style="margin-top:12px;gap:8px">
+            <li><div><a href="tel:+8801828721222">01828-721222</a></div></li>
+            <li><div><a href="tel:+8801576597666">01576-597666</a></div></li>
           </ul>
-
-          <div class="ct-social-row">
-            <a href="#" class="ct-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="ct-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="ct-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="ct-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="ct-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-
-          <div class="ct-hours">
-            <h4><i class="fa-solid fa-clock" style="color:var(--clr-primary);margin-right:8px"></i>Office Hours</h4>
-            <div class="ct-hours-row"><span>Sunday – Thursday</span><span class="open">9:00 AM – 6:00 PM</span></div>
-            <div class="ct-hours-row"><span>Saturday</span><span class="open">10:00 AM – 2:00 PM</span></div>
-            <div class="ct-hours-row"><span>Friday</span><span class="closed">Closed</span></div>
-            <div class="ct-hours-row"><span>Rider Support</span><span class="open">24 / 7</span></div>
-          </div>
         </div>
-
-        <!-- Right — form -->
-        <div class="ct-fade">
-          <div class="ct-form-wrap">
-            <h3 class="ct-form-title">Send Us a Message</h3>
-            <p class="ct-form-sub">Choose the type of inquiry and fill in the form below.</p>
-
-            <div id="ctFormMsg" class="ct-form-msg"></div>
-
-            <!-- Tabs -->
-            <div class="ct-tabs" role="tablist">
-              <button class="ct-tab active" data-panel="#ct-panel-general" role="tab">General</button>
-              <button class="ct-tab" data-panel="#ct-panel-support" role="tab">Rider Support</button>
-              <button class="ct-tab" data-panel="#ct-panel-partner" role="tab">Partnership</button>
-            </div>
-
-            <!-- Panel: General -->
-            <div class="ct-form-panel active" id="ct-panel-general">
-              <form action="form-handler.php" method="POST">
-                <input type="hidden" name="form_type" value="contact">
-                <div class="ct-form-row">
-                  <div class="ct-form-group">
-                    <label for="ctGenName">Full Name</label>
-                    <input type="text" id="ctGenName" name="name" placeholder="Your name" required />
-                  </div>
-                  <div class="ct-form-group">
-                    <label for="ctGenPhone">Phone</label>
-                    <input type="tel" id="ctGenPhone" name="phone" placeholder="+880 1XXX-XXXXXX" />
-                  </div>
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctGenEmail">Email</label>
-                  <input type="email" id="ctGenEmail" name="email" placeholder="you@example.com" required />
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctGenSubject">Subject</label>
-                  <input type="text" id="ctGenSubject" name="subject" placeholder="What's this about?" required />
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctGenMsg">Message</label>
-                  <textarea id="ctGenMsg" name="message" rows="4" placeholder="How can we help you?" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg ct-submit-btn">
-                  <i class="fa-solid fa-paper-plane"></i> Send Message
-                </button>
-              </form>
-            </div>
-
-            <!-- Panel: Rider Support -->
-            <div class="ct-form-panel" id="ct-panel-support">
-              <form action="form-handler.php" method="POST">
-                <input type="hidden" name="form_type" value="support">
-                <div class="ct-form-row">
-                  <div class="ct-form-group">
-                    <label for="ctSupName">Full Name</label>
-                    <input type="text" id="ctSupName" name="name" placeholder="Your name" required />
-                  </div>
-                  <div class="ct-form-group">
-                    <label for="ctSupPhone">Registered Phone</label>
-                    <input type="tel" id="ctSupPhone" name="phone" placeholder="+880 1XXX-XXXXXX" required />
-                  </div>
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctSupType">Issue Type</label>
-                  <select id="ctSupType" name="issue_type">
-                    <option value="">Select issue</option>
-                    <option value="breakdown">Vehicle Breakdown</option>
-                    <option value="payment">Payment / Billing</option>
-                    <option value="app">App Problem</option>
-                    <option value="battery">Battery / Charging</option>
-                    <option value="account">Account Issue</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctSupMsg">Describe Your Issue</label>
-                  <textarea id="ctSupMsg" name="message" rows="4" placeholder="Please describe what happened..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg ct-submit-btn">
-                  <i class="fa-solid fa-headset"></i> Submit Support Request
-                </button>
-              </form>
-            </div>
-
-            <!-- Panel: Partnership -->
-            <div class="ct-form-panel" id="ct-panel-partner">
-              <form action="form-handler.php" method="POST">
-                <input type="hidden" name="form_type" value="partnership">
-                <div class="ct-form-row">
-                  <div class="ct-form-group">
-                    <label for="ctParName">Full Name</label>
-                    <input type="text" id="ctParName" name="name" placeholder="Your name" required />
-                  </div>
-                  <div class="ct-form-group">
-                    <label for="ctParCompany">Company / Organisation</label>
-                    <input type="text" id="ctParCompany" name="company" placeholder="Company name" required />
-                  </div>
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctParEmail">Business Email</label>
-                  <input type="email" id="ctParEmail" name="email" placeholder="you@company.com" required />
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctParType">Partnership Type</label>
-                  <select id="ctParType" name="partnership_type">
-                    <option value="">Select type</option>
-                    <option value="franchise">Franchise (FOCO / FOFO)</option>
-                    <option value="advertising">EV Advertising</option>
-                    <option value="fleet">Corporate Fleet</option>
-                    <option value="investment">Investment</option>
-                    <option value="media">Media / Press</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div class="ct-form-group">
-                  <label for="ctParMsg">Message</label>
-                  <textarea id="ctParMsg" name="message" rows="4" placeholder="Tell us about your proposal..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg ct-submit-btn">
-                  <i class="fa-solid fa-handshake"></i> Submit Enquiry
-                </button>
-              </form>
-            </div>
-
-          </div>
+        <div class="tile">
+          <?= icon('mail') ?>
+          <h3>Email</h3>
+          <dl class="hours">
+            <dt>General</dt><dd><a class="link" href="mailto:hello@ezygobd.com">hello@ezygobd.com</a></dd>
+            <dt>Rider support</dt><dd><a class="link" href="mailto:support@ezygobd.com">support@ezygobd.com</a></dd>
+            <dt>Partnerships</dt><dd><a class="link" href="mailto:partners@ezygobd.com">partners@ezygobd.com</a></dd>
+            <dt>Press</dt><dd><a class="link" href="mailto:press@ezygobd.com">press@ezygobd.com</a></dd>
+          </dl>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MAP PLACEHOLDER ============ -->
-  <section class="ct-map">
-    <div class="container">
-      <div class="ct-map-inner ct-fade">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <p>Interactive map coming soon — Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ TEASER ============ -->
-  <section class="ct-faq">
-    <div class="container">
-      <div class="section-header ct-fade">
-        <span class="section-eyebrow">Quick Answers</span>
-        <h2 class="section-title">Common Questions</h2>
-        <p class="section-sub">Can't find what you need? Reach out via the form above.</p>
-      </div>
-
-      <div class="ct-faq-grid">
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> What are your support hours?</h4>
-          <p>Rider emergency support is available 24/7 via WhatsApp. Office staff are available Sun–Thu, 9 AM – 6 PM.</p>
+        <div class="tile">
+          <?= icon('clock') ?>
+          <h3>Office hours</h3>
+          <dl class="hours">
+            <dt>Sunday–Thursday</dt><dd>9 am – 6 pm</dd>
+            <dt>Saturday</dt><dd>10 am – 2 pm</dd>
+            <dt>Friday</dt><dd>Closed</dd>
+            <dt>Rider support</dt><dd>24/7</dd>
+          </dl>
         </div>
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> How fast do you respond to emails?</h4>
-          <p>We aim to respond to all email enquiries within 24 hours on business days. Urgent issues via phone are handled immediately.</p>
-        </div>
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> Where do I report a vehicle issue?</h4>
-          <p>Use the "Rider Support" tab in the form above or call our 24/7 helpline at 01828-721222 for immediate assistance.</p>
-        </div>
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> How do I discuss a franchise or investment?</h4>
-          <p>Use the "Partnership" tab in the form above, or visit our <a href="join.php#franchise" style="color:var(--clr-primary)">Franchise page</a> for detailed models and ROI information.</p>
-        </div>
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> Can I visit the office in person?</h4>
-          <p>Yes — our head office is at Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka. Please call ahead to schedule a meeting.</p>
-        </div>
-        <div class="ct-faq-item ct-fade">
-          <h4><i class="fa-solid fa-circle-question"></i> Have a billing or account problem?</h4>
-          <p>Email <a href="mailto:support@ezygobd.com" style="color:var(--clr-primary)">support@ezygobd.com</a> with your registered phone number and a brief description of the issue.</p>
+        <div class="tile">
+          <?= icon('pin') ?>
+          <h3>Offices</h3>
+          <dl class="hours">
+            <dt>Head office</dt><dd>Plot 34, 7th Floor, Sonargaon Janapath Road, Dhaka</dd>
+            <dt>Corporate</dt><dd>6th Floor, Chattogram Software Technology Park, Agrabad, Chattogram</dd>
+          </dl>
+          <p style="font-size:var(--t-small)">Please call before you visit.</p>
         </div>
       </div>
     </div>
   </section>
 
-<?php include 'includes/footer.php'; ?>
+  <section class="section" id="contact" aria-labelledby="msg-h">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="msg-h">Send a message</h2>
+        <p class="sub">We reply to emails and messages within 24 hours on working days. For a breakdown on the road, call us instead.</p>
+      </div>
+      <form class="form" action="form-handler.php" method="post" data-form="contact" novalidate>
+        <input type="hidden" name="form_type" value="contact">
+        <div class="notice ok" role="status" hidden data-notice="success"><?= icon('check') ?><span>Thanks, your message is sent. We'll reply within 24 hours on working days.</span></div>
+        <div class="notice err" role="alert" hidden data-notice="error"><span>Your message didn't go through. Please try again, or call 01828-721222.</span></div>
+        <div class="fields fields-2">
+          <div class="field"><label for="c-name">Full name</label><input id="c-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" required></div>
+          <div class="field"><label for="c-email">Email <span class="opt">(optional)</span></label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field">
+            <label for="c-type">What's it about?</label>
+            <select id="c-type" name="inquiry_type">
+              <option>Renting a bike</option><option>Help with my rental</option><option>Payment or billing</option><option>Delivery or corporate fleet</option><option>Franchise or investment</option><option>Advertising</option><option>Media or press</option><option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="fields" style="margin:16px 0 24px">
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-h">
+    <div class="wrap faq-grid">
+      <h2 id="faq-h">Quick answers</h2>
+      <div class="faq">
+        <details><summary>When can I reach support? <?= icon('chevron') ?></summary><p>Rider emergency support is available 24/7 on WhatsApp. The office is open Sunday to Thursday, 9 am to 6 pm, and Saturday, 10 am to 2 pm.</p></details>
+        <details><summary>How fast do you reply to email? <?= icon('chevron') ?></summary><p>Within 24 hours on working days. Urgent problems are handled straight away by phone.</p></details>
+        <details><summary>My bike has a problem. What do I do? <?= icon('chevron') ?></summary><p>Call our helpline on <a class="link" href="tel:+8801828721222">01828-721222</a> for immediate help.</p></details>
+        <details><summary>How do I discuss a franchise or investment? <?= icon('chevron') ?></summary><p>Choose "Franchise or investment" in the form above, or see the <a class="link" href="franchise.php">franchise models and returns</a>.</p></details>
+        <details><summary>I have a billing or account problem. <?= icon('chevron') ?></summary><p>Email <a class="link" href="mailto:support@ezygobd.com">support@ezygobd.com</a> with your registered phone number and a short description.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<?php include 'includes/v2/footer.php'; ?>
 </body>
 </html>

@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'preview'
 BASE = 'http://localhost:8000/'
 PAGES = ['index', 'about', 'services', 'team', 'contact', 'join', 'evs', 'franchise', 'advertising']
-ASSET_DIRS = ['assets']
-SKIP_ASSETS = {'.zip'}
+# Only what the pages use; source photos and videos stay out of the preview
+ASSET_DIRS = ['assets/css', 'assets/fonts', 'assets/img', 'assets/js']
 
 PREVIEW_HEAD = """
   <meta name="robots" content="noindex, nofollow">
@@ -39,9 +39,9 @@ def to_static(html):
 
 
 def main():
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir()
+    OUT.mkdir(exist_ok=True)
+    for child in OUT.iterdir():  # clear contents (the folder itself may be open in a server)
+        shutil.rmtree(child) if child.is_dir() else child.unlink()
     for p in PAGES:
         try:
             html = fetch(p)
@@ -50,7 +50,7 @@ def main():
         (OUT / f'{p}.html').write_text(to_static(html), encoding='utf-8')
         print('page', p)
     for d in ASSET_DIRS:
-        shutil.copytree(ROOT / d, OUT / d, ignore=lambda _d, names: [n for n in names if Path(n).suffix in SKIP_ASSETS])
+        shutil.copytree(ROOT / d, OUT / d)
     print('done ->', OUT)
 
 

@@ -20,6 +20,14 @@ function icon(string $name, string $label = ''): string {
         'whatsapp'  => '<path d="M4 20l1.3-4A8 8 0 1 1 8.4 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .9c-1-.5-1.7-1.2-2.2-2.2l.9-1-1-2z"/>',
         'facebook'  => '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/>',
         'instagram' => '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/>',
+        'bolt'      => '<path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/>',
+        'chart'     => '<path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/>',
+        'wrench'    => '<path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 0-2-2z" transform="translate(-2 0)"/>',
+        'users'     => '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/>',
+        'leaf'      => '<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/>',
+        'qr'        => '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18v2M18 14h2"/>',
+        'route'     => '<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H16a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h7.5"/>',
+        'building'  => '<path d="M5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M15 10h3a1 1 0 0 1 1 1v10M3 21h18M8.5 8h3M8.5 12h3M8.5 16h3"/>',
         'linkedin'  => '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M11.5 10.5V16"/>',
     ];
     $aria = $label !== '' ? 'role="img" aria-label="' . htmlspecialchars($label) . '"' : 'aria-hidden="true" focusable="false"';
@@ -59,3 +67,20 @@ $BIKES = [
         'price' => 'Tk 299 / day',
     ],
 ];
+
+/* Team portrait (4:5). Widths are what the source photo allows. */
+function team_pic(string $slug, string $alt): string {
+    $w = ['sazzatul' => [400, 444], 'evan' => [400, 800], 'jinia' => [400, 800]][$slug];
+    $set = fn($ext) => implode(', ', array_map(fn($x) => "assets/img/team-$slug-$x.$ext {$x}w", $w));
+    $sizes = '(min-width: 1000px) 30vw, (min-width: 640px) 45vw, 100vw';
+    return '<picture>'
+        . '<source type="image/avif" srcset="' . $set('avif') . '" sizes="' . $sizes . '">'
+        . '<source type="image/webp" srcset="' . $set('webp') . '" sizes="' . $sizes . '">'
+        . '<img src="assets/img/team-' . $slug . '-400.webp" width="400" height="500" alt="' . htmlspecialchars($alt) . '" loading="lazy" decoding="async">'
+        . '</picture>';
+}
+
+/* Contact details used across pages */
+$PHONE = ['01828-721222', '+8801828721222'];
+$PHONE2 = ['01576-597666', '+8801576597666'];
+$ADDRESS = 'Plot 34, 7th Floor, Sonargaon Janapath Road, Dhaka';

@@ -1,380 +1,97 @@
 <?php
-$pageTitle = "Our Story — EzygoBD | Bangladesh's #1 EV Rental Network";
-$pageDesc  = "Learn about EzygoBD's story, mission, leadership, certificates, awards and sustainability impact.";
-$pageCss   = 'about.css';
-$pageJs    = 'about.js';
+$pageTitle = 'About Ezygo — electric mobility for Bangladesh';
+$pageDesc  = 'Ezygo makes clean, affordable electric mobility available to riders, delivery partners and businesses across Bangladesh.';
+$pagePath  = 'about.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'includes/head.php'; ?>
+<?php include 'includes/v2/head.php'; ?>
 </head>
 <body>
+<?php include 'includes/v2/header.php'; ?>
 
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/mega-menu.php'; ?>
+<main id="main">
 
-  <!-- ============ ABOUT HERO ============ -->
-  <section class="about-hero">
-    <video class="about-hero-video" autoplay muted loop playsinline aria-hidden="true">
-      <source src="assets/videos/HUAIHAI Sparky Teaser.mp4" type="video/mp4" />
-    </video>
-    <div class="about-hero-overlay"></div>
-    <div class="about-hero-content container">
-      <p class="about-eyebrow">Our Story</p>
-      <h1>Join Us in Our Mission for<br /><span>Zero Emission</span></h1>
-      <p class="about-hero-sub">Building Bangladesh's cleanest, greenest and most connected EV mobility ecosystem — one ride at a time.</p>
-      <a href="#about-contact" class="btn btn-primary btn-lg about-cta-pill">Contact Us</a>
-    </div>
-    <div class="about-wave-bottom">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,60 C200,100 400,20 600,55 C800,90 1000,10 1200,50 C1320,70 1390,35 1440,45 L1440,90 L0,90 Z" fill="#ffffff"/>
-      </svg>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Clean, affordable rides for every Bangladeshi.</h1>
+      <p class="lede">Ezygo rents electric scooters and e-bikes to riders, delivery partners and businesses. We want every short trip in Bangladesh to be zero-emission.</p>
     </div>
   </section>
 
-  <!-- ============ MISSION / VISION / VALUES ============ -->
-  <section class="about-mvv">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Who We Are</span>
-        <h2>Driving Bangladesh Towards a Greener Tomorrow</h2>
-        <p>EzygoBD is on a mission to make clean, affordable electric mobility accessible to every Bangladeshi.</p>
-      </div>
-      <div class="mvv-grid">
-        <div class="mvv-card au-fade-up">
-          <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Our Mission</h3>
-          <p>Replace fossil-fuel vehicles with affordable, reliable electric alternatives — reducing urban air pollution and creating sustainable livelihoods across Bangladesh.</p>
-        </div>
-        <div class="mvv-card mvv-card--green au-fade-up">
-          <div class="mvv-icon"><i class="fa-solid fa-eye"></i></div>
-          <h3>Our Vision</h3>
-          <p>A Bangladesh where every last-mile journey is zero-emission — powered by locally charged, locally operated electric vehicles and a thriving green economy.</p>
-        </div>
-        <div class="mvv-card au-fade-up">
-          <div class="mvv-icon"><i class="fa-solid fa-star"></i></div>
-          <h3>Our Values</h3>
-          <p>Sustainability, inclusion, and innovation. We believe green mobility should be a right, not a luxury — accessible to riders, delivery partners, and corporations alike.</p>
-        </div>
+  <section class="section" aria-labelledby="why-h">
+    <div class="wrap">
+      <h2 id="why-h" class="head">What we're working towards</h2>
+      <div class="tiles tiles-3">
+        <div class="tile"><?= icon('leaf') ?><h3>Mission</h3><p>Replace fossil-fuel vehicles with affordable, reliable electric ones, cutting air pollution in our cities and creating sustainable jobs.</p></div>
+        <div class="tile"><?= icon('route') ?><h3>Vision</h3><p>A Bangladesh where every last-mile journey is zero-emission, on locally charged, locally operated electric vehicles.</p></div>
+        <div class="tile"><?= icon('users') ?><h3>Values</h3><p>Sustainability, inclusion and innovation. Clean transport should be a right, not a luxury.</p></div>
       </div>
     </div>
   </section>
 
-  <div class="section-wave wave-to-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C360,70 720,0 1080,35 C1260,52 1380,20 1440,35 L1440,70 L0,70 Z" fill="#f0fdf5"/>
-    </svg>
-  </div>
-
-  <!-- ============ FOUNDER / LEADERSHIP ============ -->
-  <section class="about-founder">
-    <div class="container founder-layout">
-      <div class="founder-bio au-fade-up">
-        <span class="tag">Leadership</span>
-        <h2 class="founder-name">Md Sazzatul<br/>Islam</h2>
-        <p class="founder-role">FOUNDER &amp; CEO</p>
-        <p class="founder-desc">A visionary entrepreneur and electrical engineer dedicated to transforming urban transportation in Bangladesh. Md Sazzatul Islam founded Ezygo with a vision to create sustainable mobility solutions through electric vehicle technology.</p>
-        <p class="founder-desc founder-desc--sm">Under his leadership, Ezygo has pioneered 72V lithium-powered solutions for urban mobility, developed sustainable rental frameworks, and been named "Most Impactful Business" at the Renewable Energy Fest. His expertise spans lithium-ion battery technology, EV logistics, and sustainable infrastructure.</p>
-        <ul class="founder-social">
-          <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
-          <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-        </ul>
-      </div>
-      <div class="founder-orbit au-fade-up">
-        <div class="orbit-ring orbit-ring--outer"></div>
-        <div class="orbit-ring orbit-ring--inner"></div>
-        <div class="orbit-center"><i class="fa-solid fa-user-tie"></i></div>
-        <div class="orbit-item orbit-item--1"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
-        <div class="orbit-item orbit-item--2"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
-        <div class="orbit-item orbit-item--3"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
-        <div class="orbit-item orbit-item--4"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
-        <div class="orbit-item orbit-item--5"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
-        <div class="orbit-item orbit-item--6"><div class="orbit-avatar"><i class="fa-solid fa-user"></i></div></div>
+  <section class="section" aria-labelledby="founder-h">
+    <div class="wrap founder">
+      <div class="portrait"><?= team_pic('sazzatul', 'Md Sazzatul Islam, founder and CEO of Ezygo') ?></div>
+      <div class="founder-text">
+        <h2 id="founder-h">Md Sazzatul Islam</h2>
+        <p class="role">Founder and CEO</p>
+        <p>An electrical engineer and entrepreneur who founded Ezygo to make urban transport in Bangladesh sustainable through electric vehicles.</p>
+        <p>Under his leadership Ezygo has pioneered 72V lithium-powered solutions for urban mobility, built sustainable rental frameworks, and was named Most Impactful Business at the Renewable Energy Fest. His expertise covers lithium-ion batteries, EV logistics and sustainable infrastructure.</p>
+        <div class="ctas" style="margin-top:28px"><a class="btn btn-ghost" href="team.php">Meet the team</a></div>
       </div>
     </div>
   </section>
 
-  <div class="section-wave wave-from-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C360,0 720,70 1080,35 C1260,18 1380,52 1440,35 L1440,70 L0,70 Z" fill="#f0fdf5"/>
-    </svg>
-  </div>
-
-  <!-- ============ IMPACT COUNTER (dark) ============ -->
-  <section class="about-impact">
-    <div class="about-impact-overlay"></div>
-    <div class="container about-impact-inner">
-      <p class="impact-eyebrow">Carbon Saved</p>
-      <div class="impact-number-row">
-        <span class="impact-big-num" id="impactNum">0.00</span>
-        <span class="impact-unit"> kg</span>
+  <section class="section" aria-labelledby="clients-h">
+    <div class="wrap clients-head">
+      <div>
+        <h2 id="clients-h">Who we work with</h2>
+        <p class="sub">Delivery platforms, resorts and businesses run electric fleets with Ezygo.</p>
       </div>
-      <p class="impact-sub">CO₂ reduction through EV deliveries &amp; rides across Bangladesh</p>
-      <div class="impact-dots">
-        <span class="idot active"></span>
-        <span class="idot"></span>
-        <span class="idot"></span>
-        <span class="idot"></span>
+      <ul class="clients">
+        <li><img src="assets/img/client-foodpanda.webp" width="48" height="44" alt="foodpanda" loading="lazy"></li>
+        <li><img src="assets/img/client-deraresort.webp" width="105" height="44" alt="Dera Resort &amp; Spa" loading="lazy"></li>
+        <li><img src="assets/img/client-foodi.webp" width="102" height="44" alt="Foodi" loading="lazy"></li>
+        <li><img src="assets/img/client-sapphire.webp" width="44" height="44" alt="White Orchid Sapphire" loading="lazy"></li>
+        <li><img src="assets/img/client-sharedeal.webp" width="131" height="44" alt="ShareDeal" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="credentials" aria-labelledby="cred-h">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="cred-h">Registered and licensed</h2>
+        <p class="sub">The paperwork behind every rental.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile"><?= icon('building') ?><h3>Business registration</h3><p>Registered as Ezygo Electric Ltd. with the Registrar of Joint Stock Companies and Firms (RJSC).</p></div>
+        <div class="tile"><?= icon('doc') ?><h3>Trade licence</h3><p>Licensed for electric vehicle rental and fleet management. Licence TRAD/DSCC/037731/2025.</p></div>
+        <div class="tile"><?= icon('leaf') ?><h3>Environmental compliance</h3><p>Compliant with Department of Environment rules for zero-emission vehicle operations.</p></div>
+        <div class="tile"><?= icon('shield') ?><h3>Vehicle safety</h3><p>Our vehicles meet BRTA safety and registration standards.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PARTNERS ============ -->
-  <section class="about-partners">
-    <div class="container partners-layout">
-      <div class="partners-left au-fade-up">
-        <span class="tag">Our Partners</span>
-        <h2>Our sustainable journey is powered by our partners.</h2>
-        <p>From leading delivery platforms to corporate fleet managers — our growing partner ecosystem is what makes EzygoBD's green mission possible.</p>
-        <div class="partners-stats">
-          <div class="pstat">
-            <span class="pstat-val" data-target="181344">0</span>
-            <span class="pstat-unit">Ton</span>
-            <p>CO₂ Reduced</p>
-          </div>
-          <div class="pstat">
-            <span class="pstat-val" data-target="2563756">0</span>
-            <span class="pstat-unit">km</span>
-            <p>Total Distance</p>
-          </div>
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Ride with us, or build with us.</h2>
+          <p class="sub">Rent a bike, open a franchise hub or join the team.</p>
         </div>
-        <a href="index.php#partner" class="btn btn-outline">Partner With Us</a>
-      </div>
-      <div class="partners-right au-fade-up">
-        <div class="partners-logo-grid">
-          <div class="partner-chip"><i class="fa-solid fa-motorcycle"></i><span>ShohozRide</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-box"></i><span>Pathao Food</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-store"></i><span>Chaldal</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-truck-fast"></i><span>Paperfly</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-building"></i><span>GreenCorp BD</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-wallet"></i><span>bKash</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-leaf"></i><span>EcoFleet</span></div>
-          <div class="partner-chip"><i class="fa-solid fa-solar-panel"></i><span>SolarNet BD</span></div>
+        <div class="ctas">
+          <a class="btn btn-primary" href="index.php#book">Book a bike</a>
+          <a class="btn btn-ghost" href="join.php">Join us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-wave wave-to-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C360,70 720,0 1080,35 C1260,52 1380,20 1440,35 L1440,70 L0,70 Z" fill="#f0fdf5"/>
-    </svg>
-  </div>
+</main>
 
-  <!-- ============ LIFE AT EZYGOBD ============ -->
-  <section class="life-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Our Superstars</span>
-        <h2>Life at EzygoBD</h2>
-        <p>Discover the culture that drives our team — passionate people building a cleaner world, one ride at a time.</p>
-      </div>
-      <div class="life-grid">
-        <div class="life-card life-card--tall au-fade-up" style="--lc:#00c853">
-          <div class="life-card-inner"><i class="fa-solid fa-people-group fa-3x"></i><span>Our Team</span></div>
-        </div>
-        <div class="life-card au-fade-up" style="--lc:#009624">
-          <div class="life-card-inner"><i class="fa-solid fa-handshake fa-3x"></i><span>Community</span></div>
-        </div>
-        <div class="life-card au-fade-up" style="--lc:#00e676">
-          <div class="life-card-inner"><i class="fa-solid fa-lightbulb fa-3x"></i><span>Innovation</span></div>
-        </div>
-        <div class="life-card life-card--wide au-fade-up" style="--lc:#1a202c">
-          <div class="life-card-inner"><i class="fa-solid fa-award fa-3x"></i><span>Recognition &amp; Awards</span></div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2.5rem;">
-        <a href="index.php#partner" class="btn btn-primary">Join Our Team</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-wave wave-from-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C360,0 720,70 1080,35 C1260,18 1380,52 1440,35 L1440,70 L0,70 Z" fill="#f0fdf5"/>
-    </svg>
-  </div>
-
-  <!-- ============ CERTIFICATES ============ -->
-  <section class="about-certificates" id="certificates">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Credentials</span>
-        <h2>Our Certificates</h2>
-        <p>Recognized and certified by leading industry bodies for our commitment to quality, safety and sustainability.</p>
-      </div>
-      <div class="cert-grid">
-        <div class="cert-card au-fade-up">
-          <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-          <h4>Business Registration</h4>
-          <p>Registered under Ezygo Electric Ltd. with the Registrar of Joint Stock Companies & Firms (RJSC), Bangladesh.</p>
-        </div>
-        <div class="cert-card au-fade-up">
-          <div class="cert-icon"><i class="fa-solid fa-file-shield"></i></div>
-          <h4>Trade License</h4>
-          <p>Valid trade license for electric vehicle rental and fleet management operations across Bangladesh.</p>
-        </div>
-        <div class="cert-card au-fade-up">
-          <div class="cert-icon"><i class="fa-solid fa-leaf"></i></div>
-          <h4>Environmental Compliance</h4>
-          <p>Compliant with Bangladesh's Department of Environment regulations for zero-emission vehicle operations.</p>
-        </div>
-        <div class="cert-card au-fade-up">
-          <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4>Vehicle Safety Standards</h4>
-          <p>All vehicles meet BRTA (Bangladesh Road Transport Authority) safety and registration standards.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ AWARDS ============ -->
-  <section class="about-awards" id="awards">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Recognition</span>
-        <h2>Winning Awards</h2>
-        <p>Our work in sustainable mobility has been recognized at national and international platforms.</p>
-      </div>
-      <div class="awards-grid">
-        <div class="award-card au-fade-up">
-          <div class="award-badge"><i class="fa-solid fa-trophy"></i></div>
-          <div class="award-info">
-            <h4>Most Impactful Business</h4>
-            <p class="award-event">Renewable Energy Fest</p>
-            <p class="award-desc">Recognized for pioneering sustainable EV mobility solutions in Bangladesh's transportation sector.</p>
-          </div>
-        </div>
-        <div class="award-card au-fade-up">
-          <div class="award-badge award-badge--silver"><i class="fa-solid fa-award"></i></div>
-          <div class="award-info">
-            <h4>Green Innovation Award</h4>
-            <p class="award-event">2025</p>
-            <p class="award-desc">Honoured for innovative zero-emission fleet technology and sustainable business model.</p>
-          </div>
-        </div>
-        <div class="award-card au-fade-up">
-          <div class="award-badge award-badge--bronze"><i class="fa-solid fa-medal"></i></div>
-          <div class="award-info">
-            <h4>EV Startup Excellence</h4>
-            <p class="award-event">Bangladesh Startup Summit</p>
-            <p class="award-desc">Selected as one of the top emerging EV startups driving clean energy adoption in South Asia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-wave wave-to-green">
-    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,35 C360,70 720,0 1080,35 C1260,52 1380,20 1440,35 L1440,70 L0,70 Z" fill="#f0fdf5"/>
-    </svg>
-  </div>
-
-  <!-- ============ CORPORATE VIDEO ============ -->
-  <section class="corp-video-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">EzygoBD Corporate</span>
-        <h2>EzygoBD Corporate Video</h2>
-      </div>
-      <div class="corp-video-wrapper au-fade-up">
-        <video class="corp-video-player" controls poster="assets/images/hero-poster.jpg">
-          <source src="assets/videos/HUAIHAI Sparky Teaser.mp4" type="video/mp4" />
-        </video>
-        <div class="corp-video-overlay" id="corpVideoOverlay">
-          <button class="corp-play-btn" id="corpPlayBtn" aria-label="Play corporate video">
-            <i class="fa-solid fa-circle-play"></i>
-          </button>
-          <p>EzygoBD Corporate Video — Electric, Zero Emission</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ IN THE NEWS ============ -->
-  <section class="news-reel-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Big Creators Feature Our Founder</span>
-        <h2>In the News</h2>
-      </div>
-      <div class="news-reel-grid">
-        <div class="news-reel-card au-fade-up">
-          <div class="news-reel-thumb"><i class="fa-brands fa-youtube fa-3x"></i><span class="play-badge"><i class="fa-solid fa-play"></i></span></div>
-          <p>EzygoBD Expands to Chittagong</p>
-        </div>
-        <div class="news-reel-card au-fade-up">
-          <div class="news-reel-thumb" style="background:linear-gradient(135deg,#1e3a5f,#2d5a9e)"><i class="fa-solid fa-trophy fa-3x"></i><span class="play-badge"><i class="fa-solid fa-play"></i></span></div>
-          <p>Green Innovation Award 2025</p>
-        </div>
-        <div class="news-reel-card au-fade-up">
-          <div class="news-reel-thumb" style="background:linear-gradient(135deg,#1a3020,#2d5040)"><i class="fa-solid fa-bolt fa-3x"></i><span class="play-badge"><i class="fa-solid fa-play"></i></span></div>
-          <p>Battery Swap Network Launch</p>
-        </div>
-        <div class="news-reel-card au-fade-up">
-          <div class="news-reel-thumb" style="background:linear-gradient(135deg,#2d1b4e,#4a2d8e)"><i class="fa-solid fa-user fa-3x"></i><span class="play-badge"><i class="fa-solid fa-play"></i></span></div>
-          <p>Women in EV Mobility Feature</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="index.php#news" class="btn btn-outline">View All News <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GET IN TOUCH ============ -->
-  <section id="about-contact" class="section contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Connect</span>
-        <h2 class="contact-title">Get In Touch!</h2>
-        <p>We'd love to hear from you — riders, partners, investors, or media.</p>
-      </div>
-      <div class="resource-cards">
-        <a href="#" class="resource-card"><i class="fa-solid fa-book"></i><span>User Manual</span></a>
-        <a href="#" class="resource-card"><i class="fa-solid fa-map"></i><span>Charging Map</span></a>
-        <a href="#" class="resource-card"><i class="fa-solid fa-shield"></i><span>Safety Guidelines</span></a>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-col">
-          <h3>Contact Us</h3>
-          <ul class="contact-list">
-            <li><i class="fa-solid fa-envelope"></i> hello@ezygobd.com</li>
-            <li><i class="fa-solid fa-phone"></i> 01828-721222 / 01576-597666</li>
-            <li><i class="fa-solid fa-location-dot"></i> Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</li>
-          </ul>
-        </div>
-        <div class="contact-col">
-          <h3>Find Us</h3>
-          <div class="map-placeholder">
-            <i class="fa-solid fa-map-location-dot fa-3x"></i>
-            <p>Charging station map coming soon</p>
-          </div>
-        </div>
-        <div class="contact-col">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
-          <h3 style="margin-top:1.5rem">Quick Message</h3>
-          <form class="contact-form" action="form-handler.php" method="POST">
-            <input type="hidden" name="form_type" value="contact">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <textarea name="message" rows="3" placeholder="Your message…"></textarea>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/v2/footer.php'; ?>
 </body>
 </html>

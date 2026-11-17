@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="foot-cols">
-        <nav aria-label="Riders"><h2>Riders</h2><a href="index.php#bikes">Bikes</a><a href="index.php#how">How it works</a><a href="index.php#book">Book a bike</a><a href="evs.php">Our fleet</a></nav>
+        <nav aria-label="Riders"><h2>Riders</h2><a href="evs.php">Bikes and specs</a><a href="index.php#how">How it works</a><a href="index.php#book">Book a bike</a><a href="services.php#riders">Rental plans</a></nav>
         <nav aria-label="Business"><h2>Business</h2><a href="services.php">Delivery and corporate fleets</a><a href="franchise.php">Franchise</a><a href="advertising.php">Advertising</a></nav>
         <nav aria-label="Company"><h2>Company</h2><a href="about.php">About</a><a href="team.php">Team</a><a href="join.php">Join us</a><a href="contact.php">Contact</a></nav>
         <div><h2>Talk to us</h2><a href="tel:+8801828721222">01828-721222</a><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a><p>Plot 34, 7th Floor, Sonargaon Janapath Road, Dhaka</p></div>

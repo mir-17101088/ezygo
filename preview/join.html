@@ -1,718 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#00c853" />
-  <title>Join Us — EzygoBD | Franchise, Partnership &amp; Careers</title>
-  <meta name="description" content="Join EzygoBD as a franchise partner, advertiser, or team member. Build your future with Bangladesh&#039;s #1 EV rental network." />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Join Ezygo — franchise, advertising and careers</title>
+  <meta name="description" content="Open an Ezygo franchise hub, advertise on our electric fleet, or build your career with Ezygo in Bangladesh.">
+  <link rel="canonical" href="https://www.ezygobd.com/join.php">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F3F4F6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)">
 
-  <!-- Favicon (SVG) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2300c853'/><text y='.9em' font-size='72' x='50%' text-anchor='middle' dominant-baseline='auto' font-family='Arial' fill='white'>⚡</text></svg>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:site_name"   content="EzygoBD" />
-  <meta property="og:title"       content="Join Us — EzygoBD | Franchise, Partnership &amp; Careers" />
-  <meta property="og:description" content="Join EzygoBD as a franchise partner, advertiser, or team member. Build your future with Bangladesh&#039;s #1 EV rental network." />
-  <meta property="og:image"       content="https://ezygobd.com/assets/images/og-cover.jpg" />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ezygo">
+  <meta property="og:url" content="https://www.ezygobd.com/join.php">
+  <meta property="og:title" content="Join Ezygo — franchise, advertising and careers">
+  <meta property="og:description" content="Open an Ezygo franchise hub, advertise on our electric fleet, or build your career with Ezygo in Bangladesh.">
+  <meta property="og:image" content="https://www.ezygobd.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Join Ezygo — franchise, advertising and careers">
+  <meta name="twitter:description" content="Open an Ezygo franchise hub, advertise on our electric fleet, or build your career with Ezygo in Bangladesh.">
+  <meta name="twitter:image" content="https://www.ezygobd.com/assets/img/og-cover.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/franchise.css" />
-<style>
-/* ── Join Us Page Styles ─────────────────────────── */
-.join-hero {
-  position: relative;
-  min-height: 55vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: #050d07;
-}
-.join-hero-video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: brightness(.45) saturate(1.2);
-  z-index: 0;
-}
-.join-hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.3) 0%, rgba(0,40,20,.6) 100%);
-  z-index: 1;
-}
-.join-hero-content {
-  position: relative; z-index: 2;
-  text-align: center; color: #fff;
-  padding: 7rem 1rem 4rem;
-}
-.join-hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800; line-height: 1.2;
-  margin-bottom: 1rem;
-}
-.join-hero-content h1 span { color: #69f0ae; }
-.join-hero-content p {
-  font-size: clamp(.95rem, 1.5vw, 1.15rem);
-  max-width: 600px; margin: 0 auto;
-  color: rgba(255,255,255,.85);
-}
-.join-hero-wave {
-  position: absolute; bottom: -1px;
-  left: 0; width: 100%; z-index: 3;
-}
-.join-hero-wave svg { display: block; width: 100%; height: auto; }
-
-/* ── Navigation Tabs ─────────────────────────────── */
-.join-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: -2rem auto 3rem;
-  position: relative;
-  z-index: 4;
-}
-.join-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .75rem 1.5rem;
-  border-radius: 50px;
-  font-size: .9rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #374151;
-  background: #fff;
-  border: 2px solid #e5e7eb;
-  transition: all .3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
-}
-.join-tab:hover,
-.join-tab--active {
-  border-color: #00c853;
-  color: #00c853;
-  background: #f0fdf4;
-}
-.join-tab i { font-size: .85rem; }
-
-/* ── Opportunity Cards ───────────────────────────── */
-.join-section {
-  padding: 4rem 0;
-}
-.join-section:nth-child(even) { background: #f8faf9; }
-.join-opp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.join-opp-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  border: 1px solid #e5e7eb;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.join-opp-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0,200,83,.1);
-}
-.join-opp-icon {
-  width: 50px; height: 50px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.join-opp-icon--green { background: linear-gradient(135deg, #00c853, #00e676); }
-.join-opp-icon--gold  { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
-.join-opp-icon--blue  { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
-.join-opp-icon--purple { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-.join-opp-card h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: .5rem;
-}
-.join-opp-card p {
-  font-size: .88rem;
-  color: #6b7280;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.join-highlight {
-  display: inline-block;
-  font-size: .78rem;
-  font-weight: 600;
-  padding: .3rem .8rem;
-  border-radius: 50px;
-  background: #f0fdf4;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
-}
-
-/* ── Franchise Comparison ────────────────────────── */
-.join-compare {
-  margin-top: 2.5rem;
-}
-.join-compare-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,.06);
-}
-.join-compare-table th,
-.join-compare-table td {
-  padding: .85rem 1.2rem;
-  text-align: left;
-  font-size: .88rem;
-}
-.join-compare-table thead th {
-  background: #00c853;
-  color: #fff;
-  font-weight: 600;
-}
-.join-compare-table tbody tr {
-  background: #fff;
-  border-bottom: 1px solid #f3f4f6;
-}
-.join-compare-table tbody tr:nth-child(even) { background: #f8faf9; }
-.join-compare-table td:first-child { font-weight: 600; color: #374151; }
-
-/* ── Contact Form ────────────────────────────────── */
-.join-form-section {
-  padding: 4rem 0;
-  background: #f0fdf5;
-}
-.join-form-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-.join-form-info h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: 1rem;
-}
-.join-form-info p {
-  font-size: .92rem;
-  color: #6b7280;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-.join-form-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,.06);
-}
-.join-form .jf-group {
-  margin-bottom: 1rem;
-}
-.join-form label {
-  display: block;
-  font-size: .82rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: .35rem;
-}
-.join-form input,
-.join-form select,
-.join-form textarea {
-  width: 100%;
-  padding: .7rem .9rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: .88rem;
-  font-family: inherit;
-  transition: border-color .2s ease;
-}
-.join-form input:focus,
-.join-form select:focus,
-.join-form textarea:focus {
-  outline: none;
-  border-color: #00c853;
-  box-shadow: 0 0 0 3px rgba(0,200,83,.1);
-}
-.jf-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-@media (max-width: 900px) {
-  .join-form-layout { grid-template-columns: 1fr; }
-  .jf-row { grid-template-columns: 1fr; }
-}
-
-/* ── Dark mode ───────────────────────────────────── */
-[data-theme="dark"] .join-section:nth-child(even) { background: #0f172a; }
-[data-theme="dark"] .join-opp-card { background: #1f2937; border-color: #374151; }
-[data-theme="dark"] .join-opp-card h3 { color: #f9fafb; }
-[data-theme="dark"] .join-opp-card p { color: #9ca3af; }
-[data-theme="dark"] .join-tab { background: #1f2937; border-color: #374151; color: #d1d5db; }
-[data-theme="dark"] .join-tab:hover { border-color: #00c853; color: #69f0ae; background: #0d1f0d; }
-[data-theme="dark"] .join-highlight { background: #0d1f0d; color: #86efac; border-color: #1a3a1a; }
-[data-theme="dark"] .join-compare-table tbody tr { background: #1f2937; }
-[data-theme="dark"] .join-compare-table tbody tr:nth-child(even) { background: #1a2332; }
-[data-theme="dark"] .join-compare-table td:first-child { color: #d1d5db; }
-[data-theme="dark"] .join-form-section { background: #111827; }
-[data-theme="dark"] .join-form-info h2 { color: #f9fafb; }
-[data-theme="dark"] .join-form-info p { color: #9ca3af; }
-[data-theme="dark"] .join-form-card { background: #1f2937; }
-[data-theme="dark"] .join-form label { color: #d1d5db; }
-[data-theme="dark"] .join-form input,
-[data-theme="dark"] .join-form select,
-[data-theme="dark"] .join-form textarea { background: #111827; border-color: #374151; color: #f9fafb; }
-
-/* ── Fade animation ──────────────────────────────── */
-.jf-fade { opacity: 0; transform: translateY(25px); transition: opacity .6s ease, transform .6s ease; }
-.jf-fade.visible { opacity: 1; transform: translateY(0); }
-</style>
+  <!-- Set the theme before paint: saved choice, else the device setting -->
+  <script>try{var t=localStorage.getItem('ezygo-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/v2.css?v=2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ezygo",
+    "legalName": "Ezygo Mobility Holdings Limited",
+    "url": "https://www.ezygobd.com/",
+    "logo": "https://www.ezygobd.com/assets/img/logo-480.png",
+    "image": "https://www.ezygobd.com/assets/img/og-cover.jpg",
+    "description": "Electric scooter and e-bike rental in Bangladesh, from Tk 299 a day.",
+    "telephone": "+8801828721222",
+    "email": "hello@ezygobd.com",
+    "priceRange": "Tk 299+ per day",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 34, 7th Floor, Sonargaon Janapath Road",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/198cbcDwWD/",
+      "https://www.instagram.com/rent_ezygo",
+      "https://www.linkedin.com/company/ezygo-mobility-holdings-limited/"
+    ]
+  }
+  </script>
 
   <meta name="robots" content="noindex, nofollow">
   <style>.preview-badge{position:fixed;left:12px;bottom:12px;z-index:9999;background:#16181D;color:#fff;font:600 12px/1 system-ui,sans-serif;padding:9px 12px;border-radius:999px;opacity:.85}
   .preview-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,420px);background:#16181D;color:#fff;font:15px/1.45 system-ui,sans-serif;padding:14px 18px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.25)}</style>
   <script>document.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();var t=document.createElement('div');t.className='preview-toast';t.setAttribute('role','status');t.textContent='This is a design preview, so forms are switched off. Nothing was sent.';document.body.appendChild(t);setTimeout(function(){t.remove()},4500)},true);</script>
-</head>
-<body><div class="preview-badge" aria-hidden="true">Design preview</div>
-
-  <!-- Preloader -->
-  <div class="preloader" id="preloader">
-    <div>
-      <img src="assets/photo/logo.png" alt="" srcset="" style="max-width: 150px; height: auto; padding: 10px;">
-    </div>
-    <!-- <div class="preloader-text">
-      <span class="preloader-letter">E</span>
-      <span class="preloader-letter">Z</span>
-      <span class="preloader-letter">Y</span>
-      <span class="preloader-letter">G</span>
-      <span class="preloader-letter">O</span>
-    </div> -->
-    <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
-    <p class="preloader-tagline">Bangladesh First EV Network</p>
-  </div>
-
-  <header id="header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo" aria-label="EzygoBD Home">
-        <div style = "padding: 10px;"><img src="assets/photo/logo.png" alt="" srcset="" style="max-width: 150px; height: auto;">
-          <span class="logo-tagline">EZYGO MOBILITY HOLDINGS LIMITED</span>
-      </div>
-        <!-- <div class="logo-wordmark">
-          <span class="logo-main">EZYGO</span>
-          <span class="logo-tagline">EZYGO MOBILITY HOLDINGS LIMITED</span>
-        </div> -->
-      </a>
-
-      <div class="nav-actions">
-        <a href="index.html#rent-ev" class="btn-nav-cta">Book Now</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-          <i class="fa-solid fa-sun"></i>
-          <i class="fa-solid fa-moon"></i>
-          <span class="toggle-thumb"></span>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
-  <div class="mega-menu" id="megaMenu" aria-hidden="true">
-  <div class="mega-menu-inner">
-    <div class="mega-top">
-      <a href="index.html" class="mega-logo">
-        <div class="logo-emblem"><i class="fa-solid fa-bolt"></i></div>
-        <div class="logo-wordmark">
-          <span class="logo-main">EZYGO</span>
-          <span class="logo-tagline">Bangladesh First 2W EV Rental Fleet Platform</span>
-        </div>
-      </a>
-      <button class="mega-close" id="megaClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-
-    <div class="mega-body">
-
-      <div class="mega-col">
-        <h3 class="mega-col-title mega-col-title--green">Home</h3>
-        <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="index.html#rent-ev">Rent an EV</a></li>
-          <li><a href="index.html#ev-specs">Vehicle Specs</a></li>
-          <li><a href="index.html#ezyfleet">EzyFleet</a></li>
-        </ul>
-      </div>
-
-      <div class="mega-col">
-        <h3 class="mega-col-title mega-col-title--dark">Our Story</h3>
-        <ul>
-          <li><a href="about.html" class="">About Us</a></li>
-          <li><a href="about.html#certificates">Certificates</a></li>
-          <li><a href="about.html#awards">Winning Awards</a></li>
-        </ul>
-      </div>
-
-      <div class="mega-col">
-        <!-- <h3 class="mega-col-title mega-col-title--blue">Team</h3> -->
-        <ul>
-          <li><a href="team.html" class="">Team</a></li>
-        </ul>
-      </div>
-
-      <div class="mega-col">
-        <h3 class="mega-col-title mega-col-title--orange">Services</h3>
-        <ul>
-          <li><a href="services.html" class="">EV Rental Plans</a></li>
-          <li><a href="services.html#delivery">Delivery Fleet</a></li>
-          <li><a href="services.html#corporate">Corporate Fleet</a></li>
-          <li><a href="services.html#rent-to-own">Rent to Own</a></li>
-        </ul>
-      </div>
-
-      <div class="mega-col">
-        <h3 class="mega-col-title mega-col-title--green">Contact Us</h3>
-        <ul>
-          <li><a href="contact.html" class="">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="mega-col">
-        <h3 class="mega-col-title mega-col-title--orange">Join Us</h3>
-        <ul>
-          <li><a href="join.html" class=" mega-active">Join Us</a></li>
-          <li><a href="join.html#franchise">Franchise (FOCO)</a></li>
-          <li><a href="join.html#franchise">Franchise (FOFO)</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="mega-bottom">
-      <div class="mega-cards">
-        <a href="index.html#rent-ev" class="mega-svc-card">
-          <div class="mega-card-img"><i class="fa-solid fa-motorcycle"></i></div>
-          <span class="mega-svc-label">Rent an EV</span>
-        </a>
-        <a href="services.html" class="mega-svc-card">
-          <div class="mega-card-img"><i class="fa-solid fa-truck-fast"></i></div>
-          <span class="mega-svc-label">Delivery Fleet</span>
-        </a>
-        <a href="join.html#franchise" class="mega-svc-card">
-          <div class="mega-card-img"><i class="fa-solid fa-crown"></i></div>
-          <span class="mega-svc-label">Franchise</span>
-        </a>
-        <a href="contact.html" class="mega-svc-card">
-          <div class="mega-card-img"><i class="fa-solid fa-headset"></i></div>
-          <span class="mega-svc-label">Contact Us</span>
-        </a>
-      </div>
-    </div>
-  </div><!-- /.mega-menu-inner -->
-  </div><!-- /.mega-menu -->
-
-  <!-- ============ HERO ============ -->
-  <section class="join-hero">
-    <video class="join-hero-video" autoplay muted loop playsinline aria-hidden="true">
-      <source src="assets/videos/HUAIHAI Sparky Teaser.mp4" type="video/mp4" />
-    </video>
-    <div class="join-hero-overlay"></div>
-    <div class="join-hero-content container">
-      <h1>Join the <span>Green Revolution</span></h1>
-      <p>Whether you want to invest, partner, or build your career — EzygoBD has an opportunity for you.</p>
-    </div>
-    <div class="join-hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,20 C480,75 960,-15 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ============ QUICK NAV ============ -->
-  <div class="container">
-    <div class="join-tabs">
-      <a href="#franchise" class="join-tab join-tab--active"><i class="fa-solid fa-crown"></i> Franchise</a>
-      <a href="#advertising" class="join-tab"><i class="fa-solid fa-bullhorn"></i> Advertising</a>
-      <a href="#careers" class="join-tab"><i class="fa-solid fa-users"></i> Careers</a>
-      <a href="#join-form" class="join-tab"><i class="fa-solid fa-paper-plane"></i> Apply Now</a>
-    </div>
-  </div>
-
-  <!-- ============ FRANCHISE SECTION ============ -->
-  <section class="join-section" id="franchise">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow jf-fade">Franchise Opportunity</span>
-        <h2 class="section-title jf-fade">Partner With EzygoBD</h2>
-        <p class="section-sub jf-fade">Choose a franchise model that fits your ambition. Build a profitable EV hub with Bangladesh's #1 electric vehicle rental network.</p>
-      </div>
-      <div class="join-opp-grid">
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--green"><i class="fa-solid fa-crown"></i></div>
-          <h3>FOCO — Franchise Owned, Company Operated</h3>
-          <p>You own the hub, we manage everything — fleet operations, maintenance, rider management and support. Passive income with zero operational hassle.</p>
-          <span class="join-highlight"><i class="fa-solid fa-chart-line"></i> 90%* ROI in 3 Years</span>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--gold"><i class="fa-solid fa-handshake"></i></div>
-          <h3>FOFO — Franchise Owned, Franchise Operated</h3>
-          <p>Full ownership and hands-on operation of your EV hub. We provide the fleet, technology platform, training and brand. You run the business.</p>
-          <span class="join-highlight"><i class="fa-solid fa-chart-line"></i> 45-65%* ROI in 3 Years</span>
-        </div>
-      </div>
-
-      <div class="join-compare jf-fade">
-        <table class="join-compare-table">
-          <thead>
-            <tr><th>Feature</th><th>FOCO</th><th>FOFO</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Starting Investment</td><td>৳ 4.5 Lakhs</td><td>৳ 4.5 Lakhs</td></tr>
-            <tr><td>Who Operates?</td><td>EzygoBD</td><td>You</td></tr>
-            <tr><td>Fleet Provided</td><td>10+ Scooters</td><td>10+ Scooters</td></tr>
-            <tr><td>Expected ROI</td><td>Up to 90%*</td><td>45-65%*</td></tr>
-            <tr><td>Maintenance</td><td>EzygoBD handles</td><td>Shared responsibility</td></tr>
-            <tr><td>Support</td><td>24/7 full support</td><td>Training + tech support</td></tr>
-            <tr><td>Best For</td><td>Passive investors</td><td>Hands-on entrepreneurs</td></tr>
-          </tbody>
-        </table>
-        <p style="font-size:.75rem;color:#9ca3af;margin-top:.5rem;">*T&amp;C Apply. ROI projections are estimates based on current operational data.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ADVERTISING PARTNERSHIP ============ -->
-  <section class="join-section" id="advertising">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow jf-fade">Advertising Partnership</span>
-        <h2 class="section-title jf-fade">Advertise on Our Fleet</h2>
-        <p class="section-sub jf-fade">Put your brand on wheels. EzygoBD's fleet covers 64+ districts with 250M+ monthly impressions.</p>
-      </div>
-      <div class="join-opp-grid">
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--blue"><i class="fa-solid fa-motorcycle"></i></div>
-          <h3>Scooter Body Wrap</h3>
-          <p>Full or partial body wrap on our e-scooters. High-visibility branding across city streets and delivery routes.</p>
-          <span class="join-highlight">From ৳ 8,000/month per vehicle</span>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--green"><i class="fa-solid fa-truck-pickup"></i></div>
-          <h3>Rickshaw Panel Board</h3>
-          <p>Large format panel ads on our e-rickshaws. Maximum visibility in busy marketplaces and commercial areas.</p>
-          <span class="join-highlight">From ৳ 12,000/month per vehicle</span>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--purple"><i class="fa-solid fa-mobile-screen"></i></div>
-          <h3>In-App Advertising</h3>
-          <p>Reach 120+ active riders directly through banner ads, push notifications and sponsored content in the EzygoBD app.</p>
-          <span class="join-highlight">From ৳ 5,000/month</span>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--gold"><i class="fa-solid fa-qrcode"></i></div>
-          <h3>QR Code Campaigns</h3>
-          <p>Interactive QR codes placed on vehicles linking to your landing pages, special offers or promotions.</p>
-          <span class="join-highlight">Add-on to any package</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CAREERS ============ -->
-  <section class="join-section" id="careers">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow jf-fade">Careers at EzygoBD</span>
-        <h2 class="section-title jf-fade">Build Your Career With Us</h2>
-        <p class="section-sub jf-fade">Join a passionate team building Bangladesh's cleanest mobility ecosystem. We're always looking for talented people.</p>
-      </div>
-      <div class="join-opp-grid">
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--green"><i class="fa-solid fa-wrench"></i></div>
-          <h3>Operations & Fleet</h3>
-          <p>Fleet managers, hub supervisors, mechanics and logistics coordinators. Keep our EV network running smoothly.</p>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--blue"><i class="fa-solid fa-code"></i></div>
-          <h3>Technology</h3>
-          <p>Software engineers, IoT developers, data analysts and product designers. Build the technology powering our platform.</p>
-        </div>
-        <div class="join-opp-card jf-fade">
-          <div class="join-opp-icon join-opp-icon--purple"><i class="fa-solid fa-bullhorn"></i></div>
-          <h3>Marketing & Sales</h3>
-          <p>Digital marketers, content creators, business development and partnership managers. Grow our brand and partnerships.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ JOIN FORM ============ -->
-  <section class="join-form-section" id="join-form">
-    <div class="container">
-      <div class="join-form-layout">
-        <div class="join-form-info jf-fade">
-          <h2>Ready to Join?</h2>
-          <p>Whether you're interested in a franchise partnership, advertising on our fleet, or joining our team — fill out the form and our team will get back to you within 48 hours.</p>
-          <ul class="ec-detail-list" style="list-style:none;padding:0;">
-            <li style="display:flex;gap:.75rem;margin-bottom:1rem;"><div class="ec-det-icon" style="width:40px;height:40px;border-radius:10px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;color:#00c853;flex-shrink:0;"><i class="fa-solid fa-phone"></i></div><div><strong>Phone / WhatsApp</strong><p style="font-size:.85rem;color:#6b7280;">01828-721222 / 01576-597666</p></div></li>
-            <li style="display:flex;gap:.75rem;margin-bottom:1rem;"><div class="ec-det-icon" style="width:40px;height:40px;border-radius:10px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;color:#00c853;flex-shrink:0;"><i class="fa-solid fa-envelope"></i></div><div><strong>Email</strong><p style="font-size:.85rem;color:#6b7280;">hello@ezygobd.com</p></div></li>
-            <li style="display:flex;gap:.75rem;margin-bottom:1rem;"><div class="ec-det-icon" style="width:40px;height:40px;border-radius:10px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;color:#00c853;flex-shrink:0;"><i class="fa-solid fa-location-dot"></i></div><div><strong>Head Office</strong><p style="font-size:.85rem;color:#6b7280;">Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p></div></li>
-          </ul>
-        </div>
-        <div class="join-form-card jf-fade">
-          <form class="join-form" action="form-handler.html" method="POST">
-            <input type="hidden" name="form_type" value="join">
-            <div class="jf-group">
-              <label for="jfType">I'm interested in</label>
-              <select id="jfType" name="interest_type" required>
-                <option value="">Select one</option>
-                <option value="Franchise (FOCO)">Franchise — FOCO Model</option>
-                <option value="Franchise (FOFO)">Franchise — FOFO Model</option>
-                <option value="Advertising">Advertising Partnership</option>
-                <option value="Career">Career / Job Opportunity</option>
-                <option value="Other">Other Partnership</option>
-              </select>
-            </div>
-            <div class="jf-row">
-              <div class="jf-group">
-                <label for="jfName">Full Name <span style="color:#ef4444">*</span></label>
-                <input type="text" id="jfName" name="name" placeholder="Your full name" required>
-              </div>
-              <div class="jf-group">
-                <label for="jfPhone">Phone Number <span style="color:#ef4444">*</span></label>
-                <input type="tel" id="jfPhone" name="phone" placeholder="01XXXXXXXXX" required>
-              </div>
-            </div>
-            <div class="jf-group">
-              <label for="jfEmail">Email Address <span style="color:#ef4444">*</span></label>
-              <input type="email" id="jfEmail" name="email" placeholder="you@example.com" required>
-            </div>
-            <div class="jf-row">
-              <div class="jf-group">
-                <label for="jfCompany">Company / Organization</label>
-                <input type="text" id="jfCompany" name="company" placeholder="Your company (if applicable)">
-              </div>
-              <div class="jf-group">
-                <label for="jfCity">City</label>
-                <input type="text" id="jfCity" name="city" placeholder="Your city">
-              </div>
-            </div>
-            <div class="jf-group">
-              <label for="jfMsg">Message</label>
-              <textarea id="jfMsg" name="message" rows="4" placeholder="Tell us about your interest…"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;">
-              Submit Application <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-              <!-- <div class="logo-emblem"><i class="fa-solid fa-bolt"></i></div> -->
-            <div class="logo-wordmark">
-              <img src="assets/photo/logo.png" alt="Ezygo Electric Limited Logo" class="logo-image" style="width: 250px; height: auto;">
-              <span class="logo-tagline">Bangladesh First 2W EV Rental Fleet Platform</span>
-            </div>
-          </div>
-          <p>Bangladesh's #1 electric vehicle rental network — building a greener future, one ride at a time.</p>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="www.Instagram.com/rent_ezygo" aria-label="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" aria-label="YouTube" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Riders</h4>
-          <ul>
-            <li><a href="services.html">Daily Rental</a></li>
-            <li><a href="services.html">Monthly Plan</a></li>
-            <li><a href="services.html">E-Rickshaw Plan</a></li>
-            <li><a href="contact.html">Find a Hub</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Partners</h4>
-          <ul>
-            <li><a href="services.html">Delivery Fleet</a></li>
-            <li><a href="join.html#franchise">Franchise</a></li>
-            <li><a href="join.html#advertising">Advertising</a></li>
-            <li><a href="index.html">EzyFleet</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="join.html">Join Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Ezygo Electric Limited. All rights reserved. Serving Bangladesh with clean mobility.</p>
-        <p>Trade License: TRAD/DSCC/037731/2025</p>
-      </div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-  <!-- WhatsApp floating CTA -->
-  <a href="https://wa.me/8801828721222" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/join.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Fade-in animation
-  const fadeEls = document.querySelectorAll('.jf-fade');
-  if (fadeEls.length) {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (!entry.isIntersecting) return;
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        obs.unobserve(entry.target);
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => obs.observe(el));
-  }
-
-  // Smooth scroll for tab links
-  document.querySelectorAll('.join-tab').forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(tab.getAttribute('href'));
-      if (target) {
-        const headerH = document.getElementById('header')?.offsetHeight || 70;
-        window.scrollTo({ top: target.offsetTop - headerH - 20, behavior: 'smooth' });
-      }
-    });
-  });
-});
-</script>
-
-</body>
-</html>
+</head>
+<body><div class="preview-badge" aria-hidden="true">Design preview</div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Ezygo home">
+        <picture><source type="image/webp" srcset="assets/img/logo-240.webp 1x, assets/img/logo-480.webp 2x"><img src="assets/img/logo-240.png" width="120" height="32" alt="Ezygo"></picture>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="evs.html">Bikes</a>
+        <a href="index.html#how">How it works</a>
+        <a href="services.html">For business</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="bar-actions">
+        <button class="icon-btn theme-btn" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+          <span class="when-light"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span><span class="when-dark"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+        </button>
+        <a class="btn btn-primary btn-sm" href="index.html#book">Book a bike</a>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" data-menu-open><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="menu-top">
+        <span class="menu-title">Menu</span>
+        <button class="icon-btn" type="button" aria-label="Close menu" data-menu-close><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <nav aria-label="All pages">
+        <p class="menu-group">Rent</p>
+        <a href="evs.html">Bikes and specs</a>
+        <a href="services.html#riders">Rental plans</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#book">Book a bike</a>
+        <p class="menu-group">Business</p>
+        <a href="services.html">Services</a>
+        <a href="franchise.html">Franchise</a>
+        <a href="advertising.html">Advertising</a>
+        <p class="menu-group">Company</p>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="join.html">Join us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Grow with Ezygo.</h1>
+      <p class="lede">Invest in a hub, put your brand on our fleet, or join the team building Bangladesh's cleanest way to get around.</p>
+      <nav class="jump" aria-label="Ways to join">
+        <a href="#partner">Franchise</a>
+        <a href="#partner">Advertising</a>
+        <a href="#careers">Careers</a>
+        <a href="#apply">Apply</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" id="partner" aria-labelledby="partner-h">
+    <div class="wrap">
+      <h2 id="partner-h" class="head">Partner with us</h2>
+      <div class="tiles">
+        <article class="tile">
+          <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></svg>          <h3>Open a franchise hub</h3>
+          <p>Start from Tk 4.5 lakh with 10 scooters. Let us run the hub (FOCO, up to 90% projected return in 3 years*) or run it yourself (FOFO, 45–65%*).</p>
+          <div class="tile-foot"><a class="btn btn-ghost btn-sm" href="franchise.html">Franchise details</a></div>
+        </article>
+        <article class="tile">
+          <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/></svg>          <h3>Advertise on our fleet</h3>
+          <p>Scooter wraps, e-rickshaw panels, in-app ads and QR campaigns, from Tk 5,000 a month.</p>
+          <div class="tile-foot"><a class="btn btn-ghost btn-sm" href="advertising.html">Advertising details</a></div>
+        </article>
+      </div>
+      <p class="fine">*Terms and conditions apply. Return figures are projections based on current operating data.</p>
+    </div>
+  </section>
+
+  <section class="section" id="careers" aria-labelledby="careers-h">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="careers-h">Careers</h2>
+        <p class="sub">We're always looking for talented people. These are the areas we hire in.</p>
+      </div>
+      <div class="tiles tiles-3">
+        <div class="tile"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 0-2-2z" transform="translate(-2 0)"/></svg><h3>Operations and fleet</h3><p>Fleet managers, hub supervisors, mechanics and logistics coordinators.</p></div>
+        <div class="tile"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg><h3>Technology</h3><p>Software engineers, IoT developers, data analysts and product designers.</p></div>
+        <div class="tile"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/></svg><h3>Marketing and sales</h3><p>Digital marketers, content creators, and business and partnership managers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apply" aria-labelledby="apply-h">
+    <div class="wrap book-grid">
+      <div class="book-intro">
+        <h2 id="apply-h">Apply or ask a question</h2>
+        <p class="lede">Fill in the form and our team will get back to you within 48 hours.</p>
+        <ul class="contact-list">
+          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><span>Phone or WhatsApp</span><a href="tel:+8801828721222">01828-721222</a></div></li>
+          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><span>Email</span><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a></div></li>
+        </ul>
+      </div>
+      <form class="form" action="form-handler.html" method="post" data-form="join" novalidate>
+        <input type="hidden" name="form_type" value="join">
+        <div class="notice ok" role="status" hidden data-notice="success"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Thank you. Our team will get back to you within 48 hours.</span></div>
+        <div class="notice err" role="alert" hidden data-notice="error"><span>Your application didn't go through. Please try again, or call 01828-721222.</span></div>
+        <div class="fields" style="margin-bottom:16px">
+          <div class="field">
+            <label for="j-type">I'm interested in</label>
+            <select id="j-type" name="interest_type" required>
+              <option value="">Select one</option>
+              <option>Franchise: FOCO</option><option>Franchise: FOFO</option><option>Advertising</option><option>A job at Ezygo</option><option>Another partnership</option>
+            </select>
+          </div>
+        </div>
+        <div class="fields fields-2">
+          <div class="field"><label for="j-name">Full name</label><input id="j-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="j-phone">Mobile number</label><input id="j-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" required></div>
+          <div class="field"><label for="j-email">Email</label><input id="j-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="j-city">City <span class="opt">(optional)</span></label><input id="j-city" name="city" autocomplete="address-level2"></div>
+          <div class="field"><label for="j-company">Company <span class="opt">(optional)</span></label><input id="j-company" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="fields" style="margin:16px 0 24px">
+          <div class="field"><label for="j-msg">Message <span class="opt">(optional)</span></label><textarea id="j-msg" name="message"></textarea></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <a class="brand" href="index.html" aria-label="Ezygo home">
+          <picture><source type="image/webp" srcset="assets/img/logo-240.webp 1x, assets/img/logo-480.webp 2x"><img src="assets/img/logo-240.png" width="120" height="32" alt="Ezygo" loading="lazy"></picture>
+        </a>
+        <div class="socials">
+          <a href="https://www.facebook.com/share/198cbcDwWD/" rel="noopener" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ezygo on Facebook"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
+          <a href="https://www.instagram.com/rent_ezygo" rel="noopener" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ezygo on Instagram"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" rel="noopener" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ezygo on LinkedIn"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M11.5 10.5V16"/></svg></a>
+          <a href="https://wa.me/8801828721222" rel="noopener" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Chat with Ezygo on WhatsApp"><path d="M4 20l1.3-4A8 8 0 1 1 8.4 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .9c-1-.5-1.7-1.2-2.2-2.2l.9-1-1-2z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <nav aria-label="Riders"><h2>Riders</h2><a href="evs.html">Bikes and specs</a><a href="index.html#how">How it works</a><a href="index.html#book">Book a bike</a><a href="services.html#riders">Rental plans</a></nav>
+        <nav aria-label="Business"><h2>Business</h2><a href="services.html">Delivery and corporate fleets</a><a href="franchise.html">Franchise</a><a href="advertising.html">Advertising</a></nav>
+        <nav aria-label="Company"><h2>Company</h2><a href="about.html">About</a><a href="team.html">Team</a><a href="join.html">Join us</a><a href="contact.html">Contact</a></nav>
+        <div><h2>Talk to us</h2><a href="tel:+8801828721222">01828-721222</a><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a><p>Plot 34, 7th Floor, Sonargaon Janapath Road, Dhaka</p></div>
+      </div>
+      <div class="foot-legal">
+        <p>&copy; 2026 Ezygo Electric Limited. Trade licence TRAD/DSCC/037731/2025.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js?v=1" defer></script>
+</body>
+</html>

@@ -33,7 +33,7 @@ $canonical = $siteUrl . '/' . ($pagePath ?? '');
   <!-- Set the theme before paint: saved choice, else the device setting -->
   <script>try{var t=localStorage.getItem('ezygo-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/v2.css?v=1">
+  <link rel="stylesheet" href="assets/css/v2.css?v=2">
 <?php if (!empty($preloadImg)): ?>
   <link rel="preload" as="image" type="image/avif" imagesrcset="<?= $preloadImg ?>" imagesizes="<?= $preloadSizes ?? '100vw' ?>">
 <?php endif; ?>

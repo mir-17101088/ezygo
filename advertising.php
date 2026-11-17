@@ -1,288 +1,143 @@
 <?php
-$pageTitle = "Advertising — EzygoBD | Generate Business Leads on Wheels";
-$pageDesc  = "Advertise your brand on EzygoBD's EV fleet. 250 million+ impressions across Bangladesh every month.";
-$pageCss   = 'advertising.css';
-$pageJs    = 'advertising.js';
+$pageTitle = 'Advertise on the Ezygo electric fleet';
+$pageDesc  = 'Put your brand on Ezygo electric scooters and e-rickshaws: body wraps, panel boards, in-app ads and QR campaigns, from Tk 5,000 a month.';
+$pagePath  = 'advertising.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'includes/head.php'; ?>
+<?php include 'includes/v2/head.php'; ?>
 </head>
 <body>
+<?php include 'includes/v2/header.php'; ?>
 
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/mega-menu.php'; ?>
+<main id="main">
 
-  <!-- ============ HERO ============ -->
-  <section class="ad-hero">
-    <video class="ad-hero-video" autoplay muted loop playsinline aria-hidden="true">
-      <source src="assets/videos/HUAIHAI Sparky Teaser.mp4" type="video/mp4" />
-    </video>
-    <div class="ad-hero-overlay"></div>
-
-    <div class="ad-hero-content container">
-      <p class="ad-hero-eyebrow">DRIVE YOUR BRAND FORWARD</p>
-      <h1 class="ad-hero-title">Generate Business Leads<br><span>on Wheels</span></h1>
-      <p class="ad-hero-sub">Put your brand on Bangladesh's largest EV fleet. Reach millions of riders, commuters, and households every single day.</p>
-      <a href="#ad-contact" class="btn btn-primary btn-lg ad-hero-cta">
-        <i class="fa-solid fa-bullhorn"></i> Advertise your Brand
-      </a>
-    </div>
-
-    <div class="ad-hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,85 1080,-5 1440,40 L1440,80 L0,80 Z" fill="#f0faf3"/>
-      </svg>
+  <section class="page-hero">
+    <div class="wrap page-hero-grid">
+      <div>
+        <h1>Your brand, riding through the city all day.</h1>
+        <p class="lede">Our electric scooters and e-rickshaws run 10–14 hours a day through markets, offices and neighbourhoods. Put your brand on them.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#enquire">Get a proposal</a>
+          <a class="btn btn-ghost" href="#formats">See formats</a>
+        </div>
+      </div>
+      <div class="stage"><?= bike_pic('sparky', 'Sparky electric scooter, the kind used for body-wrap ads', '(min-width: 900px) 48vw, 100vw', true) ?></div>
     </div>
   </section>
 
-  <!-- ============ STATS STRIP ============ -->
-  <section class="ad-stats">
-    <div class="container">
-      <div class="ad-stats-grid af-fade">
-        <div class="ad-stat-item">
-          <span class="ad-stat-val" data-target="250">0</span><span class="ad-stat-unit">M+</span>
-          <span class="ad-stat-label">Monthly Impressions</span>
-        </div>
-        <div class="ad-stat-sep"></div>
-        <div class="ad-stat-item">
-          <span class="ad-stat-val" data-target="5">0</span><span class="ad-stat-unit">M+</span>
-          <span class="ad-stat-label">Deliveries Covered</span>
-        </div>
-        <div class="ad-stat-sep"></div>
-        <div class="ad-stat-item">
-          <span class="ad-stat-val" data-target="64">0</span><span class="ad-stat-unit">+</span>
-          <span class="ad-stat-label">Districts Reached</span>
-        </div>
-        <div class="ad-stat-sep"></div>
-        <div class="ad-stat-item">
-          <span class="ad-stat-val" data-target="1200">0</span><span class="ad-stat-unit">+</span>
-          <span class="ad-stat-label">Active EV Fleet</span>
-        </div>
+  <!-- Formats -->
+  <section class="section" id="formats" aria-labelledby="formats-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="formats-h">Ad formats</h2>
+        <p class="sub">Choose one, or combine them. Our team can design the artwork for you at no charge.</p>
       </div>
+      <div class="tiles tiles-4">
+        <article class="tile">
+          <?= icon('bolt') ?>
+          <h3>Scooter body wrap</h3>
+          <p>Full or partial vinyl wraps on our scooters. Each one covers 80–120 km a day.</p>
+          <ul class="checks"><li><?= icon('check') ?>Full or partial wrap</li><li><?= icon('check') ?>GPS route reports</li></ul>
+          <div class="tile-foot"><span class="amount">Tk 8,000<small>a month per vehicle</small></span></div>
+        </article>
+        <article class="tile feature">
+          <?= icon('route') ?>
+          <h3>E-rickshaw panel board</h3>
+          <p>Large panels on the sides of our e-rickshaws, in busy markets and commercial streets. Our most popular format.</p>
+          <ul class="checks"><li><?= icon('check') ?>Front, side and rear panels</li><li><?= icon('check') ?>Reflective prints, visible at night</li></ul>
+          <div class="tile-foot"><span class="amount">Tk 12,000<small>a month per vehicle</small></span></div>
+        </article>
+        <article class="tile">
+          <?= icon('phone') ?>
+          <h3>In-app ads</h3>
+          <p>Banners, push notifications and splash screens in the Ezygo rider and partner apps.</p>
+          <ul class="checks"><li><?= icon('check') ?>Local targeting</li><li><?= icon('check') ?>Click and view reports</li></ul>
+          <div class="tile-foot"><span class="amount">Tk 5,000<small>a month</small></span></div>
+        </article>
+        <article class="tile">
+          <?= icon('qr') ?>
+          <h3>QR code campaigns</h3>
+          <p>QR codes on our vehicles that open your website, offer page or WhatsApp.</p>
+          <ul class="checks"><li><?= icon('check') ?>Scan reports</li><li><?= icon('check') ?>Good for launches and offers</li></ul>
+          <div class="tile-foot"><span class="amount">Add-on<small>to any format</small></span></div>
+        </article>
+      </div>
+      <p class="fine">Prices are starting prices.</p>
     </div>
   </section>
 
-  <!-- ============ AD FORMATS ============ -->
-  <section class="ad-formats">
-    <div class="container">
-      <div class="section-header af-fade">
-        <span class="section-eyebrow">How We Advertise</span>
-        <h2 class="section-title">Advertising Formats</h2>
-        <p class="section-sub">From eye-catching wraps to digital panels — choose the format that works for your brand.</p>
+  <!-- Why -->
+  <section class="section" aria-labelledby="why-h">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="why-h">Why advertise on an electric fleet</h2>
       </div>
-
-      <div class="ad-formats-grid">
-
-        <div class="ad-format-card af-fade">
-          <div class="ad-format-icon" style="--ic:#00c853"><i class="fa-solid fa-motorcycle"></i></div>
-          <h3>Scooter Body Wrap</h3>
-          <p>Full or partial vinyl wraps on our 2W fleet. Your brand travels 80–120 km per day through high-traffic areas.</p>
-          <ul class="ad-format-perks">
-            <li><i class="fa-solid fa-check-circle"></i> 10,000+ impressions/day per vehicle</li>
-            <li><i class="fa-solid fa-check-circle"></i> Full or partial wrap options</li>
-            <li><i class="fa-solid fa-check-circle"></i> GPS-tracked route reports</li>
-          </ul>
-          <span class="ad-format-badge">From ৳ 8,000/mo per vehicle</span>
-        </div>
-
-        <div class="ad-format-card ad-format-card--featured af-fade">
-          <div class="ad-format-tag"><i class="fa-solid fa-star"></i> Most Popular</div>
-          <div class="ad-format-icon" style="--ic:#fbbf24"><i class="fa-solid fa-truck-pickup"></i></div>
-          <h3>Rickshaw Panel Board</h3>
-          <p>Large format panels mounted on e-rickshaw sides. Maximum visibility in busy urban corridors and markets.</p>
-          <ul class="ad-format-perks">
-            <li><i class="fa-solid fa-check-circle"></i> 25,000+ impressions/day</li>
-            <li><i class="fa-solid fa-check-circle"></i> Front, side & rear panel options</li>
-            <li><i class="fa-solid fa-check-circle"></i> Night-visible reflective prints</li>
-          </ul>
-          <span class="ad-format-badge ad-format-badge--gold">From ৳ 12,000/mo per vehicle</span>
-        </div>
-
-        <div class="ad-format-card af-fade">
-          <div class="ad-format-icon" style="--ic:#00b4d8"><i class="fa-solid fa-mobile-screen-button"></i></div>
-          <h3>In-App Advertising</h3>
-          <p>Reach EzygoBD's rider and partner app users directly with banner ads, push notifications, and splash screens.</p>
-          <ul class="ad-format-perks">
-            <li><i class="fa-solid fa-check-circle"></i> Hyper-local targeting</li>
-            <li><i class="fa-solid fa-check-circle"></i> Real-time click & view analytics</li>
-            <li><i class="fa-solid fa-check-circle"></i> A/B testing supported</li>
-          </ul>
-          <span class="ad-format-badge">From ৳ 5,000/mo</span>
-        </div>
-
-        <div class="ad-format-card af-fade">
-          <div class="ad-format-icon" style="--ic:#a855f7"><i class="fa-solid fa-qrcode"></i></div>
-          <h3>QR Code Campaigns</h3>
-          <p>Embed QR codes on vehicles linking to your website, offer page, or WhatsApp — for direct lead generation.</p>
-          <ul class="ad-format-perks">
-            <li><i class="fa-solid fa-check-circle"></i> Trackable scan analytics</li>
-            <li><i class="fa-solid fa-check-circle"></i> Custom landing page support</li>
-            <li><i class="fa-solid fa-check-circle"></i> Ideal for promotions & launches</li>
-          </ul>
-          <span class="ad-format-badge">Add-on to any format</span>
-        </div>
-
+      <div class="tiles">
+        <div class="tile"><?= icon('route') ?><h3>Busy routes</h3><p>Our vehicles work the busiest corridors: markets, business districts and residential areas.</p></div>
+        <div class="tile"><?= icon('clock') ?><h3>All-day exposure</h3><p>Vehicles run 10–14 hours a day, so your brand is seen from morning to night.</p></div>
+        <div class="tile"><?= icon('leaf') ?><h3>A green brand</h3><p>Your name on zero-emission vehicles tells customers you care about clean air.</p></div>
+        <div class="tile"><?= icon('chart') ?><h3>Monthly reports</h3><p>GPS route data, estimated impressions, QR scans and in-app ad results every month.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY EZYGOBD ============ -->
-  <section class="ad-why">
-    <div class="container">
-      <div class="section-header af-fade">
-        <span class="section-eyebrow">Why EzygoBD Advertising</span>
-        <h2 class="section-title">Drive Your <span style="color:var(--clr-primary)">BRAND</span> Forward<br>with EzygoBD Electric</h2>
-      </div>
-
-      <div class="ad-why-grid">
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-route"></i>
-          <h4>High-Traffic Routes</h4>
-          <p>Our EVs serve the busiest corridors — markets, commercial zones, and residential areas across Bangladesh.</p>
-        </div>
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-clock"></i>
-          <h4>All-Day Exposure</h4>
-          <p>EVs operate 10–14 hours daily. Your brand gets continuous visibility from morning to night.</p>
-        </div>
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-leaf"></i>
-          <h4>Green Brand Association</h4>
-          <p>Align your brand with sustainability. Customers respect and remember eco-conscious partners.</p>
-        </div>
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-chart-bar"></i>
-          <h4>Measurable Results</h4>
-          <p>Monthly reports with GPS route data, estimated impressions, QR scans and app ad performance.</p>
-        </div>
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-bangladeshi-taka-sign"></i>
-          <h4>Cost-Effective CPM</h4>
-          <p>Outdoor EV advertising delivers 8–12x lower cost per impression than billboards or digital ads.</p>
-        </div>
-        <div class="ad-why-card af-fade">
-          <i class="fa-solid fa-location-dot"></i>
-          <h4>City-Wide Coverage</h4>
-          <p>Operate in Dhaka, Chattogram, Sylhet and 60+ other districts — nationwide reach at local rates.</p>
-        </div>
-      </div>
+  <!-- Steps -->
+  <section class="section" aria-labelledby="steps-h">
+    <div class="wrap">
+      <h2 id="steps-h" class="head">On the road in three steps</h2>
+      <ol class="flow flow-3">
+        <li><span class="n">Step 1</span><h3>Choose your format</h3><p>Pick the vehicle, ad size and campaign length that fit your budget.</p></li>
+        <li><span class="n">Step 2</span><h3>Send your design</h3><p>Send us your artwork, or our creative team will design the wrap or panel free of charge.</p></li>
+        <li><span class="n">Step 3</span><h3>Launch and track</h3><p>Your brand is on the road in 5–7 days. Reports arrive by email every month.</p></li>
+      </ol>
     </div>
   </section>
 
-  <!-- ============ BRANDS / TRUSTED BY ============ -->
-  <section class="ad-brands">
-    <div class="container">
-      <p class="ad-brands-label af-fade">Trusted by brands across Bangladesh</p>
-      <div class="ad-brands-strip af-fade">
-        <div class="ad-brand-placeholder"><i class="fa-solid fa-store"></i> <span>Your Brand</span></div>
-        <div class="ad-brand-placeholder"><i class="fa-solid fa-building"></i> <span>Corporate Co.</span></div>
-        <div class="ad-brand-placeholder"><i class="fa-solid fa-cart-shopping"></i> <span>Retail Brand</span></div>
-        <div class="ad-brand-placeholder"><i class="fa-solid fa-utensils"></i> <span>F&B Brand</span></div>
-        <div class="ad-brand-placeholder"><i class="fa-solid fa-mobile-screen-button"></i> <span>Tech Startup</span></div>
+  <!-- Enquiry -->
+  <section class="section" id="enquire" aria-labelledby="enq-h">
+    <div class="wrap book-grid">
+      <div class="book-intro">
+        <h2 id="enq-h">Get a proposal</h2>
+        <p class="lede">Tell us about your brand and our advertising team will send a proposal within 24 hours.</p>
+        <ul class="contact-list">
+          <li><?= icon('phone') ?><div><span>Phone</span><a href="tel:+8801828721222">01828-721222</a></div></li>
+          <li><?= icon('mail') ?><div><span>Email</span><a href="mailto:ads@ezygobd.com">ads@ezygobd.com</a></div></li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ PROCESS ============ -->
-  <section class="ad-process">
-    <div class="container">
-      <div class="section-header af-fade">
-        <span class="section-eyebrow">Simple Onboarding</span>
-        <h2 class="section-title">Get on the Road in 3 Steps</h2>
-      </div>
-      <div class="ad-steps">
-        <div class="ad-step af-fade">
-          <div class="ad-step-num">01</div>
-          <h4>Choose Your Format</h4>
-          <p>Pick the vehicle type, ad size, and campaign duration that fits your budget and goals.</p>
-        </div>
-        <div class="ad-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="ad-step af-fade">
-          <div class="ad-step-num">02</div>
-          <h4>Submit Your Design</h4>
-          <p>Send us your artwork — or let our creative team design your wrap/panel free of charge.</p>
-        </div>
-        <div class="ad-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="ad-step af-fade">
-          <div class="ad-step-num">03</div>
-          <h4>Launch & Track</h4>
-          <p>Your brand hits the road within 5–7 days. Monthly reports arrive in your inbox automatically.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT FORM ============ -->
-  <section class="ad-contact" id="ad-contact">
-    <div class="container">
-      <div class="ad-contact-inner af-fade">
-        <div class="ad-contact-text">
-          <span class="section-eyebrow">Let's Work Together</span>
-          <h2>Advertise Your<br>Brand Today</h2>
-          <p>Fill out the form and our advertising team will reach out within 24 hours with a custom proposal.</p>
-          <div class="ad-contact-info">
-            <div class="ad-info-row"><i class="fa-solid fa-phone"></i> <span>01828-721222</span></div>
-            <div class="ad-info-row"><i class="fa-solid fa-envelope"></i> <span>ads@ezygobd.com</span></div>
-            <div class="ad-info-row"><i class="fa-solid fa-location-dot"></i> <span>Dhaka, Bangladesh</span></div>
+      <form class="form" action="form-handler.php" method="post" data-form="advertising" novalidate>
+        <input type="hidden" name="form_type" value="advertising">
+        <div class="notice ok" role="status" hidden data-notice="success"><?= icon('check') ?><span>Thank you. Our advertising team will send you a proposal within 24 hours.</span></div>
+        <div class="notice err" role="alert" hidden data-notice="error"><span>Your enquiry didn't go through. Please try again, or call 01828-721222.</span></div>
+        <div class="fields fields-2">
+          <div class="field"><label for="a-name">Full name</label><input id="a-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="a-brand">Brand or company</label><input id="a-brand" name="brand" autocomplete="organization" required></div>
+          <div class="field"><label for="a-phone">Mobile number</label><input id="a-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" required></div>
+          <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field">
+            <label for="a-format">Format</label>
+            <select id="a-format" name="format">
+              <option>Scooter body wrap</option><option>E-rickshaw panel board</option><option>In-app ads</option><option>QR code campaign</option><option>A mix of formats</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="a-budget">Monthly budget</label>
+            <select id="a-budget" name="budget">
+              <option>Tk 5,000–20,000</option><option>Tk 20,000–50,000</option><option>Tk 50,000–1,00,000</option><option>Over Tk 1,00,000</option>
+            </select>
           </div>
         </div>
-        <form class="ad-form" action="form-handler.php" method="POST">
-          <input type="hidden" name="form_type" value="advertising">
-          <div class="ad-form-row">
-            <div class="ad-form-group">
-              <label for="adName">Full Name</label>
-              <input type="text" id="adName" name="name" placeholder="Your name" required />
-            </div>
-            <div class="ad-form-group">
-              <label for="adPhone">Phone</label>
-              <input type="tel" id="adPhone" name="phone" placeholder="+880 1XXX-XXXXXX" required />
-            </div>
-          </div>
-          <div class="ad-form-group">
-            <label for="adEmail">Email</label>
-            <input type="email" id="adEmail" name="email" placeholder="you@company.com" required />
-          </div>
-          <div class="ad-form-group">
-            <label for="adBrand">Brand / Company Name</label>
-            <input type="text" id="adBrand" name="brand" placeholder="e.g. Acme Bangladesh Ltd." required />
-          </div>
-          <div class="ad-form-row">
-            <div class="ad-form-group">
-              <label for="adFormat">Preferred Format</label>
-              <select id="adFormat" name="format">
-                <option value="">Select format</option>
-                <option value="wrap">Scooter Body Wrap</option>
-                <option value="panel">Rickshaw Panel Board</option>
-                <option value="app">In-App Advertising</option>
-                <option value="qr">QR Code Campaign</option>
-                <option value="combo">Combo Package</option>
-              </select>
-            </div>
-            <div class="ad-form-group">
-              <label for="adBudget">Monthly Budget</label>
-              <select id="adBudget" name="budget">
-                <option value="">Select budget</option>
-                <option value="small">৳ 5,000 – ৳ 20,000</option>
-                <option value="med">৳ 20,000 – ৳ 50,000</option>
-                <option value="large">৳ 50,000 – ৳ 1,00,000</option>
-                <option value="xlarge">৳ 1,00,000+</option>
-              </select>
-            </div>
-          </div>
-          <div class="ad-form-group">
-            <label for="adMsg">Campaign Goal (optional)</label>
-            <textarea id="adMsg" name="message" rows="3" placeholder="Describe your campaign objective..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg ad-submit-btn">
-            <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
-          </button>
-        </form>
-      </div>
+        <div class="fields" style="margin:16px 0 24px">
+          <div class="field"><label for="a-msg">What do you want the campaign to do? <span class="opt">(optional)</span></label><textarea id="a-msg" name="message"></textarea></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send enquiry</button>
+      </form>
     </div>
   </section>
 
-<?php include 'includes/footer.php'; ?>
+</main>
+
+<?php include 'includes/v2/footer.php'; ?>
 </body>
 </html>
