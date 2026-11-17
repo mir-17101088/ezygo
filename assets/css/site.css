@@ -1455,3 +1455,19 @@ body.is-loading { overflow: hidden; }
 .bike--feat .bike__flag::after { content: ""; position: absolute; left: 22px; bottom: -7px; width: 14px; height: 14px; background: #5E9A2C; transform: rotate(45deg); z-index: -1; border-radius: 2px; }
 .bike--feat:hover .bike__flag { transform: rotate(-6deg) translateY(-2px); transition: transform .5s var(--ease-pop); }
 @media (max-width: 1079px) { .bike--feat .bike__flag, .bike--sheet.bike--feat .bike__flag { left: -6px; } }
+
+/* Parity pass */
+.pick-specs { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; border-radius: var(--r-sm); background: var(--lime-soft); animation: rise .35s var(--ease) both; }
+.pick-specs[hidden] { display: none; }
+.pick-specs span { padding: 6px 10px; border-radius: 8px; background: var(--card); font: 600 .8125rem/1.2 var(--f-text); color: var(--ink); }
+.faq__q { font: inherit; margin: 0; }
+.why__t { font: 700 1.0625rem/1.3 var(--f-display); }
+@media (max-width: 767px) { .to-top { display: grid; bottom: calc(80px + env(safe-area-inset-bottom)); right: 12px; width: 42px; height: 42px; } }
+
+/* Functional QA pass */
+@media (max-width: 767px) {
+  html { scroll-padding-bottom: 96px; }
+  .dock.is-away { transform: translateY(120%); }
+}
+.corp__frame video:focus-visible { outline: 3px solid var(--lime); outline-offset: -3px; }
+.corp__play:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }

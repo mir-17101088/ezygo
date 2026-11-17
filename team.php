@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Our Team — EzygoBD | The Leaders Behind Bangladesh's EV Network";
-$pageDesc  = "Meet the founding team of EzygoBD: Md Sazzatul Islam, Mokammel Hossain Evan and Jinia Chowdhury Usha.";
+$pageTitle = "Our Team — EzygoBD | Meet the Leaders Behind Bangladesh's EV Revolution";
+$pageDesc  = "Meet the passionate team driving EzygoBD's mission to electrify Bangladesh's transportation.";
 $pagePath  = 'team.php';
 $team = [
   ['sazzatul', 'Md Sazzatul Islam', 'Founder & CEO', 'Md Sazzatul Islam - Founder & CEO, Ezygo Electric Ltd', 'Electrical Engineering & EV Innovation',

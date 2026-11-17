@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Join Us — EzygoBD | Franchise, Advertising & Careers";
-$pageDesc  = "Invest, partner or build your career with EzygoBD: FOCO and FOFO franchise models, fleet advertising and jobs in operations, technology and marketing.";
+$pageTitle = "Join Us — EzygoBD | Franchise, Partnership & Careers";
+$pageDesc  = "Join EzygoBD as a franchise partner, advertiser, or team member. Build your future with Bangladesh's #1 EV rental network.";
 $pagePath  = 'join.php';
 ?>
 <!DOCTYPE html>
@@ -121,7 +121,7 @@ $pagePath  = 'join.php';
             </select></div>
           <div class="row2">
             <div class="field"><label for="jfName">Full Name <span>*</span></label><input type="text" id="jfName" name="name" placeholder="Your full name" autocomplete="name" required></div>
-            <div class="field"><label for="jfPhone">Phone Number <span>*</span></label><input type="tel" id="jfPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" required></div>
+            <div class="field"><label for="jfPhone">Phone Number <span>*</span></label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="jfPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" required></div>
           </div>
           <div class="field"><label for="jfEmail">Email Address <span>*</span></label><input type="email" id="jfEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
           <div class="row2">

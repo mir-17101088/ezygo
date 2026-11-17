@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Advertising — EzygoBD | Put Your Brand on Our EV Fleet";
-$pageDesc  = "Advertise on EzygoBD's electric fleet: scooter body wraps, rickshaw panel boards, in-app ads and QR code campaigns across Bangladesh.";
+$pageTitle = "Advertising — EzygoBD | Generate Business Leads on Wheels";
+$pageDesc  = "Advertise your brand on EzygoBD's EV fleet. 250 million+ impressions across Bangladesh every month.";
 $pagePath  = 'advertising.php';
 ?>
 <!DOCTYPE html>
@@ -143,7 +143,7 @@ foreach ($formats as $f): ?>
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your enquiry didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">
             <div class="field"><label for="adName">Full Name</label><input type="text" id="adName" name="name" placeholder="Your name" autocomplete="name" required></div>
-            <div class="field"><label for="adPhone">Phone</label><input type="tel" id="adPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
+            <div class="field"><label for="adPhone">Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="adPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
           </div>
           <div class="field"><label for="adEmail">Email</label><input type="email" id="adEmail" name="email" placeholder="you@company.com" autocomplete="email" required></div>
           <div class="field"><label for="adBrand">Brand / Company Name</label><input type="text" id="adBrand" name="brand" placeholder="e.g. Acme Bangladesh Ltd." autocomplete="organization" required></div>

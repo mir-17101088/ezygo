@@ -47,6 +47,20 @@
   onScroll();
   if (toTop) toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
 
+  /* ---------- Phone bar: hide while a field has focus (keyboard open), keep focus visible ---------- */
+  if (dock) {
+    doc.addEventListener('focusin', function (e) {
+      if (e.target.matches && e.target.matches('input, select, textarea')) dock.classList.add('is-away');
+      if (window.innerWidth < 768) {
+        var r = e.target.getBoundingClientRect(), lim = window.innerHeight - 84;
+        if (r.bottom > lim) window.scrollBy(0, r.bottom - lim + 12);
+      }
+    });
+    doc.addEventListener('focusout', function () { setTimeout(function () {
+      var a = doc.activeElement; if (!(a && a.matches && a.matches('input, select, textarea'))) dock.classList.remove('is-away');
+    }, 50); });
+  }
+
   /* ---------- Mega menu ---------- */
   var mega = doc.getElementById('megaMenu'), menuBtn = doc.getElementById('menuBtn'), megaClose = doc.getElementById('megaClose');
   function setMenu(open) {
@@ -203,6 +217,25 @@
     if (m) select(tabs[m[1] === 'support' ? 1 : 2]);
   });
 
+  /* ---------- Rent form: show the chosen vehicle's specs (as on the original site) ---------- */
+  var VSPECS = {
+    'E-Scooter':  ['Range: 120 km', 'Charge: 3 hrs', 'Speed: 60 km/h', 'Payload: 150 kg', '72V Lithium', '2000W BLDC'],
+    'E-Bike':     ['Range: 80 km', 'Charge: 2.5 hrs', 'Speed: 35 km/h', 'Weight: 22 kg', '48V Lithium', '500W Hub Motor'],
+    'E-Rickshaw': ['Range: 100 km', 'Charge: 4 hrs', 'Speed: 40 km/h', 'Cargo: 500 kg', '72V Lead-acid', '1500W BLDC']
+  };
+  var vSel = doc.getElementById('revVehicle'), vBox = doc.getElementById('revSpecs');
+  if (vSel && vBox) vSel.addEventListener('change', function () {
+    var list = VSPECS[vSel.value];
+    vBox.hidden = !list;
+    vBox.textContent = '';
+    if (list) list.forEach(function (t) { var s = doc.createElement('span'); s.textContent = t; vBox.appendChild(s); });
+  });
+
+  /* ---------- Franchise: #foco / #fofo pre-selects the model ---------- */
+  var frModel = doc.getElementById('frModel');
+  function pickModel() { var h = location.hash.replace('#', ''); if (frModel && (h === 'foco' || h === 'fofo')) frModel.value = h; }
+  pickModel(); window.addEventListener('hashchange', pickModel);
+
   /* ---------- Corporate video: big play button ---------- */
   var cv = doc.getElementById('corpVideo'), cp = doc.getElementById('corpPlay');
   if (cv && cp) {
@@ -217,7 +250,22 @@
   if (q.status) {
     var form = (q.form && doc.querySelector('form[data-form="' + q.form + '"]')) || doc.querySelector('form[data-form]');
     var n = form && form.querySelector('[data-notice="' + (q.status === 'success' ? 'success' : 'error') + '"]');
-    if (n) { n.hidden = false; setTimeout(function () { n.scrollIntoView({ block: 'center' }); }, 60); }
+    if (n) {
+      n.hidden = false;
+      whenLoaded(function () { setTimeout(function () {
+        var r = n.getBoundingClientRect();
+        window.scrollTo(0, window.pageYOffset + r.top - Math.max(90, (window.innerHeight - r.height) / 2));
+      }, 120); });
+    }
+    /* restore what the visitor typed if the server turned the form away; forget it after success */
+    if (form) {
+      var key = 'ezygo-form-' + (form.getAttribute('data-form') || '');
+      try {
+        if (q.status === 'success') sessionStorage.removeItem(key);
+        else { var saved = JSON.parse(sessionStorage.getItem(key) || '{}');
+          Object.keys(saved).forEach(function (k) { var el = form.elements[k]; if (el && el.type !== 'hidden' && !el.value) el.value = saved[k]; }); }
+      } catch (e) {}
+    }
     if (history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
   }
 
@@ -238,7 +286,12 @@
           el.setAttribute('aria-invalid', 'true');
         } else if (msg) { msg.parentNode.removeChild(msg); el.removeAttribute('aria-invalid'); }
       });
-      if (bad) { e.preventDefault(); bad.focus(); }
+      if (bad) { e.preventDefault(); bad.focus(); return; }
+      try {
+        var keep = {};
+        $$('input, select, textarea', f).forEach(function (el) { if (el.name && el.type !== 'hidden' && el.name !== 'nid' && el.name !== 'website') keep[el.name] = el.value; });
+        sessionStorage.setItem('ezygo-form-' + f.getAttribute('data-form'), JSON.stringify(keep));
+      } catch (x) {}
     });
   });
 })();

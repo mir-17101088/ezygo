@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Franchise — EzygoBD | FOCO & FOFO EV Hub Models";
-$pageDesc  = "Open an EzygoBD EV franchise hub. Compare the FOCO (company operated) and FOFO (franchise operated) models, starting from Tk 4.5 Lakhs with 10 scooters.";
+$pageTitle = "Franchise — EzygoBD | Partner With Us";
+$pageDesc  = "Partner with EzygoBD through our FOCO or FOFO franchise models. Earn up to 90% ROI in 3 years with Bangladesh's #1 EV rental network.";
 $pagePath  = 'franchise.php';
 
 function model_block($id, $alt, $badge, $title, $sub, $metrics, $howTitle, $steps, $whyTitle, $whys, $cta) { ?>
@@ -31,7 +31,7 @@ function model_block($id, $alt, $badge, $title, $sub, $metrics, $howTitle, $step
           <h3 class="d3"><?= $whyTitle ?></h3>
           <ul>
 <?php foreach ($whys as $w): ?>
-            <li><span class="why__ic"><?= icon($w[0]) ?></span><div><strong><?= $w[1] ?></strong><p><?= $w[2] ?></p></div></li>
+            <li><span class="why__ic"><?= icon($w[0]) ?></span><div><h4 class="why__t"><?= $w[1] ?></h4><p><?= $w[2] ?></p></div></li>
 <?php endforeach; ?>
           </ul>
           <a href="#fr-contact" class="btn btn--lime btn--block"><?= icon('send') ?> <?= $cta ?></a>
@@ -163,7 +163,7 @@ model_block('fofo', true, 'FOFO Model', 'Franchise Owned,<br><em>Franchise Opera
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your application didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">
             <div class="field"><label for="frName">Full Name</label><input type="text" id="frName" name="name" placeholder="Your name" autocomplete="name" required></div>
-            <div class="field"><label for="frPhone">Phone</label><input type="tel" id="frPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
+            <div class="field"><label for="frPhone">Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="frPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
           </div>
           <div class="field"><label for="frEmail">Email</label><input type="email" id="frEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
           <div class="field"><label for="frCity">Preferred City / Area</label><input type="text" id="frCity" name="city" placeholder="e.g. Dhaka, Chattogram, Sylhet"></div>

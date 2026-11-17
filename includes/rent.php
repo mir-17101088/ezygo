@@ -38,7 +38,7 @@
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your request didn't go through. Please check the fields, or call 01828-721222.</p>
             <div class="row2">
               <div class="field"><label for="revName">Full Name <span>*</span></label><input type="text" id="revName" name="name" placeholder="Your full name" autocomplete="name" required></div>
-              <div class="field"><label for="revPhone">Phone Number <span>*</span></label><input type="tel" id="revPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" inputmode="tel" required></div>
+              <div class="field"><label for="revPhone">Phone Number <span>*</span></label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="revPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" inputmode="tel" required></div>
             </div>
             <div class="field"><label for="revEmail">Email Address <span>*</span></label><input type="email" id="revEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
             <div class="row2">
@@ -58,6 +58,7 @@
                   <option value="">Select plan</option><option value="Daily">Daily</option><option value="Weekly">Weekly</option><option value="Monthly">Monthly</option>
                 </select></div>
             </div>
+            <div class="pick-specs" id="revSpecs" hidden aria-live="polite"></div>
             <div class="field"><label for="revAddress">Pickup / Home Address <span>*</span></label><textarea id="revAddress" name="address" rows="3" placeholder="Your full address including area, city" autocomplete="street-address" required></textarea></div>
             <button type="submit" class="btn btn--lime">Submit Rental Request <?= icon('send') ?></button>
           </form>

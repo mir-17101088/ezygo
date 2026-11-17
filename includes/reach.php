@@ -23,7 +23,7 @@
           <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
           <div class="row2">
             <div class="field"><label for="ec-name">Full Name</label><input type="text" id="ec-name" name="name" placeholder="Your name" autocomplete="name" required></div>
-            <div class="field"><label for="ec-phone">Phone</label><input type="tel" id="ec-phone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
+            <div class="field"><label for="ec-phone">Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="ec-phone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
           </div>
           <div class="field"><label for="ec-email">Email Address</label><input type="email" id="ec-email" name="email" placeholder="you@example.com" autocomplete="email"></div>
           <div class="field"><label for="ec-type">I am a…</label>

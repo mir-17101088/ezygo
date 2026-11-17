@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Our Story — EzygoBD | Zero-Emission Mobility for Bangladesh";
-$pageDesc  = "The story behind EzygoBD: our mission, vision and values, founder Md Sazzatul Islam, partners, certificates and awards.";
+$pageTitle = "Our Story — EzygoBD | Bangladesh's #1 EV Rental Network";
+$pageDesc  = "Learn about EzygoBD's story, mission, leadership, certificates, awards and sustainability impact.";
 $pagePath  = 'about.php';
 ?>
 <!DOCTYPE html>

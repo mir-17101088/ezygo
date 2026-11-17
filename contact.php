@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Contact — EzygoBD | Phone, WhatsApp, Email & Office";
-$pageDesc  = "Contact EzygoBD: call or WhatsApp 01828-721222, email hello@ezygobd.com, or visit our head office in Dhaka. 24/7 rider support.";
+$pageTitle = "Contact — EzygoBD | Get In Touch";
+$pageDesc  = "Reach out to EzygoBD for rider support, partnership inquiries, franchise questions or media requests. We respond within 24 hours.";
 $pagePath  = 'contact.php';
 ?>
 <!DOCTYPE html>
@@ -84,7 +84,7 @@ $pagePath  = 'contact.php';
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
             <div class="row2">
               <div class="field"><label for="ctGenName">Full Name</label><input type="text" id="ctGenName" name="name" placeholder="Your name" autocomplete="name" required></div>
-              <div class="field"><label for="ctGenPhone">Phone</label><input type="tel" id="ctGenPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel"></div>
+              <div class="field"><label for="ctGenPhone">Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="ctGenPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel"></div>
             </div>
             <div class="field"><label for="ctGenEmail">Email</label><input type="email" id="ctGenEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
             <div class="field"><label for="ctGenSubject">Subject</label><input type="text" id="ctGenSubject" name="subject" placeholder="What's this about?" required></div>
@@ -100,7 +100,7 @@ $pagePath  = 'contact.php';
             <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your request didn't go through. Please call 01828-721222.</p>
             <div class="row2">
               <div class="field"><label for="ctSupName">Full Name</label><input type="text" id="ctSupName" name="name" placeholder="Your name" autocomplete="name" required></div>
-              <div class="field"><label for="ctSupPhone">Registered Phone</label><input type="tel" id="ctSupPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
+              <div class="field"><label for="ctSupPhone">Registered Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="ctSupPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
             </div>
             <div class="field"><label for="ctSupType">Issue Type</label>
               <select id="ctSupType" name="issue_type"><option value="">Select issue</option><option value="breakdown">Vehicle Breakdown</option><option value="payment">Payment / Billing</option><option value="app">App Problem</option><option value="battery">Battery / Charging</option><option value="account">Account Issue</option><option value="other">Other</option></select></div>
@@ -145,12 +145,12 @@ $pagePath  = 'contact.php';
         <p class="lead" data-reveal style="--i:2">Can't find what you need? Reach out via the form above.</p>
       </div>
       <div class="faq__list" data-faq data-stagger>
-        <details><summary>What are your support hours?<?= icon('plus') ?></summary><p>Rider emergency support is available 24/7 via WhatsApp. Office staff are available Sun–Thu, 9 AM – 6 PM.</p></details>
-        <details><summary>How fast do you respond to emails?<?= icon('plus') ?></summary><p>We aim to respond to all email enquiries within 24 hours on business days. Urgent issues via phone are handled immediately.</p></details>
-        <details><summary>Where do I report a vehicle issue?<?= icon('plus') ?></summary><p>Use the "Rider Support" tab in the form above or call our 24/7 helpline at 01828-721222 for immediate assistance.</p></details>
-        <details><summary>How do I discuss a franchise or investment?<?= icon('plus') ?></summary><p>Use the "Partnership" tab in the form above, or visit our <a href="join.php#franchise" class="inline-link">Franchise page</a> for detailed models and ROI information.</p></details>
-        <details><summary>Can I visit the office in person?<?= icon('plus') ?></summary><p>Yes — our head office is at Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka. Please call ahead to schedule a meeting.</p></details>
-        <details><summary>Have a billing or account problem?<?= icon('plus') ?></summary><p>Email <a href="mailto:support@ezygobd.com" class="inline-link">support@ezygobd.com</a> with your registered phone number and a brief description of the issue.</p></details>
+        <details><summary><h3 class=\"faq__q\">What are your support hours?</h3><?= icon('plus') ?></summary><p>Rider emergency support is available 24/7 via WhatsApp. Office staff are available Sun–Thu, 9 AM – 6 PM.</p></details>
+        <details><summary><h3 class=\"faq__q\">How fast do you respond to emails?</h3><?= icon('plus') ?></summary><p>We aim to respond to all email enquiries within 24 hours on business days. Urgent issues via phone are handled immediately.</p></details>
+        <details><summary><h3 class=\"faq__q\">Where do I report a vehicle issue?</h3><?= icon('plus') ?></summary><p>Use the "Rider Support" tab in the form above or call our 24/7 helpline at 01828-721222 for immediate assistance.</p></details>
+        <details><summary><h3 class=\"faq__q\">How do I discuss a franchise or investment?</h3><?= icon('plus') ?></summary><p>Use the "Partnership" tab in the form above, or visit our <a href="join.php#franchise" class="inline-link">Franchise page</a> for detailed models and ROI information.</p></details>
+        <details><summary><h3 class=\"faq__q\">Can I visit the office in person?</h3><?= icon('plus') ?></summary><p>Yes — our head office is at Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka. Please call ahead to schedule a meeting.</p></details>
+        <details><summary><h3 class=\"faq__q\">Have a billing or account problem?</h3><?= icon('plus') ?></summary><p>Email <a href="mailto:support@ezygobd.com" class="inline-link">support@ezygobd.com</a> with your registered phone number and a brief description of the issue.</p></details>
       </div>
     </div>
   </section>

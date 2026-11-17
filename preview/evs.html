@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Our EVs — EzygoBD | Electric Fleet for Bangladesh</title>
@@ -31,7 +31,7 @@
   <script>(function(d){var e=d.documentElement;e.className+=' js';setTimeout(function(){if(!window.ezygoReady)e.className=e.className.replace(' js','')},4000);try{var t=localStorage.getItem('ezygo-theme');if(t==='dark'||t==='light')e.setAttribute('data-theme',t);if(sessionStorage.getItem('ezygo-intro'))e.className+=' seen';sessionStorage.setItem('ezygo-intro','1')}catch(x){}})(document)</script>
   <link rel="preload" href="assets/fonts/cabinet-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/site.css?v=3.9">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,15 +63,18 @@
   <style>.preview-badge{position:fixed;left:12px;bottom:12px;z-index:9999;background:#16181D;color:#fff;font:600 12px/1 system-ui,sans-serif;padding:9px 12px;border-radius:999px;opacity:.85}
   .preview-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,420px);background:#16181D;color:#fff;font:15px/1.45 system-ui,sans-serif;padding:14px 18px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.25)}</style>
   <script>document.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();var t=document.createElement('div');t.className='preview-toast';t.setAttribute('role','status');t.textContent='This is a design preview, so forms are switched off. Nothing was sent.';document.body.appendChild(t);setTimeout(function(){t.remove()},4500)},true);</script>
-</head>
-<body><div class="preview-badge" aria-hidden="true">Design preview</div>
+</head>
+<body><div class="preview-badge" aria-hidden="true">Design preview</div>
   <a class="skip" href="#main">Skip to content</a>
 
   <!-- Intro: once per visit, CSS only -->
   <div class="intro" aria-hidden="true">
-    <img src="assets/img/logo-480.webp" width="240" height="65" alt="">
-    <span class="intro__bar"><span></span></span>
-    <p class="intro__tag">Bangladesh First EV Network</p>
+    <div class="intro__in">
+      <span class="intro__glow"></span>
+      <img src="assets/img/logo-480.webp" width="240" height="65" alt="">
+      <div class="intro__meter"><span class="intro__bar"><span></span></span><span class="intro__pct">0</span></div>
+      <p class="intro__tag">Bangladesh First EV Network</p>
+    </div>
   </div>
 
   <header class="site-head" id="top">
@@ -169,174 +172,176 @@
       </div>
     </div>
   </div>
-
-<main id="main">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero hero--page">
-    <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" poster="assets/video/ezygo-hero-poster.webp" data-autoplay><source src="assets/video/ezygo-hero-480.mp4" type="video/mp4" media="(max-width: 640px)"><source src="assets/video/ezygo-hero-720.mp4" type="video/mp4"></video>    <div class="hero__in wrap">
-      <p class="kick" data-reveal style="--i:0">EV Rental Platform</p>
-      <h1 class="d1 balance" data-reveal style="--i:1">Start Your Rental Business<br><em>Manage Your Fleet Efficiency</em></h1>
-      <p class="lead" data-reveal style="--i:2">EzygoBD's smart electric vehicle platform connects riders, operators and businesses across Bangladesh — reducing costs, emissions and complexity.</p>
-      <div class="hero__ctas" data-reveal style="--i:3">
-        <a href="#rent-ev" class="btn btn--lime"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> Get Started Now</a>
-        <a href="#evs-platform" class="btn btn--glass"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5L8 5.5z"/></svg> How It Works</a>
-      </div>
-      <div class="riders" data-reveal style="--i:4">
-        <div class="riders__faces" aria-hidden="true"><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span></div>
-        <p><strong>120+</strong> active riders across Bangladesh</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PLATFORM STRIP ============ -->
-  <section class="sec" id="evs-platform">
-    <div class="wrap">
-      <div class="head head--split">
-        <h2 class="d2 balance" data-reveal>Smart Platform for EV Infrastructure.</h2>
-        <p class="lead" data-reveal style="--i:1">Everything you need to deploy, operate and scale an electric vehicle fleet — in one unified system.</p>
-      </div>
-      <div class="feats feats--4" data-stagger>
-        <div class="feat"><span class="feat__n">01</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3 class="h4">EV Tracking</h3><p>Real-time GPS on every vehicle. Live battery, speed and trip data at your fingertips.</p></div>
-        <div class="feat"><span class="feat__n">02</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/></svg></div><h3 class="h4">Zero-Emission Fleet</h3><p>100% electric. Reduce carbon footprint and fuel costs simultaneously.</p></div>
-        <div class="feat"><span class="feat__n">03</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 0 0 5 5L11 20a2.1 2.1 0 0 1-3-3l8.7-8.7z"/><path d="M14.7 6.3a4 4 0 0 1 5-2.8l-2.6 2.6.4 2.2 2.2.4 2.6-2.6a4 4 0 0 1-2.8 5"/></svg></div><h3 class="h4">Smart Maintenance</h3><p>Predictive alerts flag issues before breakdowns. Service scheduling, auto-assigned.</p></div>
-        <div class="feat"><span class="feat__n">04</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5h17M5 16l4.5-5 4 3L20 6.5"/><path d="M15.5 6.5H20V11"/></svg></div><h3 class="h4">Rapid Scaling</h3><p>Add vehicles, hubs or cities in minutes. Modular pricing grows with your business.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ RENT OUR EV ============ -->
-  <section class="sec sec--night" id="rent-ev">
-    <div class="glow"></div>
-    <div class="wrap rent">
-      <div class="rent__info">
-        <p class="kick" data-reveal>Get Behind the Wheel</p>
-        <h2 class="d2" data-reveal style="--i:1">Rent Our EV<br><em>Start Riding Today</em></h2>
-        <p class="lead" data-reveal style="--i:2">Fill out the form and our team will confirm your booking within a few hours. No hidden charges — just clean, affordable electric mobility.</p>
-
-        <ul class="perks" data-stagger>
-          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg></span><div><strong>Instant Confirmation</strong><p>Booking confirmed via SMS &amp; email within 2 hours.</p></div></li>
-          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><strong>Fully Insured</strong><p>Third-party insurance included on every rental plan.</p></div></li>
-          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5h1.7c.6 0 1 .4 1 1v6a1.5 1.5 0 0 0 3 0V14M8 11.5h6"/></svg></span><div><strong>Flexible Pricing</strong><p>Daily, weekly or monthly plans — from Tk 100/day.</p></div></li>
-          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></span><div><strong>24/7 Rider Support</strong><p>Our team is available anytime for roadside assistance.</p></div></li>
-        </ul>
-
-        <div class="docs" data-reveal>
-          <div class="docs__head"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9.5A1.5 1.5 0 0 0 19.5 8H12l-2-2.5H4.5A1.5 1.5 0 0 0 3 7z"/></svg><h3 class="h4">Required Documents</h3></div>
-          <p>Thank you for your interest in renting an Ezygo bike. Please bring the following documents when picking up your vehicle:</p>
-          <ul>
-            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16a3 3 0 0 1 6 0M14 10h4.5M14 13.5h3"/></svg><span>National ID Card (NID) <em>or</em> Valid Passport</span></li>
-            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Two (2) copies of passport-size photographs</span></li>
-            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7.5" cy="7" r="2.5"/><circle cx="16.5" cy="7" r="2.5"/><path d="M3 19v-3.5a4.5 4.5 0 0 1 9 0M12 15.5a4.5 4.5 0 0 1 9 0V19"/></svg><span>Parent's National ID Card</span></li>
-            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2.5h12v19l-3-2-3 2-3-2-3 2v-19z"/><path d="M9 7.5h6M9 11h6M9 14.5h3.5"/></svg><span>Copy of home electricity <em>or</em> water bill</span></li>
-            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><span>Active mobile phone number</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="rent__form" data-reveal="pop">
-        <div class="form-card">
-          <h3 class="h3 form-card__title"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg> Rental Application</h3>
-          <p class="form-note"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.1"/></svg> Please have your required documents ready before submission. Our team will verify them at pickup.</p>
-
-          <form action="form-handler.html" method="POST" data-form="rent_ev" class="fields">
-            <input type="hidden" name="form_type" value="rent_ev">
-            <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your rental request is in. Our team will call you to confirm your booking.</p>
-            <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your request didn't go through. Please check the fields, or call 01828-721222.</p>
-            <div class="row2">
-              <div class="field"><label for="revName">Full Name <span>*</span></label><input type="text" id="revName" name="name" placeholder="Your full name" autocomplete="name" required></div>
-              <div class="field"><label for="revPhone">Phone Number <span>*</span></label><input type="tel" id="revPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" inputmode="tel" required></div>
-            </div>
-            <div class="field"><label for="revEmail">Email Address <span>*</span></label><input type="email" id="revEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
-            <div class="row2">
-              <div class="field"><label for="revNid">NID Number <span>*</span></label><input type="text" id="revNid" name="nid" placeholder="National ID number" inputmode="numeric" required></div>
-              <div class="field"><label for="revGender">Gender <span>*</span></label>
-                <select id="revGender" name="gender" required>
-                  <option value="">Select gender</option><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option>
-                </select></div>
-            </div>
-            <div class="row2">
-              <div class="field"><label for="revVehicle">Vehicle Type</label>
-                <select id="revVehicle" name="vehicle_type">
-                  <option value="">Any available</option><option value="E-Scooter">EzyGo E-Scooter</option><option value="E-Bike">EzyRide E-Bike</option><option value="E-Rickshaw">EzyHaul E-Rickshaw</option>
-                </select></div>
-              <div class="field"><label for="revPlan">Rental Plan</label>
-                <select id="revPlan" name="rental_plan">
-                  <option value="">Select plan</option><option value="Daily">Daily</option><option value="Weekly">Weekly</option><option value="Monthly">Monthly</option>
-                </select></div>
-            </div>
-            <div class="field"><label for="revAddress">Pickup / Home Address <span>*</span></label><textarea id="revAddress" name="address" rows="3" placeholder="Your full address including area, city" autocomplete="street-address" required></textarea></div>
-            <button type="submit" class="btn btn--lime">Submit Rental Request <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3L10 14M21 3l-6.5 18-4.5-7-7-4.5L21 3z"/></svg></button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VEHICLE SPECIFICATIONS ============ -->
-  <section class="sec" id="ev-specs">
-    <div class="wrap">
-      <div class="head head--split">
-        <div>
-          <p class="kick" data-reveal>Know Your Ride</p>
-          <h2 class="d2" data-reveal style="--i:1">Vehicle Specifications</h2>
-        </div>
-        <p class="lead" data-reveal style="--i:2">Compare our electric vehicles and find the perfect fit for your needs.</p>
-      </div>
-      <div class="bikes" data-stagger="pop">
-        <article class="bike bike--sheet" data-tilt>
-          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg></span><span class="sheet__code">EZY · 01</span></div>
-          <div class="bike__body">
-            <h3 class="bike__name">EzyGo E-Scooter</h3>
-            <p class="bike__line">Urban commuting &amp; last-mile delivery</p>
-            <dl class="specs">
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>120 km/charge</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>3 hours</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Top Speed:</dt><dd>60 km/h</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg>Payload:</dt><dd>150 kg</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>72V Lithium-ion</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>2000W BLDC</dd></div>
-            </dl>
-            <div class="bike__foot"><p class="price">From Tk 150/day</p><a href="#rent-ev" class="btn btn--ink btn--sm">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
-          </div>
-        </article>
-        <article class="bike bike--sheet bike--feat" data-tilt>
-          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H16a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h7.5"/></svg></span><span class="sheet__code">EZY · 02</span></div>
-          <div class="bike__body">
-            <h3 class="bike__name">EzyRide E-Bike</h3>
-            <p class="bike__line">Pedal-assist for urban commuters</p>
-            <dl class="specs">
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>80 km (assist mode)</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>2.5 hours</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Assist Speed:</dt><dd>35 km/h</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg>Vehicle Weight:</dt><dd>22 kg</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>48V Lithium-ion</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>500W Hub</dd></div>
-            </dl>
-            <div class="bike__foot"><p class="price">From Tk 100/day</p><a href="#rent-ev" class="btn btn--lime btn--sm">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
-          </div>
-        </article>
-        <article class="bike bike--sheet" data-tilt>
-          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span><span class="sheet__code">EZY · 03</span></div>
-          <div class="bike__body">
-            <h3 class="bike__name">EzyHaul E-Rickshaw</h3>
-            <p class="bike__line">Cargo &amp; hyperlocal delivery</p>
-            <dl class="specs">
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>100 km/charge</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>4 hours</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Top Speed:</dt><dd>40 km/h</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg>Cargo Capacity:</dt><dd>500 kg</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>72V Lead-acid</dd></div>
-              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>1500W BLDC</dd></div>
-            </dl>
-            <div class="bike__foot"><p class="price">Earn Tk 35K+/month</p><a href="#rent-ev" class="btn btn--ink btn--sm">Partner Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHITE LABEL SOLUTIONS ============ -->
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero hero--page">
+    <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" poster="assets/video/ezygo-hero-poster.webp" data-autoplay><source src="assets/video/ezygo-hero-480.mp4" type="video/mp4" media="(max-width: 640px)"><source src="assets/video/ezygo-hero-720.mp4" type="video/mp4"></video>    <div class="hero__in wrap">
+      <p class="kick" data-reveal style="--i:0">EV Rental Platform</p>
+      <h1 class="d1 balance" data-reveal style="--i:1">Start Your Rental Business<br><em>Manage Your Fleet Efficiency</em></h1>
+      <p class="lead" data-reveal style="--i:2">EzygoBD's smart electric vehicle platform connects riders, operators and businesses across Bangladesh — reducing costs, emissions and complexity.</p>
+      <div class="hero__ctas" data-reveal style="--i:3">
+        <a href="#rent-ev" class="btn btn--lime"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> Get Started Now</a>
+        <a href="#evs-platform" class="btn btn--glass"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5L8 5.5z"/></svg> How It Works</a>
+      </div>
+      <div class="riders" data-reveal style="--i:4">
+        <div class="riders__faces" aria-hidden="true"><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span></div>
+        <p><strong>120+</strong> active riders across Bangladesh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM STRIP ============ -->
+  <section class="sec" id="evs-platform">
+    <div class="wrap">
+      <div class="head head--split">
+        <h2 class="d2 balance" data-reveal>Smart Platform for EV Infrastructure.</h2>
+        <p class="lead" data-reveal style="--i:1">Everything you need to deploy, operate and scale an electric vehicle fleet — in one unified system.</p>
+      </div>
+      <div class="feats feats--4" data-stagger>
+        <div class="feat"><span class="feat__n">01</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3 class="h4">EV Tracking</h3><p>Real-time GPS on every vehicle. Live battery, speed and trip data at your fingertips.</p></div>
+        <div class="feat"><span class="feat__n">02</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/></svg></div><h3 class="h4">Zero-Emission Fleet</h3><p>100% electric. Reduce carbon footprint and fuel costs simultaneously.</p></div>
+        <div class="feat"><span class="feat__n">03</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 0 0 5 5L11 20a2.1 2.1 0 0 1-3-3l8.7-8.7z"/><path d="M14.7 6.3a4 4 0 0 1 5-2.8l-2.6 2.6.4 2.2 2.2.4 2.6-2.6a4 4 0 0 1-2.8 5"/></svg></div><h3 class="h4">Smart Maintenance</h3><p>Predictive alerts flag issues before breakdowns. Service scheduling, auto-assigned.</p></div>
+        <div class="feat"><span class="feat__n">04</span><div class="feat__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5h17M5 16l4.5-5 4 3L20 6.5"/><path d="M15.5 6.5H20V11"/></svg></div><h3 class="h4">Rapid Scaling</h3><p>Add vehicles, hubs or cities in minutes. Modular pricing grows with your business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RENT OUR EV ============ -->
+  <section class="sec sec--night" id="rent-ev">
+    <div class="glow"></div>
+    <div class="wrap rent">
+      <div class="rent__info">
+        <p class="kick" data-reveal>Get Behind the Wheel</p>
+        <h2 class="d2" data-reveal style="--i:1">Rent Our EV<br><em>Start Riding Today</em></h2>
+        <p class="lead" data-reveal style="--i:2">Fill out the form and our team will confirm your booking within a few hours. No hidden charges — just clean, affordable electric mobility.</p>
+
+        <ul class="perks" data-stagger>
+          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg></span><div><strong>Instant Confirmation</strong><p>Booking confirmed via SMS &amp; email within 2 hours.</p></div></li>
+          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><strong>Fully Insured</strong><p>Third-party insurance included on every rental plan.</p></div></li>
+          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5h1.7c.6 0 1 .4 1 1v6a1.5 1.5 0 0 0 3 0V14M8 11.5h6"/></svg></span><div><strong>Flexible Pricing</strong><p>Daily, weekly or monthly plans — from Tk 100/day.</p></div></li>
+          <li class="perk"><span class="perk__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></span><div><strong>24/7 Rider Support</strong><p>Our team is available anytime for roadside assistance.</p></div></li>
+        </ul>
+
+        <div class="docs" data-reveal>
+          <div class="docs__head"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9.5A1.5 1.5 0 0 0 19.5 8H12l-2-2.5H4.5A1.5 1.5 0 0 0 3 7z"/></svg><h3 class="h4">Required Documents</h3></div>
+          <p>Thank you for your interest in renting an Ezygo bike. Please bring the following documents when picking up your vehicle:</p>
+          <ul>
+            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16a3 3 0 0 1 6 0M14 10h4.5M14 13.5h3"/></svg><span>National ID Card (NID) <em>or</em> Valid Passport</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Two (2) copies of passport-size photographs</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7.5" cy="7" r="2.5"/><circle cx="16.5" cy="7" r="2.5"/><path d="M3 19v-3.5a4.5 4.5 0 0 1 9 0M12 15.5a4.5 4.5 0 0 1 9 0V19"/></svg><span>Parent's National ID Card</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2.5h12v19l-3-2-3 2-3-2-3 2v-19z"/><path d="M9 7.5h6M9 11h6M9 14.5h3.5"/></svg><span>Copy of home electricity <em>or</em> water bill</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><span>Active mobile phone number</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rent__form" data-reveal="pop">
+        <div class="form-card">
+          <h3 class="h3 form-card__title"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg> Rental Application</h3>
+          <p class="form-note"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.1"/></svg> Please have your required documents ready before submission. Our team will verify them at pickup.</p>
+
+          <form action="form-handler.html" method="POST" data-form="rent_ev" class="fields">
+            <input type="hidden" name="form_type" value="rent_ev"><div class="hp" aria-hidden="true"><label for="hp-1">Leave this empty</label><input type="text" id="hp-1" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="_t" value="1794945670">            <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your rental request is in. Our team will call you to confirm your booking.</p>
+            <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your request didn't go through. Please check the fields, or call 01828-721222.</p>
+            <div class="row2">
+              <div class="field"><label for="revName">Full Name <span>*</span></label><input type="text" id="revName" name="name" placeholder="Your full name" autocomplete="name" required></div>
+              <div class="field"><label for="revPhone">Phone Number <span>*</span></label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="revPhone" name="phone" placeholder="01XXXXXXXXX" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <div class="field"><label for="revEmail">Email Address <span>*</span></label><input type="email" id="revEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+            <div class="row2">
+              <div class="field"><label for="revNid">NID Number <span>*</span></label><input type="text" id="revNid" name="nid" placeholder="National ID number" inputmode="numeric" required></div>
+              <div class="field"><label for="revGender">Gender <span>*</span></label>
+                <select id="revGender" name="gender" required>
+                  <option value="">Select gender</option><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option>
+                </select></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="revVehicle">Vehicle Type</label>
+                <select id="revVehicle" name="vehicle_type">
+                  <option value="">Any available</option><option value="E-Scooter">EzyGo E-Scooter</option><option value="E-Bike">EzyRide E-Bike</option><option value="E-Rickshaw">EzyHaul E-Rickshaw</option>
+                </select></div>
+              <div class="field"><label for="revPlan">Rental Plan</label>
+                <select id="revPlan" name="rental_plan">
+                  <option value="">Select plan</option><option value="Daily">Daily</option><option value="Weekly">Weekly</option><option value="Monthly">Monthly</option>
+                </select></div>
+            </div>
+            <div class="pick-specs" id="revSpecs" hidden aria-live="polite"></div>
+            <div class="field"><label for="revAddress">Pickup / Home Address <span>*</span></label><textarea id="revAddress" name="address" rows="3" placeholder="Your full address including area, city" autocomplete="street-address" required></textarea></div>
+            <button type="submit" class="btn btn--lime">Submit Rental Request <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3L10 14M21 3l-6.5 18-4.5-7-7-4.5L21 3z"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VEHICLE SPECIFICATIONS ============ -->
+  <section class="sec sec--glass" id="ev-specs">
+    <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="wrap">
+      <div class="head head--split">
+        <div>
+          <p class="kick" data-reveal>Know Your Ride</p>
+          <h2 class="d2" data-reveal style="--i:1">Vehicle Specifications</h2>
+        </div>
+        <p class="lead" data-reveal style="--i:2">Compare our electric vehicles and find the perfect fit for your needs.</p>
+      </div>
+      <div class="bikes" data-stagger="pop">
+        <article class="bike bike--sheet" data-tilt>
+          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg></span><span class="sheet__code">EZY · 01</span></div>
+          <div class="bike__body">
+            <h3 class="bike__name">EzyGo E-Scooter</h3>
+            <p class="bike__line">Urban commuting &amp; last-mile delivery</p>
+            <dl class="specs">
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>120 km/charge</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>3 hours</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Top Speed:</dt><dd>60 km/h</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg>Payload:</dt><dd>150 kg</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>72V Lithium-ion</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>2000W BLDC</dd></div>
+            </dl>
+            <div class="bike__foot"><p class="price">From Tk 150/day</p><a href="#rent-ev" class="btn btn--ink btn--sm">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
+          </div>
+        </article>
+        <article class="bike bike--sheet bike--feat" data-tilt>
+          <span class="bike__flag"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9l-5.3 2.7 1-5.8-4.2-4.1 5.9-.9L12 3.5z"/></svg> Top Pick</span>
+          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H16a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h7.5"/></svg></span><span class="sheet__code">EZY · 02</span></div>
+          <div class="bike__body">
+            <h3 class="bike__name">EzyRide E-Bike</h3>
+            <p class="bike__line">Pedal-assist for urban commuters</p>
+            <dl class="specs">
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>80 km (assist mode)</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>2.5 hours</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Assist Speed:</dt><dd>35 km/h</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg>Vehicle Weight:</dt><dd>22 kg</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>48V Lithium-ion</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>500W Hub</dd></div>
+            </dl>
+            <div class="bike__foot"><p class="price">From Tk 100/day</p><a href="#rent-ev" class="btn btn--lime btn--sm">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
+          </div>
+        </article>
+        <article class="bike bike--sheet" data-tilt>
+          <div class="sheet__top"><span class="sheet__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span><span class="sheet__code">EZY · 03</span></div>
+          <div class="bike__body">
+            <h3 class="bike__name">EzyHaul E-Rickshaw</h3>
+            <p class="bike__line">Cargo &amp; hyperlocal delivery</p>
+            <dl class="specs">
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg>Range:</dt><dd>100 km/charge</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>Charge Time:</dt><dd>4 hours</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg>Top Speed:</dt><dd>40 km/h</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg>Cargo Capacity:</dt><dd>500 kg</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg>Battery:</dt><dd>72V Lead-acid</dd></div>
+              <div><dt><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0V7.5zM12 16.5v5"/></svg>Motor:</dt><dd>1500W BLDC</dd></div>
+            </dl>
+            <div class="bike__foot"><p class="price">Earn Tk 35K+/month</p><a href="#rent-ev" class="btn btn--ink btn--sm">Partner Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHITE LABEL SOLUTIONS ============ -->
   <section class="sec">
     <div class="wrap wl">
       <div class="wl__media" data-reveal="left">
@@ -371,299 +376,296 @@
       </div>
     </div>
   </section>
-
-  <!-- ============ SUCCESS STORY ============ -->
-  <section class="sec sec--night">
-    <div class="glow"></div>
-    <div class="wrap story">
-      <div class="story__visual" data-reveal="left">
-        <div class="story__panel">
-          <div class="story__brand"><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg></span><div><b>EzyFleet</b><small>Fleet Management OS</small></div></div>
-          <p class="story__proven">Proven.</p>
-          <div class="story__grid" aria-hidden="true"></div>
-        </div>
-        <p class="story__cap">Operational Excellence Through Technology</p>
-      </div>
-      <div>
-        <p class="kick" data-reveal>Success Story</p>
-        <h2 class="d2" data-reveal style="--i:1">How EzygoBD Transformed<br>Last-Mile Delivery in Dhaka</h2>
-        <p class="lead" data-reveal style="--i:2">A leading e-commerce company in Bangladesh replaced 600 petrol bikes with EzygoBD e-scooters, cutting fuel costs by 65% and improving on-time delivery rates.</p>
-        <div class="story__stats" data-stagger>
-          <div><p class="stat__v"><span class="countup" data-count="30,000">30,000</span><small>+</small></p><p class="stat__l">Daily Deliveries<br>Completed</p></div>
-          <div><p class="stat__v"><span class="countup" data-count="500,000">500,000</span><small>+</small></p><p class="stat__l">Kilometres<br>Logged Monthly</p></div>
-        </div>
-        <blockquote class="quote" data-reveal>
-          <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 7H6.5A2.5 2.5 0 0 0 4 9.5V12h5v5H4v-5M20 7h-3.5A2.5 2.5 0 0 0 14 9.5V12h5v5h-5v-5"/></svg>          <p>"EzygoBD's fleet OS gave us real-time visibility on every scooter. Our delivery SLA improved from 78% to 96% in 3 months."</p>
-          <cite>— Logistics Director, Leading BD E-commerce Co.</cite>
-        </blockquote>
-        <a href="about.html" class="btn btn--lime" data-reveal>Read the Case Study <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FLEET OPTIMIZATION ============ -->
-  <section class="sec" id="ezyfleet">
-    <div class="wrap">
-      <div class="head head--center">
-        <p class="kick" data-reveal>Intelligent Fleet Management</p>
-        <h2 class="d2 balance" data-reveal style="--i:1">Autonomous Unified Fleet<br>Optimization Solution</h2>
-        <p class="lead" data-reveal style="--i:2">Our platform uses smart analytics to predict demand, pre-position vehicles and auto-assign maintenance — keeping your fleet at peak performance with zero manual effort.</p>
-      </div>
-      <div class="fo">
-        <div class="fo__list" data-stagger>
-          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5l-6-2zM9 4.5v13M15 6.5v13"/></svg></span><div><h3 class="h4">Geofence &amp; Zone-Based Dispatch</h3><p>Automatically assign riders to zones. Reduce deadhead kilometres and increase utilisation.</p></div></div>
-          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg></span><div><h3 class="h4">Predictive Battery Management</h3><p>System forecasts charge depletion and routes vehicles to stations before they run flat.</p></div></div>
-          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg></span><div><h3 class="h4">Live KPI Performance Dashboard</h3><p>Distance, revenue, energy consumed, rider score — all in a single real-time view.</p></div></div>
-          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15L6 16.5zM10 21h4"/></svg></span><div><h3 class="h4">Automated Alert &amp; Incident System</h3><p>Instant notifications for harsh braking, overloading, or off-route excursions.</p></div></div>
-          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="7.5" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0M1.5 18a3.5 3.5 0 0 1 4.5-3.3M22.5 18a3.5 3.5 0 0 0-4.5-3.3"/></svg></span><div><h3 class="h4">Multi-Role Team Management</h3><p>Assign fleet managers, mechanics and riders with granular permission control.</p></div></div>
-          <div><a href="services.html" class="btn btn--lime">Get Started <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
-        </div>
-        <div class="dash" data-reveal="pop">
-          <div class="dash__screen">
-            <div class="dash__bar"><span></span><span></span><span></span></div>
-            <div class="dash__map" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><svg viewBox="0 0 400 220" preserveAspectRatio="none"><path d="M10 180 C 80 120, 120 200, 190 130 S 300 60, 390 90" /><path d="M30 40 C 120 70, 160 20, 240 60 S 340 170, 380 160" /></svg></div>
-            <div class="dash__stats">
-              <div><b>142</b><small>Active</small></div>
-              <div><b>98%</b><small>Uptime</small></div>
-              <div><b>3.2T</b><small>CO₂ saved</small></div>
-            </div>
-          </div>
-          <div class="dash__float dash__float--1"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg><div><strong>EZY-0142</strong><small>Battery 84% · Online</small></div></div>
-          <div class="dash__float dash__float--2"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="10" height="18" rx="1.5"/><path d="M4 21h10M14 9.5h2.5a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 0 3 0V8l-2.5-3M9.5 7.5l-2 3.5h3l-2 3.5"/></svg><div><strong>Charging Hub A</strong><small>12 slots available</small></div></div>
-        </div>
-      </div>
-      <div class="bens" data-stagger="pop">
-        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3 class="h4">Real-Time Fleet Safety</h3><ul><li>Speed violation alerts</li><li>Geo-fence breach notifications</li><li>Crash detection via accelerometer</li><li>Emergency SOS button integration</li></ul></div>
-        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20.5h16M6.5 17V11M11 17V6M15.5 17v-8M20 17v-4"/></svg></span><h3 class="h4">Intelligent Analytics</h3><ul><li>Revenue per vehicle reports</li><li>Energy cost-per-km breakdown</li><li>Maintenance cost tracking</li><li>Rider performance leaderboard</li></ul></div>
-        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9.5 2.5V6M14.5 2.5V6M9.5 18v3.5M14.5 18v3.5M2.5 9.5H6M2.5 14.5H6M18 9.5h3.5M18 14.5h3.5"/></svg></span><h3 class="h4">Advanced IoT System</h3><ul><li>4G/MQTT connected hardware</li><li>Tamper-proof GPS module</li><li>OTA firmware updates</li><li>Remote immobilisation</li></ul></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ OUR PRODUCTS ============ -->
-  <section class="sec sec--tint">
-    <div class="wrap">
-      <div class="head head--split">
-        <div>
-          <p class="kick" data-reveal>Our Product Lineup</p>
-          <h2 class="d2" data-reveal style="--i:1">Our EVs &amp; Platform Tools</h2>
-        </div>
-        <p class="lead" data-reveal style="--i:2">Purpose-built electric vehicles and software products for every use-case across Bangladesh.</p>
-      </div>
-      <div class="lineup">
-        <article class="prod" data-reveal>
-          <div class="prod__info">
-            <span class="prod__n">01</span>
-            <h3 class="d3">EzyGo E-Scooter</h3>
-            <p class="muted">Our flagship two-wheeler — built for daily commuting, food delivery and last-mile logistics. Lightweight, powerful and engineered for Bangladesh roads.</p>
-            <ul class="prod__specs">
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 120 km range per charge</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 3-hour fast charge</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg> Payload: 150 kg</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg> Top speed: 60 km/h</li>
-            </ul>
-            <a href="services.html" class="btn btn--ink">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-          </div>
-          <div class="prod__visual">
-            <span class="prod__big" aria-hidden="true">01</span>
-            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg></span>
-            <span class="prod__badge">From Tk 150/day</span>
-          </div>
-        </article>
-        <article class="prod prod--rev" data-reveal>
-          <div class="prod__info">
-            <span class="prod__n">02</span>
-            <h3 class="d3">EzyRide E-Bike</h3>
-            <p class="muted">Pedal-assist electric bike for urban commuters who want exercise without the sweat. Fold-flat design fits inside apartments and offices.</p>
-            <ul class="prod__specs">
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 80 km range (assist mode)</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 2.5-hour charge</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg> Vehicle weight: 22 kg</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg> Assist up to 35 km/h</li>
-            </ul>
-            <a href="services.html" class="btn btn--ink">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-          </div>
-          <div class="prod__visual">
-            <span class="prod__big" aria-hidden="true">02</span>
-            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H16a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h7.5"/></svg></span>
-            <span class="prod__badge">From Tk 100/day</span>
-          </div>
-        </article>
-        <article class="prod" data-reveal>
-          <div class="prod__info">
-            <span class="prod__n">03</span>
-            <h3 class="d3">EzyHaul E-Rickshaw</h3>
-            <p class="muted">Three-wheel electric cargo vehicle purpose-built for hyperlocal delivery businesses. Carry larger loads with zero emissions and dramatically lower running costs.</p>
-            <ul class="prod__specs">
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 100 km range per charge</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg> Cargo capacity: 500 kg</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 4-hour full charge</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5h1.7c.6 0 1 .4 1 1v6a1.5 1.5 0 0 0 3 0V14M8 11.5h6"/></svg> Save Tk 8,000+/month vs CNG</li>
-            </ul>
-            <a href="services.html" class="btn btn--ink">Partner Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-          </div>
-          <div class="prod__visual">
-            <span class="prod__big" aria-hidden="true">03</span>
-            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span>
-            <span class="prod__badge">Earn Tk 35K+/month</span>
-          </div>
-        </article>
-        <article class="prod prod--rev" data-reveal>
-          <div class="prod__info">
-            <span class="prod__n">04</span>
-            <h3 class="d3">EzygoBD Rider App</h3>
-            <p class="muted">Our mobile application puts EV rentals, payments and support in the palm of your hand. Available in Bengali and English, with bKash / Nagad integration.</p>
-            <ul class="prod__specs">
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 10.5h14V18a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 18v-7.5zM5 10.5a7 7 0 0 1 14 0M8 4.5l1.5 2.2M16 4.5l-1.5 2.2"/></svg> Android &amp; iOS</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg> Bengali language UI</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 9.5h19M6 15h4"/></svg> bKash / Nagad / Card</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9l-5.3 2.7 1-5.8-4.2-4.1 5.9-.9L12 3.5z"/></svg> 4.8 ★ App Store rating</li>
-            </ul>
-            <a href="#app" class="btn btn--ink">Download App <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5v12M7 10.5l5 5 5-5M4 20.5h16"/></svg></a>
-          </div>
-          <div class="prod__visual">
-            <span class="prod__big" aria-hidden="true">04</span>
-            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
-            <span class="prod__badge">Free Download</span>
-          </div>
-        </article>
-        <article class="prod" data-reveal>
-          <div class="prod__info">
-            <span class="prod__n">05</span>
-            <h3 class="d3">EzyFleet GPS System</h3>
-            <p class="muted">All-in-one IoT hardware unit installed on every EzygoBD vehicle. Delivers live location, battery telemetry, ride events and remote-lock capability over 4G.</p>
-            <ul class="prod__specs">
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20a9 9 0 0 1 0-9M8 20a5 5 0 0 1 0-5"/><path d="M13 4l7 7-3 3-7-7 3-3zM14 13l-3.5 3.5"/></svg> GPS accuracy: &lt; 5m</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg> 4G LTE connectivity</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg> Remote immobilisation</li>
-              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5A8 8 0 0 0 5.6 7M4 12.5A8 8 0 0 0 18.4 17"/><path d="M5 3v4.5h4.5M19 21v-4.5h-4.5"/></svg> OTA firmware updates</li>
-            </ul>
-            <a href="services.html" class="btn btn--ink">View Platform <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-          </div>
-          <div class="prod__visual">
-            <span class="prod__big" aria-hidden="true">05</span>
-            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20a9 9 0 0 1 0-9M8 20a5 5 0 0 1 0-5"/><path d="M13 4l7 7-3 3-7-7 3-3zM14 13l-3.5 3.5"/></svg></span>
-            <span class="prod__badge">All Models Included</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PARTNERS ============ -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="head head--center">
-        <p class="kick" data-reveal>Trusted By</p>
-        <h2 class="d2 balance" data-reveal style="--i:1">Powering Innovation at Leading Companies</h2>
-        <p class="lead" data-reveal style="--i:2">Bangladesh's top delivery companies, startups and enterprises trust EzygoBD to run their electric fleets.</p>
-      </div>
-    </div>
-    <div class="marquee" data-reveal>
-      <div class="marquee__track">
-        <span class="name-chip">ShopExpress BD</span>
-        <span class="name-chip">SwiftDeliver</span>
-        <span class="name-chip">FoodRun BD</span>
-        <span class="name-chip">UrbanLogix</span>
-        <span class="name-chip">ParcelBD</span>
-        <span class="name-chip">RiderPro</span>
-        <span class="name-chip">GreenMove</span>
-        <span class="name-chip">MetroFleet</span>
-        <span class="name-chip" aria-hidden="true">ShopExpress BD</span>
-        <span class="name-chip" aria-hidden="true">SwiftDeliver</span>
-        <span class="name-chip" aria-hidden="true">FoodRun BD</span>
-        <span class="name-chip" aria-hidden="true">UrbanLogix</span>
-        <span class="name-chip" aria-hidden="true">ParcelBD</span>
-        <span class="name-chip" aria-hidden="true">RiderPro</span>
-        <span class="name-chip" aria-hidden="true">GreenMove</span>
-        <span class="name-chip" aria-hidden="true">MetroFleet</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ APP CTA ============ -->
-  <section class="sec sec--tight" id="app">
-    <div class="wrap">
-      <div class="app on-night" data-reveal>
-        <div class="glow"></div>
-        <div class="app__text">
-          <p class="kick">Navigate the Future</p>
-          <h2 class="d2">Navigate the Future<br>with Our Fleet App</h2>
-          <p class="lead">Download EzygoBD and start riding or managing your fleet today. Available on Android and iOS — completely free.</p>
-          <div class="stores">
-            <a href="#" class="store"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3.5l11 8.5-11 8.5V3.5zM4.5 3.5L18.5 10a2.2 2.2 0 0 1 0 4l-14 6.5M4.5 3.5l11 8.5"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
-            <a href="#" class="store"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.5 3c0 1.7-1.3 3.2-3 3.3-.2-1.6 1.3-3.2 3-3.3zM17.5 12.4c0-2 1.6-3 1.7-3a3.8 3.8 0 0 0-3-1.6c-1.3-.1-2.5.8-3.2.8-.7 0-1.7-.7-2.8-.7a4.2 4.2 0 0 0-3.5 2.1c-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.6.7 2.7.6c1.1 0 1.8-1 2.5-2a8 8 0 0 0 1.1-2.4 3.5 3.5 0 0 1-1.9-3.8z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
-          </div>
-        </div>
-        <div class="app__qr">
-          <div class="qr"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18v2M18 14h2"/></svg><p>Scan to Download</p></div>
-          <div class="phone" aria-hidden="true"><div class="phone__screen"><img src="assets/img/logo-240.webp" width="120" height="33" alt="" loading="lazy"><span></span><span></span><span></span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="sec">
-    <div class="wrap faq">
-      <div class="faq__side">
-        <p class="faq__big" aria-hidden="true">FAQ</p>
-        <p class="kick" data-reveal>Got Questions?</p>
-        <h2 class="d2" data-reveal style="--i:1">Frequently Asked<br>Questions</h2>
-        <p class="lead" data-reveal style="--i:2">Can't find what you're looking for? Reach out to our support team.</p>
-        <a href="#contact" class="btn btn--ink" style="margin-top:28px" data-reveal>Contact Us <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="faq__list" data-faq data-stagger>
-        <details><summary>How do I rent an EzygoBD e-scooter?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Download the EzygoBD app, register with your NID, choose your plan (daily, weekly or monthly) and pick up your vehicle from the nearest hub. The whole process takes under 10 minutes.</p></details>
-        <details><summary>What is the minimum age to rent?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Riders must be 18 years or older and hold a valid Bangladeshi driving licence. NID verification is done through the app at signup.</p></details>
-        <details><summary>Is the vehicle insured? What happens after an accident?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Yes. Every EzygoBD vehicle carries third-party liability insurance. Comprehensive rider accident cover is included in monthly plans. Call our 24/7 helpline immediately after an incident.</p></details>
-        <details><summary>Where are the charging / pickup hubs located?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>We currently operate hubs in Dhaka (Dhanmondi, Gulshan, Uttara, Mirpur, Mohammadpur), Chittagong and Sylhet. Use the map in the app to find the nearest hub and check live vehicle availability.</p></details>
-        <details><summary>How does the Franchise (FOCO) model work?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Under the FOCO model, EzygoBD owns and manages the vehicles while you own the hub real estate. You share revenue without handling operations. Starting investment is Tk 4.5 Lakhs for 10 scooters, with projected 90%* ROI in 3 years.</p></details>
-        <details><summary>Can my business get a white-label EV fleet solution?<svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Absolutely. EzygoBD offers a full white-label package — branded vehicles, customised rider app (your logo/colours), dedicated fleet dashboard and 24/7 enterprise support. Contact our partnerships team for a quote.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GET IN TOUCH ============ -->
-  <section class="sec" id="contact">
-    <div class="wrap reach">
-      <div>
-        <p class="kick" data-reveal>Reach Out</p>
-        <h2 class="d2" data-reveal style="--i:1">Get In Touch!</h2>
-        <p class="lead" data-reveal style="--i:2">Whether you're a rider, a business, or an investor — our team is ready to help you go electric.</p>
-        <ul class="reach__list" data-stagger>
-          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Head Office</strong><p>Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p></div></li>
-          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><strong>Phone / WhatsApp</strong><p><a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a></p></div></li>
-          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><div><strong>Email</strong><p><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a></p></div></li>
-        </ul>
-        <div class="socials" data-reveal>
-          <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
-          <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
-          <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M11.5 10.5V16"/></svg></a>
-          <a href="https://wa.me/8801828721222" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.4l-4.5 1.1z"/><path d="M9 8.5c-.3 0-.8.4-.8 1.3 0 2.2 2.8 5.5 5.8 5.8 1 .1 1.5-.6 1.5-1l-.1-.6-1.8-.8-.9 1c-1.2-.5-2.3-1.5-2.8-2.7l.9-.9-.7-1.9-1.1-.2z"/></svg></a>
-        </div>
-      </div>
-      <div class="form-card" data-reveal="pop">
-        <form action="form-handler.html" method="POST" data-form="evs_contact" class="fields">
-          <input type="hidden" name="form_type" value="evs_contact">
-          <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in and our team will get back to you.</p>
-          <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
-          <div class="row2">
-            <div class="field"><label for="ec-name">Full Name</label><input type="text" id="ec-name" name="name" placeholder="Your name" autocomplete="name" required></div>
-            <div class="field"><label for="ec-phone">Phone</label><input type="tel" id="ec-phone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
-          </div>
-          <div class="field"><label for="ec-email">Email Address</label><input type="email" id="ec-email" name="email" placeholder="you@example.com" autocomplete="email"></div>
-          <div class="field"><label for="ec-type">I am a…</label>
-            <select id="ec-type" name="inquiry_type"><option value="">Select one</option><option>Individual Rider</option><option>Delivery Business</option><option>Franchise Investor</option><option>Enterprise / White Label</option><option>Media / Press</option></select></div>
-          <div class="field"><label for="ec-msg">Message</label><textarea id="ec-msg" name="message" rows="4" placeholder="Tell us how we can help…"></textarea></div>
-          <button type="submit" class="btn btn--lime">Send Message <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3L10 14M21 3l-6.5 18-4.5-7-7-4.5L21 3z"/></svg></button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-</main>
-
+
+  <!-- ============ SUCCESS STORY ============ -->
+  <section class="sec sec--night">
+    <div class="glow"></div>
+    <div class="wrap story">
+      <div class="story__visual" data-reveal="left">
+        <div class="story__panel">
+          <div class="story__brand"><span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg></span><div><b>EzyFleet</b><small>Fleet Management OS</small></div></div>
+          <p class="story__proven">Proven.</p>
+          <div class="story__grid" aria-hidden="true"></div>
+        </div>
+        <p class="story__cap">Operational Excellence Through Technology</p>
+      </div>
+      <div>
+        <p class="kick" data-reveal>Success Story</p>
+        <h2 class="d2" data-reveal style="--i:1">How EzygoBD Transformed<br>Last-Mile Delivery in Dhaka</h2>
+        <p class="lead" data-reveal style="--i:2">A leading e-commerce company in Bangladesh replaced 600 petrol bikes with EzygoBD e-scooters, cutting fuel costs by 65% and improving on-time delivery rates.</p>
+        <div class="story__stats" data-stagger>
+          <div><p class="stat__v"><span class="countup" data-count="30,000">30,000</span><small>+</small></p><p class="stat__l">Daily Deliveries<br>Completed</p></div>
+          <div><p class="stat__v"><span class="countup" data-count="500,000">500,000</span><small>+</small></p><p class="stat__l">Kilometres<br>Logged Monthly</p></div>
+        </div>
+        <blockquote class="quote" data-reveal>
+          <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 7H6.5A2.5 2.5 0 0 0 4 9.5V12h5v5H4v-5M20 7h-3.5A2.5 2.5 0 0 0 14 9.5V12h5v5h-5v-5"/></svg>          <p>"EzygoBD's fleet OS gave us real-time visibility on every scooter. Our delivery SLA improved from 78% to 96% in 3 months."</p>
+          <cite>— Logistics Director, Leading BD E-commerce Co.</cite>
+        </blockquote>
+        <a href="about.html" class="btn btn--lime" data-reveal>Read the Case Study <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLEET OPTIMIZATION ============ -->
+  <section class="sec" id="ezyfleet">
+    <div class="wrap">
+      <div class="head head--center">
+        <p class="kick" data-reveal>Intelligent Fleet Management</p>
+        <h2 class="d2 balance" data-reveal style="--i:1">Autonomous Unified Fleet<br>Optimization Solution</h2>
+        <p class="lead" data-reveal style="--i:2">Our platform uses smart analytics to predict demand, pre-position vehicles and auto-assign maintenance — keeping your fleet at peak performance with zero manual effort.</p>
+      </div>
+      <div class="fo">
+        <div class="fo__list" data-stagger>
+          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5l-6-2zM9 4.5v13M15 6.5v13"/></svg></span><div><h3 class="h4">Geofence &amp; Zone-Based Dispatch</h3><p>Automatically assign riders to zones. Reduce deadhead kilometres and increase utilisation.</p></div></div>
+          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M21.5 10.5v3M6 10v4M9.5 10v4M13 10v4"/></svg></span><div><h3 class="h4">Predictive Battery Management</h3><p>System forecasts charge depletion and routes vehicles to stations before they run flat.</p></div></div>
+          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg></span><div><h3 class="h4">Live KPI Performance Dashboard</h3><p>Distance, revenue, energy consumed, rider score — all in a single real-time view.</p></div></div>
+          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15L6 16.5zM10 21h4"/></svg></span><div><h3 class="h4">Automated Alert &amp; Incident System</h3><p>Instant notifications for harsh braking, overloading, or off-route excursions.</p></div></div>
+          <div class="fo__item"><span class="fo__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="7.5" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0M1.5 18a3.5 3.5 0 0 1 4.5-3.3M22.5 18a3.5 3.5 0 0 0-4.5-3.3"/></svg></span><div><h3 class="h4">Multi-Role Team Management</h3><p>Assign fleet managers, mechanics and riders with granular permission control.</p></div></div>
+          <div><a href="services.html" class="btn btn--lime">Get Started <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="dash" data-reveal="pop">
+          <div class="dash__screen">
+            <div class="dash__bar"><span></span><span></span><span></span></div>
+            <div class="dash__map" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><svg viewBox="0 0 400 220" preserveAspectRatio="none"><path d="M10 180 C 80 120, 120 200, 190 130 S 300 60, 390 90" /><path d="M30 40 C 120 70, 160 20, 240 60 S 340 170, 380 160" /></svg></div>
+            <div class="dash__stats">
+              <div><b>142</b><small>Active</small></div>
+              <div><b>98%</b><small>Uptime</small></div>
+              <div><b>3.2T</b><small>CO₂ saved</small></div>
+            </div>
+          </div>
+          <div class="dash__float dash__float--1"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg><div><strong>EZY-0142</strong><small>Battery 84% · Online</small></div></div>
+          <div class="dash__float dash__float--2"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="10" height="18" rx="1.5"/><path d="M4 21h10M14 9.5h2.5a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 0 3 0V8l-2.5-3M9.5 7.5l-2 3.5h3l-2 3.5"/></svg><div><strong>Charging Hub A</strong><small>12 slots available</small></div></div>
+        </div>
+      </div>
+      <div class="bens" data-stagger="pop">
+        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3 class="h4">Real-Time Fleet Safety</h3><ul><li>Speed violation alerts</li><li>Geo-fence breach notifications</li><li>Crash detection via accelerometer</li><li>Emergency SOS button integration</li></ul></div>
+        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20.5h16M6.5 17V11M11 17V6M15.5 17v-8M20 17v-4"/></svg></span><h3 class="h4">Intelligent Analytics</h3><ul><li>Revenue per vehicle reports</li><li>Energy cost-per-km breakdown</li><li>Maintenance cost tracking</li><li>Rider performance leaderboard</li></ul></div>
+        <div class="ben"><span class="ben__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9.5 2.5V6M14.5 2.5V6M9.5 18v3.5M14.5 18v3.5M2.5 9.5H6M2.5 14.5H6M18 9.5h3.5M18 14.5h3.5"/></svg></span><h3 class="h4">Advanced IoT System</h3><ul><li>4G/MQTT connected hardware</li><li>Tamper-proof GPS module</li><li>OTA firmware updates</li><li>Remote immobilisation</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR PRODUCTS ============ -->
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <div class="head head--split">
+        <div>
+          <p class="kick" data-reveal>Our Product Lineup</p>
+          <h2 class="d2" data-reveal style="--i:1">Our EVs &amp; Platform Tools</h2>
+        </div>
+        <p class="lead" data-reveal style="--i:2">Purpose-built electric vehicles and software products for every use-case across Bangladesh.</p>
+      </div>
+      <div class="lineup">
+        <article class="prod" data-reveal>
+          <div class="prod__info">
+            <span class="prod__n">01</span>
+            <h3 class="d3">EzyGo E-Scooter</h3>
+            <p class="muted">Our flagship two-wheeler — built for daily commuting, food delivery and last-mile logistics. Lightweight, powerful and engineered for Bangladesh roads.</p>
+            <ul class="prod__specs">
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 120 km range per charge</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 3-hour fast charge</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg> Payload: 150 kg</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg> Top speed: 60 km/h</li>
+            </ul>
+            <a href="services.html" class="btn btn--ink">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="prod__visual">
+            <span class="prod__big" aria-hidden="true">01</span>
+            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M8 17h7.5l3-6.5H21M15 4.5h2l1.5 6M5.5 14.5l2-4h6"/></svg></span>
+            <span class="prod__badge">From Tk 150/day</span>
+          </div>
+        </article>
+        <article class="prod prod--rev" data-reveal>
+          <div class="prod__info">
+            <span class="prod__n">02</span>
+            <h3 class="d3">EzyRide E-Bike</h3>
+            <p class="muted">Pedal-assist electric bike for urban commuters who want exercise without the sweat. Fold-flat design fits inside apartments and offices.</p>
+            <ul class="prod__specs">
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 80 km range (assist mode)</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 2.5-hour charge</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 8h11l2.5 12.5H4L6.5 8z"/><circle cx="12" cy="5.5" r="2.5"/></svg> Vehicle weight: 22 kg</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1"/></svg> Assist up to 35 km/h</li>
+            </ul>
+            <a href="services.html" class="btn btn--ink">Rent Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="prod__visual">
+            <span class="prod__big" aria-hidden="true">02</span>
+            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H16a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h7.5"/></svg></span>
+            <span class="prod__badge">From Tk 100/day</span>
+          </div>
+        </article>
+        <article class="prod" data-reveal>
+          <div class="prod__info">
+            <span class="prod__n">03</span>
+            <h3 class="d3">EzyHaul E-Rickshaw</h3>
+            <p class="muted">Three-wheel electric cargo vehicle purpose-built for hyperlocal delivery businesses. Carry larger loads with zero emissions and dramatically lower running costs.</p>
+            <ul class="prod__specs">
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21L9 3M18 21L15 3M12 4v2.5M12 10.5v3M12 17.5V20"/></svg> 100 km range per charge</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg> Cargo capacity: 500 kg</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg> 4-hour full charge</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5h1.7c.6 0 1 .4 1 1v6a1.5 1.5 0 0 0 3 0V14M8 11.5h6"/></svg> Save Tk 8,000+/month vs CNG</li>
+            </ul>
+            <a href="services.html" class="btn btn--ink">Partner Now <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="prod__visual">
+            <span class="prod__big" aria-hidden="true">03</span>
+            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span>
+            <span class="prod__badge">Earn Tk 35K+/month</span>
+          </div>
+        </article>
+        <article class="prod prod--rev" data-reveal>
+          <div class="prod__info">
+            <span class="prod__n">04</span>
+            <h3 class="d3">EzygoBD Rider App</h3>
+            <p class="muted">Our mobile application puts EV rentals, payments and support in the palm of your hand. Available in Bengali and English, with bKash / Nagad integration.</p>
+            <ul class="prod__specs">
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 10.5h14V18a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 18v-7.5zM5 10.5a7 7 0 0 1 14 0M8 4.5l1.5 2.2M16 4.5l-1.5 2.2"/></svg> Android &amp; iOS</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg> Bengali language UI</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 9.5h19M6 15h4"/></svg> bKash / Nagad / Card</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9l-5.3 2.7 1-5.8-4.2-4.1 5.9-.9L12 3.5z"/></svg> 4.8 ★ App Store rating</li>
+            </ul>
+            <a href="#app" class="btn btn--ink">Download App <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5v12M7 10.5l5 5 5-5M4 20.5h16"/></svg></a>
+          </div>
+          <div class="prod__visual">
+            <span class="prod__big" aria-hidden="true">04</span>
+            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+            <span class="prod__badge">Free Download</span>
+          </div>
+        </article>
+        <article class="prod" data-reveal>
+          <div class="prod__info">
+            <span class="prod__n">05</span>
+            <h3 class="d3">EzyFleet GPS System</h3>
+            <p class="muted">All-in-one IoT hardware unit installed on every EzygoBD vehicle. Delivers live location, battery telemetry, ride events and remote-lock capability over 4G.</p>
+            <ul class="prod__specs">
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20a9 9 0 0 1 0-9M8 20a5 5 0 0 1 0-5"/><path d="M13 4l7 7-3 3-7-7 3-3zM14 13l-3.5 3.5"/></svg> GPS accuracy: &lt; 5m</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg> 4G LTE connectivity</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg> Remote immobilisation</li>
+              <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5A8 8 0 0 0 5.6 7M4 12.5A8 8 0 0 0 18.4 17"/><path d="M5 3v4.5h4.5M19 21v-4.5h-4.5"/></svg> OTA firmware updates</li>
+            </ul>
+            <a href="services.html" class="btn btn--ink">View Platform <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="prod__visual">
+            <span class="prod__big" aria-hidden="true">05</span>
+            <span class="prod__ic"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20a9 9 0 0 1 0-9M8 20a5 5 0 0 1 0-5"/><path d="M13 4l7 7-3 3-7-7 3-3zM14 13l-3.5 3.5"/></svg></span>
+            <span class="prod__badge">All Models Included</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTNERS ============ -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="head head--center">
+        <p class="kick" data-reveal>Trusted By</p>
+        <h2 class="d2 balance" data-reveal style="--i:1">Powering Innovation at Leading Companies</h2>
+        <p class="lead" data-reveal style="--i:2">Bangladesh's top delivery companies, startups and enterprises trust EzygoBD to run their electric fleets.</p>
+      </div>
+    </div>
+    <div class="marquee" data-reveal>
+      <div class="marquee__track">
+        <span class="name-chip">ShopExpress BD</span>
+        <span class="name-chip">SwiftDeliver</span>
+        <span class="name-chip">FoodRun BD</span>
+        <span class="name-chip">UrbanLogix</span>
+        <span class="name-chip">ParcelBD</span>
+        <span class="name-chip">RiderPro</span>
+        <span class="name-chip">GreenMove</span>
+        <span class="name-chip">MetroFleet</span>
+        <span class="name-chip" aria-hidden="true">ShopExpress BD</span>
+        <span class="name-chip" aria-hidden="true">SwiftDeliver</span>
+        <span class="name-chip" aria-hidden="true">FoodRun BD</span>
+        <span class="name-chip" aria-hidden="true">UrbanLogix</span>
+        <span class="name-chip" aria-hidden="true">ParcelBD</span>
+        <span class="name-chip" aria-hidden="true">RiderPro</span>
+        <span class="name-chip" aria-hidden="true">GreenMove</span>
+        <span class="name-chip" aria-hidden="true">MetroFleet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APP CTA ============ -->
+  <section class="sec sec--tight" id="app">
+    <div class="wrap">
+      <div class="app on-night" data-reveal>
+        <div class="glow"></div>
+        <div class="app__text">
+          <p class="kick">Navigate the Future</p>
+          <h2 class="d2">Navigate the Future<br>with Our Fleet App</h2>
+          <p class="lead">Download EzygoBD and start riding or managing your fleet today. Available on Android and iOS — completely free.</p>
+          <div class="stores">
+            <span class="store is-soon" aria-disabled="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3.5l11 8.5-11 8.5V3.5zM4.5 3.5L18.5 10a2.2 2.2 0 0 1 0 4l-14 6.5M4.5 3.5l11 8.5"/></svg><span><small>Get it on</small><b>Google Play</b></span><small class="soon">Coming soon</small></span>            <span class="store is-soon" aria-disabled="true"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.5 3c0 1.7-1.3 3.2-3 3.3-.2-1.6 1.3-3.2 3-3.3zM17.5 12.4c0-2 1.6-3 1.7-3a3.8 3.8 0 0 0-3-1.6c-1.3-.1-2.5.8-3.2.8-.7 0-1.7-.7-2.8-.7a4.2 4.2 0 0 0-3.5 2.1c-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.6.7 2.7.6c1.1 0 1.8-1 2.5-2a8 8 0 0 0 1.1-2.4 3.5 3.5 0 0 1-1.9-3.8z"/></svg><span><small>Download on the</small><b>App Store</b></span><small class="soon">Coming soon</small></span>          </div>
+        </div>
+        <div class="app__qr">
+          <div class="qr"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18v2M18 14h2"/></svg><p>Scan to Download</p></div>
+          <div class="phone" aria-hidden="true"><div class="phone__screen"><img src="assets/img/logo-240.webp" width="120" height="33" alt="" loading="lazy"><span></span><span></span><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec">
+    <div class="wrap faq">
+      <div class="faq__side">
+        <p class="faq__big" aria-hidden="true">FAQ</p>
+        <p class="kick" data-reveal>Got Questions?</p>
+        <h2 class="d2" data-reveal style="--i:1">Frequently Asked<br>Questions</h2>
+        <p class="lead" data-reveal style="--i:2">Can't find what you're looking for? Reach out to our support team.</p>
+        <a href="#contact" class="btn btn--ink" style="margin-top:28px" data-reveal>Contact Us <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="faq__list" data-faq data-stagger>
+        <details><summary><h3 class=\"faq__q\">How do I rent an EzygoBD e-scooter?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Download the EzygoBD app, register with your NID, choose your plan (daily, weekly or monthly) and pick up your vehicle from the nearest hub. The whole process takes under 10 minutes.</p></details>
+        <details><summary><h3 class=\"faq__q\">What is the minimum age to rent?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Riders must be 18 years or older and hold a valid Bangladeshi driving licence. NID verification is done through the app at signup.</p></details>
+        <details><summary><h3 class=\"faq__q\">Is the vehicle insured? What happens after an accident?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Yes. Every EzygoBD vehicle carries third-party liability insurance. Comprehensive rider accident cover is included in monthly plans. Call our 24/7 helpline immediately after an incident.</p></details>
+        <details><summary><h3 class=\"faq__q\">Where are the charging / pickup hubs located?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>We currently operate hubs in Dhaka (Dhanmondi, Gulshan, Uttara, Mirpur, Mohammadpur), Chittagong and Sylhet. Use the map in the app to find the nearest hub and check live vehicle availability.</p></details>
+        <details><summary><h3 class=\"faq__q\">How does the Franchise (FOCO) model work?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Under the FOCO model, EzygoBD owns and manages the vehicles while you own the hub real estate. You share revenue without handling operations. Starting investment is Tk 4.5 Lakhs for 10 scooters, with projected 90%* ROI in 3 years.</p></details>
+        <details><summary><h3 class=\"faq__q\">Can my business get a white-label EV fleet solution?</h3><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><p>Absolutely. EzygoBD offers a full white-label package — branded vehicles, customised rider app (your logo/colours), dedicated fleet dashboard and 24/7 enterprise support. Contact our partnerships team for a quote.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GET IN TOUCH ============ -->
+  <section class="sec" id="contact">
+    <div class="wrap reach">
+      <div>
+        <p class="kick" data-reveal>Reach Out</p>
+        <h2 class="d2" data-reveal style="--i:1">Get In Touch!</h2>
+        <p class="lead" data-reveal style="--i:2">Whether you're a rider, a business, or an investor — our team is ready to help you go electric.</p>
+        <ul class="reach__list" data-stagger>
+          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Head Office</strong><p>Plot#34, 7th Floor, Road Sonargaon Janapath Rd, Dhaka</p></div></li>
+          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><strong>Phone / WhatsApp</strong><p><a href="tel:+8801828721222">01828-721222</a> / <a href="tel:+8801576597666">01576-597666</a></p></div></li>
+          <li><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><div><strong>Email</strong><p><a href="mailto:hello@ezygobd.com">hello@ezygobd.com</a></p></div></li>
+        </ul>
+        <div class="socials" data-reveal>
+          <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
+          <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M11.5 10.5V16"/></svg></a>
+          <a href="https://wa.me/8801828721222" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.4l-4.5 1.1z"/><path d="M9 8.5c-.3 0-.8.4-.8 1.3 0 2.2 2.8 5.5 5.8 5.8 1 .1 1.5-.6 1.5-1l-.1-.6-1.8-.8-.9 1c-1.2-.5-2.3-1.5-2.8-2.7l.9-.9-.7-1.9-1.1-.2z"/></svg></a>
+        </div>
+      </div>
+      <div class="form-card" data-reveal="pop">
+        <form action="form-handler.html" method="POST" data-form="evs_contact" class="fields">
+          <input type="hidden" name="form_type" value="evs_contact"><div class="hp" aria-hidden="true"><label for="hp-2">Leave this empty</label><input type="text" id="hp-2" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="_t" value="1794945670">          <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your message is in and our team will get back to you.</p>
+          <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your message didn't go through. Please check the fields, or call 01828-721222.</p>
+          <div class="row2">
+            <div class="field"><label for="ec-name">Full Name</label><input type="text" id="ec-name" name="name" placeholder="Your name" autocomplete="name" required></div>
+            <div class="field"><label for="ec-phone">Phone</label><input type="tel" pattern="\+?[0-9][0-9 \(\)\-]{5,24}" id="ec-phone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="ec-email">Email Address</label><input type="email" id="ec-email" name="email" placeholder="you@example.com" autocomplete="email"></div>
+          <div class="field"><label for="ec-type">I am a…</label>
+            <select id="ec-type" name="inquiry_type"><option value="">Select one</option><option>Individual Rider</option><option>Delivery Business</option><option>Franchise Investor</option><option>Enterprise / White Label</option><option>Media / Press</option></select></div>
+          <div class="field"><label for="ec-msg">Message</label><textarea id="ec-msg" name="message" rows="4" placeholder="Tell us how we can help…"></textarea></div>
+          <button type="submit" class="btn btn--lime">Send Message <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3L10 14M21 3l-6.5 18-4.5-7-7-4.5L21 3z"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
   <footer class="foot">
     <div class="wrap">
       <div class="foot__grid">
@@ -675,8 +677,7 @@
             <a href="https://www.facebook.com/share/198cbcDwWD/" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
             <a href="https://www.instagram.com/rent_ezygo" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a>
             <a href="https://www.linkedin.com/company/ezygo-mobility-holdings-limited/" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.1M11.5 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M11.5 10.5V16"/></svg></a>
-            <a href="#" aria-label="YouTube" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9v6l5-3-5-3z"/></svg></a>
-          </div>
+                      </div>
         </div>
         <nav class="foot__col" aria-label="Riders">
           <h2>Riders</h2>
@@ -702,7 +703,7 @@
             <li><a href="about.html">Our Story</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="join.html">Join Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </nav>
       </div>
@@ -723,6 +724,6 @@
     <a href="https://wa.me/8801828721222" class="btn btn--glass" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.4l-4.5 1.1z"/><path d="M9 8.5c-.3 0-.8.4-.8 1.3 0 2.2 2.8 5.5 5.8 5.8 1 .1 1.5-.6 1.5-1l-.1-.6-1.8-.8-.9 1c-1.2-.5-2.3-1.5-2.8-2.7l.9-.9-.7-1.9-1.1-.2z"/></svg> WhatsApp</a>
   </div>
 
-  <script src="assets/js/site.js?v=3.1" defer></script>
-</body>
-</html>
+  <script src="assets/js/site.js?v=3.9" defer></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Services — EzygoBD | EV Rental Plans, Delivery Fleet, Franchise & Advertising";
-$pageDesc  = "EzygoBD services for riders and partners: daily rental, monthly subscription, rent-to-own e-scooter, e-rickshaw earning plan, delivery fleets, franchise, EV advertising and the EzyFleet platform.";
+$pageTitle = "Services — EzygoBD | EV Rental & Partner Solutions";
+$pageDesc  = "Explore EzygoBD's services for riders and business partners — rent an EV, earn with e-rickshaws, launch a franchise, or manage a fleet.";
 $pagePath  = 'services.php';
 ?>
 <!DOCTYPE html>

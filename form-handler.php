@@ -88,7 +88,7 @@ function hit(string $file, int $window, int $max): bool {   // true = allowed
 $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 if (strpos($ip, ':') !== false) { $ip = implode(':', array_slice(explode(':', $ip), 0, 4)) . '::/64'; }
 $rlFile = $logDir . '/.rate-' . substr(hash_hmac('sha256', $ip, (string) $cfg['secret']), 0, 20);
-if (!hit($logDir . '/.rate-site', 3600, (int) ($cfg['site_limit'] ?? 60)) || !hit($rlFile, 600, (int) $cfg['rate_limit'])) {
+if (!hit($rlFile, 600, (int) $cfg['rate_limit']) || !hit($logDir . '/.rate-site', 3600, (int) ($cfg['site_limit'] ?? 60))) {
     finish('error', $formType);
 }
 if (mt_rand(1, 50) === 1) {   // tidy old per-visitor counters now and then
