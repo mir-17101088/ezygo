@@ -1,0 +1,7 @@
+submissions/*
+!submissions/.gitkeep
+*.zip
+!submissions/.htaccess
+_mock/
+__pycache__/
+*.pyc
