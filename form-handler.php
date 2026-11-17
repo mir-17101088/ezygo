@@ -34,7 +34,7 @@ function back_url(string $status): string {
         }
     }
     $form   = preg_replace('/[^a-z_]/', '', $_POST['form_type'] ?? '');
-    $anchor = ['rent_ev' => '#book', 'contact' => '#contact', 'franchise' => '#apply', 'advertising' => '#enquire', 'join' => '#apply'][$form] ?? '';
+    $anchor = ['rent_ev' => '#rent-ev', 'evs_contact' => '#contact', 'franchise' => '#fr-contact', 'advertising' => '#ad-contact', 'join' => '#join-form', 'support' => '#message', 'partnership' => '#message'][$form] ?? '';
     return $path . (strpos($path, '?') !== false ? '&' : '?') . 'status=' . $status . ($form ? '&form=' . $form : '') . $anchor;
 }
 

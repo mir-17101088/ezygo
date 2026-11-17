@@ -1,9 +1,10 @@
 <?php
 require_once __DIR__ . '/helpers.php';
 $siteUrl   = 'https://www.ezygobd.com';
-$pageTitle = $pageTitle ?? 'Ezygo — Electric bike rental in Bangladesh';
-$pageDesc  = $pageDesc  ?? 'Rent an electric scooter or e-bike by the day, week or month from Tk 299 a day. Insurance and 24/7 rider support included.';
+$pageTitle = $pageTitle ?? "EzygoBD — Bangladesh's #1 EV Rental Network";
+$pageDesc  = $pageDesc  ?? 'Efficient, eco-friendly, and affordable electric vehicle rentals across Bangladesh.';
 $canonical = $siteUrl . '/' . ($pagePath ?? '');
+$cssVer    = '3.0';
 ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,14 +12,14 @@ $canonical = $siteUrl . '/' . ($pagePath ?? '');
   <meta name="description" content="<?= htmlspecialchars($pageDesc) ?>">
   <link rel="canonical" href="<?= $canonical ?>">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#F3F4F6" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0C120E">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ezygo">
+  <meta property="og:site_name" content="EzygoBD">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="<?= $canonical ?>">
   <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
   <meta property="og:description" content="<?= htmlspecialchars($pageDesc) ?>">
@@ -30,23 +31,21 @@ $canonical = $siteUrl . '/' . ($pagePath ?? '');
   <meta name="twitter:description" content="<?= htmlspecialchars($pageDesc) ?>">
   <meta name="twitter:image" content="<?= $siteUrl ?>/assets/img/og-cover.jpg">
 
-  <!-- Set the theme before paint: saved choice, else the device setting -->
-  <script>try{var t=localStorage.getItem('ezygo-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/v2.css?v=2">
-<?php if (!empty($preloadImg)): ?>
-  <link rel="preload" as="image" type="image/avif" imagesrcset="<?= $preloadImg ?>" imagesizes="<?= $preloadSizes ?? '100vw' ?>">
-<?php endif; ?>
+  <!-- Theme before paint (saved choice, else device setting); intro only once per visit -->
+  <script>(function(d){var e=d.documentElement;e.className+=' js';try{var t=localStorage.getItem('ezygo-theme');if(t==='dark'||t==='light')e.setAttribute('data-theme',t);if(sessionStorage.getItem('ezygo-intro'))e.className+=' seen';sessionStorage.setItem('ezygo-intro','1')}catch(x){}})(document)</script>
+  <link rel="preload" href="assets/fonts/cabinet-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=<?= $cssVer ?>">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Ezygo",
+    "name": "EzygoBD",
     "legalName": "Ezygo Mobility Holdings Limited",
     "url": "<?= $siteUrl ?>/",
     "logo": "<?= $siteUrl ?>/assets/img/logo-480.png",
     "image": "<?= $siteUrl ?>/assets/img/og-cover.jpg",
-    "description": "Electric scooter and e-bike rental in Bangladesh, from Tk 299 a day.",
+    "description": "Bangladesh First 2W EV Rental Fleet Platform: electric scooter and e-bike rental, delivery fleets, franchise and advertising.",
     "telephone": "+8801828721222",
     "email": "hello@ezygobd.com",
     "priceRange": "Tk 299+ per day",

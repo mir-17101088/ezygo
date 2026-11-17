@@ -1,153 +1,185 @@
 <?php
-$pageTitle = 'Ezygo franchise — run an electric bike hub (FOCO and FOFO)';
-$pageDesc  = 'Open an Ezygo electric bike hub from Tk 4.5 lakh with 10 scooters. Let Ezygo operate it (FOCO) or run it yourself (FOFO).';
+$pageTitle = "Franchise — EzygoBD | FOCO & FOFO EV Hub Models";
+$pageDesc  = "Open an EzygoBD EV franchise hub. Compare the FOCO (company operated) and FOFO (franchise operated) models, starting from Tk 4.5 Lakhs with 10 scooters.";
 $pagePath  = 'franchise.php';
+
+function model_block($id, $alt, $badge, $title, $sub, $metrics, $howTitle, $steps, $whyTitle, $whys, $cta) { ?>
+  <section class="sec<?= $alt ? ' sec--tint' : '' ?>" id="<?= $id ?>">
+    <div class="wrap">
+      <div class="model-head">
+        <div>
+          <span class="pill" data-reveal><?= icon('crown') ?> <?= $badge ?></span>
+          <h2 class="d2" data-reveal style="--i:1"><?= $title ?></h2>
+        </div>
+        <p class="lead" data-reveal style="--i:2"><?= $sub ?></p>
+      </div>
+      <div class="metrics" data-stagger="pop">
+<?php foreach ($metrics as $m): ?>
+        <div class="metric"><p class="metric__v"><?= $m[0] ?></p><p class="metric__l"><?= $m[1] ?></p></div>
+<?php endforeach; ?>
+      </div>
+      <div class="model-body">
+        <div>
+          <h3 class="d3" data-reveal><?= $howTitle ?></h3>
+          <ol class="steps" data-stagger>
+<?php foreach ($steps as $i => $s): ?>
+            <li class="step"><span class="step__n"><?= $i + 1 ?></span><div><h4 class="h4"><?= $s[0] ?></h4><p><?= $s[1] ?></p></div></li>
+<?php endforeach; ?>
+          </ol>
+        </div>
+        <div class="why" data-reveal="right">
+          <h3 class="d3"><?= $whyTitle ?></h3>
+          <ul>
+<?php foreach ($whys as $w): ?>
+            <li><span class="why__ic"><?= icon($w[0]) ?></span><div><strong><?= $w[1] ?></strong><p><?= $w[2] ?></p></div></li>
+<?php endforeach; ?>
+          </ul>
+          <a href="#fr-contact" class="btn btn--lime btn--block"><?= icon('send') ?> <?= $cta ?></a>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'includes/v2/head.php'; ?>
+<?php include 'includes/head.php'; ?>
 </head>
 <body>
-<?php include 'includes/v2/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main id="main">
 
-  <section class="page-hero">
-    <div class="wrap">
-      <h1>Own an Ezygo hub.</h1>
-      <p class="lede">Start with Tk 4.5 lakh and 10 scooters. Choose whether we run the hub for you or you run it yourself.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#apply">Apply for a franchise</a>
-        <a class="btn btn-ghost" href="#compare">Compare the models</a>
+  <!-- ============ HERO ============ -->
+  <section class="hero hero--fr">
+    <?= hero_video() ?>
+    <div class="glow"></div>
+    <div class="hero__in wrap">
+      <h1 class="d1 balance" data-reveal style="--i:0">Join Us in our <em>Green Mission</em></h1>
+      <p class="lead" data-reveal style="--i:1">Choose a franchise model that fits your ambition. Build a profitable EV hub with EzygoBD.</p>
+      <div class="pick" data-stagger="pop">
+        <a href="#foco" class="pick__card">
+          <h2 class="pick__name">FOCO</h2>
+          <div class="pick__banner">
+            <span class="pick__kick">Introducing EzygoBD Franchise (FOCO) Model</span>
+            <h3 class="pick__h">Earn <em>90%</em> ROI<br>in just <em>3 years</em></h3>
+            <span class="pick__deco"><?= icon('chart') ?></span>
+            <span class="pick__note">*T&amp;C Apply</span>
+          </div>
+          <p class="pick__desc">Franchise Owned Company Operated — We manage, you earn. <?= icon('arrow') ?></p>
+        </a>
+        <a href="#fofo" class="pick__card">
+          <h2 class="pick__name">FOFO</h2>
+          <div class="pick__banner">
+            <span class="pick__kick">Introducing EzygoBD Franchise (FOFO) Model</span>
+            <h3 class="pick__h">Earn upto <em>45% to 65%</em><br>ROI in <em>3 Years</em></h3>
+            <div class="pick__invest"><span>Starting Investments</span><b>Tk 4.5 Lakhs</b><small>with 10 scooters</small></div>
+            <span class="pick__note">*T&amp;C Apply</span>
+          </div>
+          <p class="pick__desc">Franchise Owned Franchise Operated — You own and run it. <?= icon('arrow') ?></p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- The two models -->
-  <section class="section" aria-labelledby="models-h">
-    <div class="wrap">
-      <h2 id="models-h" class="head">Two ways to own a hub</h2>
-      <div class="models">
-        <article class="model" id="foco">
-          <p class="model-name">FOCO</p>
-          <h3>Franchise owned, company operated</h3>
-          <p>You invest in the hub. Ezygo runs everything: rentals, maintenance, battery swaps and customer support. You receive revenue every month.</p>
-          <dl>
-            <dt>Investment</dt><dd>From Tk 4.5 lakh</dd>
-            <dt>Fleet</dt><dd>10+ scooters per hub</dd>
-            <dt>Projected return</dt><dd>Up to 90% in 3 years*</dd>
-            <dt>Your time</dt><dd>None. Fully managed</dd>
-            <dt>Best for</dt><dd>Investors who want passive income</dd>
-          </dl>
-          <a class="btn btn-primary" href="#apply" data-model="FOCO">Apply for FOCO</a>
-        </article>
-        <article class="model" id="fofo">
-          <p class="model-name">FOFO</p>
-          <h3>Franchise owned, franchise operated</h3>
-          <p>You own the hub and run it day to day, with Ezygo's training, technology and brand behind you. You keep a bigger share of the earnings.</p>
-          <dl>
-            <dt>Investment</dt><dd>From Tk 4.5 lakh</dd>
-            <dt>Fleet</dt><dd>10+ scooters per hub</dd>
-            <dt>Projected return</dt><dd>45–65% in 3 years*</dd>
-            <dt>Your time</dt><dd>Hands-on, every day</dd>
-            <dt>Best for</dt><dd>Entrepreneurs who want to run a business</dd>
-          </dl>
-          <a class="btn btn-primary" href="#apply" data-model="FOFO">Apply for FOFO</a>
-        </article>
+<?php
+model_block('foco', false, 'FOCO Model', 'Franchise Owned,<br><em>Company Operated</em>',
+  'You invest in the hub infrastructure — EzygoBD handles end-to-end operations, fleet management, and customer support. Sit back and watch your money grow.',
+  [['90%*', 'ROI in 3 Years'], ['Tk 4.5L', 'Starting Investment'], ['10+', 'Scooters Per Hub'], ['24/7', 'Support &amp; Ops']],
+  'How FOCO Works', [
+    ['Invest in a Hub', 'Secure a location (200–400 sqft) and fund the initial setup — scooters, charging infra, branding.'],
+    ['EzygoBD Takes Over Operations', 'We deploy our team to manage rentals, maintenance, battery swaps, and customer relations.'],
+    ['Earn Monthly Revenue', 'You receive a guaranteed revenue share every month with full transparency and digital reporting.'],
+    ['Scale When Ready', 'Add more scooters or open additional hubs in new locations to multiply your earnings.'],
+  ],
+  'Why Choose FOCO?', [
+    ['leaf', 'Zero Operational Hassle', 'EzygoBD manages everything — you focus on growth.'],
+    ['shield', 'Low Risk', 'Proven model with guaranteed minimum revenue commitment.'],
+    ['chart', 'High Returns', 'Up to 90% ROI within the first 3 years.'],
+    ['gauge', 'Transparent Dashboard', 'Live reporting on fleet performance, revenue, and utilisation.'],
+  ], 'Apply for FOCO Franchise');
+
+model_block('fofo', true, 'FOFO Model', 'Franchise Owned,<br><em>Franchise Operated</em>',
+  'You own the hub AND run the daily operations. Get comprehensive training, tech stack, and brand support from EzygoBD — keeping more of the earnings yourself.',
+  [['45–65%*', 'ROI in 3 Years'], ['Tk 4.5L', 'Starting Investment'], ['10+', 'Scooters Per Hub'], ['You', 'Run the Show']],
+  'How FOFO Works', [
+    ['Set Up Your Hub', 'We help you find the right location, set up charging, branding, and fleet. Full turnkey support.'],
+    ['Get Trained by EzygoBD', 'Comprehensive 2-week training on fleet ops, app usage, customer handling, and battery management.'],
+    ['Operate Independently', 'You manage daily rentals, maintenance, and customer service — with our tech and support backbone.'],
+    ['Keep Higher Margins', 'No ops fee means more revenue stays with you. Pay only a brand royalty percentage.'],
+  ],
+  'Why Choose FOFO?', [
+    ['coins', 'Higher Earning Potential', 'More revenue stays with you since you handle operations.'],
+    ['book', 'Full Training', '2-week intensive onboarding + ongoing technical support.'],
+    ['chip', 'EzygoBD Tech Stack', 'Access to our rider app, fleet dashboard, and IoT monitoring.'],
+    ['star', 'Brand Power', 'Operate under the EzygoBD brand — trusted across Bangladesh.'],
+  ], 'Apply for FOFO Franchise');
+?>
+
+  <!-- ============ COMPARISON TABLE ============ -->
+  <section class="sec">
+    <div class="wrap wrap--narrow">
+      <div class="head head--center">
+        <p class="kick" data-reveal>Side by Side</p>
+        <h2 class="d2" data-reveal style="--i:1">FOCO vs FOFO</h2>
+        <p class="lead" data-reveal style="--i:2">Not sure which model is right for you? Here's a quick comparison.</p>
       </div>
-      <p class="fine">*Terms and conditions apply. Return figures are projections based on current operating data.</p>
-    </div>
-  </section>
-
-  <!-- How it works -->
-  <section class="section" aria-labelledby="how-h">
-    <div class="wrap">
-      <h2 id="how-h" class="head">How it works</h2>
-      <h3 class="block-title" style="margin-bottom:20px">FOCO</h3>
-      <ol class="flow flow-4">
-        <li><span class="n">Step 1</span><h3>Invest in a hub</h3><p>Secure a 200–400 sq ft location and fund the setup: scooters, charging and branding.</p></li>
-        <li><span class="n">Step 2</span><h3>We take over operations</h3><p>Our team runs rentals, maintenance, battery swaps and customer relations.</p></li>
-        <li><span class="n">Step 3</span><h3>Earn every month</h3><p>You receive a revenue share each month, with digital reports.</p></li>
-        <li><span class="n">Step 4</span><h3>Scale when ready</h3><p>Add scooters or open more hubs in new areas.</p></li>
-      </ol>
-      <h3 class="block-title" style="margin:48px 0 20px">FOFO</h3>
-      <ol class="flow flow-4">
-        <li><span class="n">Step 1</span><h3>Set up your hub</h3><p>We help you find a location and set up charging, branding and the fleet.</p></li>
-        <li><span class="n">Step 2</span><h3>Train with Ezygo</h3><p>Two weeks of training on fleet operations, the app, customers and batteries.</p></li>
-        <li><span class="n">Step 3</span><h3>Run it yourself</h3><p>You manage rentals, maintenance and customer service, with our technology and support.</p></li>
-        <li><span class="n">Step 4</span><h3>Keep higher margins</h3><p>No operations fee. You pay a brand royalty only.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Compare -->
-  <section class="section" id="compare" aria-labelledby="compare-h">
-    <div class="wrap">
-      <h2 id="compare-h" class="head">FOCO or FOFO?</h2>
-      <div class="table-wrap" role="region" aria-labelledby="compare-h" tabindex="0">
+      <div class="table-wrap" data-reveal>
         <table class="compare">
-          <thead><tr><td></td><th scope="col">FOCO</th><th scope="col">FOFO</th></tr></thead>
+          <thead><tr><th scope="col">Feature</th><th scope="col"><span class="th-tag th-tag--lime">FOCO</span></th><th scope="col"><span class="th-tag">FOFO</span></th></tr></thead>
           <tbody>
-            <tr><th scope="row">Who runs the hub</th><td>Ezygo</td><td>You</td></tr>
-            <tr><th scope="row">Investment</th><td>From Tk 4.5 lakh</td><td>From Tk 4.5 lakh</td></tr>
-            <tr><th scope="row">Projected return</th><td>Up to 90% in 3 years*</td><td>45–65% in 3 years*</td></tr>
-            <tr><th scope="row">Day-to-day work</th><td>None</td><td>Hands-on daily</td></tr>
-            <tr><th scope="row">Training</th><td>Not needed</td><td>2 weeks</td></tr>
-            <tr><th scope="row">How you earn</th><td>Fixed monthly payout</td><td>Higher margins, pay a brand royalty</td></tr>
-            <tr><th scope="row">Best for</th><td>Passive investors</td><td>Hands-on entrepreneurs</td></tr>
+            <tr><th scope="row">Who Operates?</th><td>EzygoBD</td><td>You (Franchise Owner)</td></tr>
+            <tr><th scope="row">Investment</th><td>Tk 4.5 Lakhs+</td><td>Tk 4.5 Lakhs+</td></tr>
+            <tr><th scope="row">Expected ROI</th><td><strong class="hl">Up to 90%</strong> in 3 years</td><td><strong>45–65%</strong> in 3 years</td></tr>
+            <tr><th scope="row">Operational Effort</th><td><?= icon('check-c') ?> None — fully managed</td><td><?= icon('user') ?> Hands-on daily</td></tr>
+            <tr><th scope="row">Training</th><td>Not required</td><td>2-week intensive</td></tr>
+            <tr><th scope="row">Revenue Share</th><td>Fixed monthly payout</td><td>Higher margins, brand royalty</td></tr>
+            <tr><th scope="row">Best For</th><td>Passive investors</td><td>Hands-on entrepreneurs</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <!-- Apply -->
-  <section class="section" id="apply" aria-labelledby="apply-h">
-    <div class="wrap book-grid">
-      <div class="book-intro">
-        <h2 id="apply-h">Apply for a franchise</h2>
-        <p class="lede">Send your details and our partnership team will contact you within 24 hours.</p>
-        <ul class="contact-list">
-          <li><?= icon('phone') ?><div><span>Phone</span><a href="tel:+8801828721222">01828-721222</a></div></li>
-          <li><?= icon('mail') ?><div><span>Email</span><a href="mailto:franchise@ezygobd.com">franchise@ezygobd.com</a></div></li>
+  <!-- ============ APPLY ============ -->
+  <section class="sec sec--night" id="fr-contact">
+    <div class="glow"></div>
+    <div class="wrap reach">
+      <div>
+        <p class="kick" data-reveal>Get In Touch</p>
+        <h2 class="d2" data-reveal style="--i:1">Ready to Start Your<br>Franchise Journey?</h2>
+        <p class="lead" data-reveal style="--i:2">Fill out the form and our partnership team will reach out within 24 hours.</p>
+        <ul class="info-rows" data-stagger>
+          <li><?= icon('phone') ?> <a href="tel:+8801828721222">01828-721222</a></li>
+          <li><?= icon('mail') ?> <a href="mailto:franchise@ezygobd.com">franchise@ezygobd.com</a></li>
+          <li><?= icon('pin') ?> <span>Dhaka, Bangladesh</span></li>
         </ul>
       </div>
-      <form class="form" action="form-handler.php" method="post" data-form="franchise" novalidate>
-        <input type="hidden" name="form_type" value="franchise">
-        <div class="notice ok" role="status" hidden data-notice="success"><?= icon('check') ?><span>Thank you. Our partnership team will contact you within 24 hours.</span></div>
-        <div class="notice err" role="alert" hidden data-notice="error"><span>Your application didn't go through. Please try again, or call 01828-721222.</span></div>
-        <div class="fields fields-2">
-          <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="f-phone">Mobile number</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" required></div>
-          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="f-city">City or area for the hub</label><input id="f-city" name="city" autocomplete="address-level2" required></div>
-        </div>
-        <div class="fields" style="margin:16px 0 24px">
-          <div class="field">
-            <label for="f-model">Model</label>
-            <select id="f-model" name="model">
-              <option value="FOCO">FOCO: Ezygo runs the hub</option>
-              <option value="FOFO">FOFO: I run the hub</option>
-              <option value="Not sure">Not sure yet</option>
-            </select>
+      <div class="form-card" data-reveal="pop">
+        <form action="form-handler.php" method="POST" data-form="franchise" class="fields">
+          <input type="hidden" name="form_type" value="franchise">
+          <p class="form-msg form-msg--ok" data-notice="success" role="status" hidden>Thank you. Your application is in. Our partnership team will reach out within 24 hours.</p>
+          <p class="form-msg form-msg--err" data-notice="error" role="alert" hidden>Your application didn't go through. Please check the fields, or call 01828-721222.</p>
+          <div class="row2">
+            <div class="field"><label for="frName">Full Name</label><input type="text" id="frName" name="name" placeholder="Your name" autocomplete="name" required></div>
+            <div class="field"><label for="frPhone">Phone</label><input type="tel" id="frPhone" name="phone" placeholder="+880 1XXX-XXXXXX" autocomplete="tel" required></div>
           </div>
-          <div class="field"><label for="f-msg">Anything else <span class="opt">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
-        </div>
-        <button class="btn btn-primary btn-block" type="submit">Send application</button>
-      </form>
+          <div class="field"><label for="frEmail">Email</label><input type="email" id="frEmail" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+          <div class="field"><label for="frCity">Preferred City / Area</label><input type="text" id="frCity" name="city" placeholder="e.g. Dhaka, Chattogram, Sylhet"></div>
+          <div class="field"><label for="frModel">Preferred Model</label>
+            <select id="frModel" name="model">
+              <option value="">Select a franchise model</option><option value="foco">FOCO — Company Operated</option><option value="fofo">FOFO — Franchise Operated</option><option value="both">Not sure — tell me more</option>
+            </select></div>
+          <div class="field"><label for="frMsg">Message (optional)</label><textarea id="frMsg" name="message" rows="3" placeholder="Any questions or comments..."></textarea></div>
+          <button type="submit" class="btn btn--lime"><?= icon('send') ?> Submit Application</button>
+        </form>
+      </div>
     </div>
   </section>
 
 </main>
 
-<?php include 'includes/v2/footer.php'; ?>
-<script>
-  /* "Apply for FOCO/FOFO" preselects the model */
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('[data-model]'); if (!a) return;
-    var s = document.getElementById('f-model'); if (s) s.value = a.getAttribute('data-model');
-  });
-</script>
+<?php include 'includes/footer.php'; ?>
 </body>
 </html>

@@ -14,7 +14,7 @@ OUT = ROOT / 'preview'
 BASE = 'http://localhost:8000/'
 PAGES = ['index', 'about', 'services', 'team', 'contact', 'join', 'evs', 'franchise', 'advertising']
 # Only what the pages use; source photos and videos stay out of the preview
-ASSET_DIRS = ['assets/css', 'assets/fonts', 'assets/img', 'assets/js']
+ASSET_DIRS = ['assets/css', 'assets/fonts', 'assets/img', 'assets/js', 'assets/video']
 
 PREVIEW_HEAD = """
   <meta name="robots" content="noindex, nofollow">

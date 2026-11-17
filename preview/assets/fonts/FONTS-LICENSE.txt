@@ -1,0 +1,5 @@
+Cabinet Grotesk and Satoshi
+Designed by Indian Type Foundry (ITF), distributed by Fontshare (https://www.fontshare.com).
+Licensed under the ITF Free Font License: free for personal and commercial use, including web embedding.
+The files here are Latin subsets converted to WOFF2 for self-hosting. Cabinet Grotesk and Satoshi are
+trademarks of Indian Type Foundry; copyright (c) 2017-2021 Indian Type Foundry. All rights reserved.
